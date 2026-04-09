@@ -39,6 +39,7 @@ import N_mt from "./N_mt";
 import R_mt from "./R_mt";
 import HV from "./HV";
 import H from "./H";
+import H_mt from "./H_mt";
 import JT_mt from "./JT_mt";
 import U_mt from "./U_mt";
 import K_mt from "./K_mt";
@@ -47,7 +48,7 @@ export const haplogroups: Haplogroup[] = [
   A, BT, CT,
   DE, D, E, E1b1b,
   CF, C, C2,
-  F, G,
+  F, G, H,
   IJ, I, I1, I2,
   J, J1, J2,
   K,
@@ -57,7 +58,7 @@ export const haplogroups: Haplogroup[] = [
   R, R1, R1a, R1b,
   L_mt, L3, M_mt,
   N_mt, R_mt,
-  HV, H,
+  HV, H_mt,
   JT_mt, U_mt, K_mt,
 ];
 
