@@ -1,11 +1,11 @@
 import type { Haplogroup } from "@/types/haplogroup";
 
-const H: Haplogroup = {
-  id: "H",
+const H_mt: Haplogroup = {
+  id: "H_mt",
   name: "H (mtDNA)",
   type: "mtDNA",
   parent: "HV",
-  children: ["H1", "H2", "H3", "H4", "H5"],
+  children: [],
   formed: "~25,000 BCE",
   mrca: "~20,000 BCE",
   origin: {
@@ -43,4 +43,4 @@ const H: Haplogroup = {
   addedAt: "2026-04-09",
 };
 
-export default H;
+export default H_mt;
