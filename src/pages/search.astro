@@ -1,0 +1,306 @@
+---
+import Base from "@/layouts/Base.astro";
+import HaplogroupCard from "@/components/HaplogroupCard.astro";
+import { t } from "@/i18n";
+import { haplogroups, getAllRegions, getAllTags } from "@/data/haplogroups";
+
+const regions = getAllRegions();
+const tags = getAllTags();
+const types = ["Y-DNA", "mtDNA", "autosomal"] as const;
+
+const haplogroupsJson = JSON.stringify(haplogroups.map((h) => ({
+  id: h.id,
+  name: h.name,
+  type: h.type,
+  origin: h.origin,
+  description: h.description.slice(0, 200),
+  distribution: h.distribution,
+  tags: h.tags,
+  formed: h.formed,
+  statistics: h.statistics,
+  addedAt: h.addedAt,
+})));
+---
+
+<Base title={t("home.browse_all")} description={t("site.description")}>
+  <div class="container search-page">
+    <h1 class="search-page__title">{t("home.browse_all")}</h1>
+
+    <div class="search-page__layout">
+      <aside class="search-filters card">
+        <form id="search-form" class="search-filters__form">
+          <div class="search-filters__field">
+            <label for="q" class="sr-only">{t("search.placeholder")}</label>
+            <div class="search-input-wrap">
+              <svg class="search-input-icon" width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="10.5" y1="10.5" x2="14.5" y2="14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <input
+                type="search"
+                id="q"
+                name="q"
+                placeholder={t("search.placeholder")}
+                class="search-input"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="search-filters__group">
+            <p class="search-filters__label">{t("search.filter_type")}</p>
+            <label class="check-option">
+              <input type="radio" name="type" value="" checked /> {t("search.all_types")}
+            </label>
+            {types.map((type) => (
+              <label class="check-option">
+                <input type="radio" name="type" value={type} />
+                {type === "Y-DNA" ? t("haplogroup.type_y") : type === "mtDNA" ? t("haplogroup.type_mt") : t("haplogroup.type_auto")}
+              </label>
+            ))}
+          </div>
+
+          <div class="search-filters__group">
+            <p class="search-filters__label">{t("search.filter_region")}</p>
+            <select name="region" class="select-input">
+              <option value="">{t("search.all_regions")}</option>
+              {regions.map((r) => <option value={r}>{r}</option>)}
+            </select>
+          </div>
+
+          <div class="search-filters__group">
+            <p class="search-filters__label">{t("search.sort_by")}</p>
+            <select name="sort" class="select-input">
+              <option value="name">{t("search.sort_name")}</option>
+              <option value="frequency">{t("search.sort_frequency")}</option>
+            </select>
+          </div>
+        </form>
+      </aside>
+
+      <div class="search-results">
+        <div id="results-count" class="search-results__count"></div>
+        <div id="results-grid" class="cards-grid">
+          {haplogroups.map((h) => (
+            <div class="result-item" data-id={h.id}>
+              <HaplogroupCard haplogroup={h} />
+            </div>
+          ))}
+        </div>
+        <p id="no-results" class="search-results__empty" hidden>
+          {t("search.no_results", { query: "" })}
+        </p>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<script define:vars={{ haplogroupsJson }}>
+  const data = JSON.parse(haplogroupsJson);
+  const form = document.getElementById("search-form");
+  const grid = document.getElementById("results-grid");
+  const noResults = document.getElementById("no-results");
+  const countEl = document.getElementById("results-count");
+
+  function normalize(s) {
+    return s.toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function score(h, query) {
+    if (!query) return 1;
+    const q = normalize(query);
+    const fields = [
+      h.name,
+      h.origin.region,
+      h.origin.period,
+      h.description,
+      h.tags.join(" "),
+      h.distribution.map((d) => d.ethnicity + " " + d.region).join(" "),
+    ];
+    const text = normalize(fields.join(" "));
+    if (normalize(h.name).startsWith(q)) return 100;
+    if (normalize(h.name).includes(q)) return 80;
+    if (text.includes(q)) return 50;
+    const words = q.split(" ");
+    const matches = words.filter((w) => text.includes(w)).length;
+    return (matches / words.length) * 30;
+  }
+
+  function filter() {
+    const fd = new FormData(form);
+    const query = fd.get("q")?.toString().trim() ?? "";
+    const type = fd.get("type")?.toString() ?? "";
+    const region = fd.get("region")?.toString() ?? "";
+    const sort = fd.get("sort")?.toString() ?? "name";
+
+    let items = data
+      .map((h) => ({ h, s: score(h, query) }))
+      .filter(({ h, s }) => {
+        if (query && s === 0) return false;
+        if (type && h.type !== type) return false;
+        if (region && !h.distribution.some((d) => d.region === region)) return false;
+        return true;
+      });
+
+    if (sort === "frequency") {
+      items.sort((a, b) => {
+        const aMax = Math.max(...a.h.distribution.map((d) => d.percentage));
+        const bMax = Math.max(...b.h.distribution.map((d) => d.percentage));
+        return bMax - aMax;
+      });
+    } else if (query) {
+      items.sort((a, b) => b.s - a.s);
+    } else {
+      items.sort((a, b) => a.h.name.localeCompare(b.h.name));
+    }
+
+    const visibleIds = new Set(items.map(({ h }) => h.id));
+    let count = 0;
+
+    grid?.querySelectorAll(".result-item").forEach((el) => {
+      const id = el.getAttribute("data-id");
+      const show = visibleIds.has(id);
+      el.hidden = !show;
+      if (show) count++;
+    });
+
+    if (countEl) countEl.textContent = `${count} result${count !== 1 ? "s" : ""}`;
+    if (noResults) noResults.hidden = count > 0;
+  }
+
+  form?.addEventListener("input", filter);
+  form?.addEventListener("change", filter);
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const tagParam = urlParams.get("tag");
+  if (tagParam) {
+    const qInput = document.getElementById("q");
+    if (qInput) {
+      qInput.value = tagParam;
+      filter();
+    }
+  } else {
+    filter();
+  }
+</script>
+
+<style>
+  .search-page {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .search-page__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .search-page__layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .search-filters {
+    padding: 1.25rem;
+    position: sticky;
+    top: 72px;
+  }
+
+  .search-filters__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .search-filters__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .search-input-wrap {
+    position: relative;
+  }
+
+  .search-input-icon {
+    position: absolute;
+    left: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.45rem 0.75rem 0.45rem 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    font-size: 0.875rem;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+
+  .search-filters__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .search-filters__label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-faint);
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+
+  .check-option {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.875rem;
+    color: var(--color-text);
+    cursor: pointer;
+  }
+
+  .cs-wrap {
+    width: 100%;
+  }
+
+  .search-results__count {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .search-results__empty {
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 3rem 0;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .search-page__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .search-filters {
+      position: static;
+    }
+  }
+</style>

@@ -1,0 +1,232 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t } from "@/i18n";
+import { haplogroups } from "@/data/haplogroups";
+
+const haplogroupsJson = JSON.stringify(haplogroups.map((h) => ({
+  id: h.id,
+  name: h.name,
+  type: h.type,
+  formed: h.formed,
+  origin: h.origin,
+  distribution: h.distribution,
+  statistics: h.statistics,
+  tags: h.tags,
+  description: h.description.slice(0, 200),
+})));
+---
+
+<Base title={t("compare.title")} description={t("compare.subtitle")}>
+  <div class="container compare-page">
+    <h1>{t("compare.title")}</h1>
+    <p class="page-subtitle">{t("compare.subtitle")}</p>
+
+    <div class="compare-controls card">
+      <div class="compare-controls__selects" id="compare-selects">
+        <div class="compare-select-group">
+          <label class="compare-select-label">Haplogroup A</label>
+          <select class="select-input compare-select" id="select-a">
+            <option value="">{t("compare.add")}</option>
+            {haplogroups.map((h) => <option value={h.id}>{h.name} ({h.type})</option>)}
+          </select>
+        </div>
+        <div class="compare-select-group">
+          <label class="compare-select-label">Haplogroup B</label>
+          <select class="select-input compare-select" id="select-b">
+            <option value="">{t("compare.add")}</option>
+            {haplogroups.map((h) => <option value={h.id}>{h.name} ({h.type})</option>)}
+          </select>
+        </div>
+      </div>
+      <button class="btn btn--ghost" id="clear-btn">{t("compare.clear")}</button>
+    </div>
+
+    <div id="compare-empty" class="compare-empty">
+      <p>{t("compare.no_selection")}</p>
+    </div>
+
+    <div id="compare-table-wrap" class="compare-table-wrap" hidden>
+      <table class="compare-table" id="compare-table">
+        <thead>
+          <tr>
+            <th class="compare-table__prop">Property</th>
+            <th id="col-a" class="compare-table__col">—</th>
+            <th id="col-b" class="compare-table__col">—</th>
+          </tr>
+        </thead>
+        <tbody id="compare-tbody">
+        </tbody>
+      </table>
+
+      <section id="dist-section" class="dist-compare">
+        <h2 class="section-title" style="margin-top:2rem">{t("compare.column_ethnicity")}</h2>
+        <div id="dist-table-wrap"></div>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<script define:vars={{ haplogroupsJson }}>
+  const data = JSON.parse(haplogroupsJson);
+  const byId = Object.fromEntries(data.map((h) => [h.id, h]));
+
+  const selA = document.getElementById("select-a");
+  const selB = document.getElementById("select-b");
+  const clearBtn = document.getElementById("clear-btn");
+  const emptyEl = document.getElementById("compare-empty");
+  const tableWrap = document.getElementById("compare-table-wrap");
+  const colA = document.getElementById("col-a");
+  const colB = document.getElementById("col-b");
+  const tbody = document.getElementById("compare-tbody");
+  const distWrap = document.getElementById("dist-table-wrap");
+
+  function row(label, valA, valB) {
+    return `<tr>
+      <td class="compare-table__prop-cell">${label}</td>
+      <td>${valA ?? "—"}</td>
+      <td>${valB ?? "—"}</td>
+    </tr>`;
+  }
+
+  function render() {
+    const idA = selA?.value;
+    const idB = selB?.value;
+    const hA = idA ? byId[idA] : null;
+    const hB = idB ? byId[idB] : null;
+
+    if (!hA && !hB) {
+      emptyEl.hidden = false;
+      tableWrap.hidden = true;
+      return;
+    }
+
+    emptyEl.hidden = true;
+    tableWrap.hidden = false;
+
+    colA.textContent = hA?.name ?? "—";
+    colB.textContent = hB?.name ?? "—";
+
+    const rows = [
+      row("Type", hA?.type, hB?.type),
+      row("Formed", hA?.formed, hB?.formed),
+      row("Origin region", hA?.origin.region, hB?.origin.region),
+      row("Origin period", hA?.origin.period, hB?.origin.period),
+      row("Peak region", hA?.statistics.peakRegion, hB?.statistics.peakRegion),
+      row("Global frequency", hA?.statistics.modernFrequency, hB?.statistics.modernFrequency),
+      row("Est. carriers", hA ? Number(hA.statistics.estimatedCarriers).toLocaleString() : null, hB ? Number(hB.statistics.estimatedCarriers).toLocaleString() : null),
+      row("Tags", hA?.tags.join(", "), hB?.tags.join(", ")),
+    ];
+
+    tbody.innerHTML = rows.join("");
+
+    const allEthnicities = new Set([
+      ...(hA?.distribution.map((d) => d.ethnicity) ?? []),
+      ...(hB?.distribution.map((d) => d.ethnicity) ?? []),
+    ]);
+
+    const distA = Object.fromEntries((hA?.distribution ?? []).map((d) => [d.ethnicity, d.percentage]));
+    const distB = Object.fromEntries((hB?.distribution ?? []).map((d) => [d.ethnicity, d.percentage]));
+
+    const distRows = Array.from(allEthnicities)
+      .sort((a, b) => (distA[b] ?? 0) - (distA[a] ?? 0))
+      .map((eth) => {
+        const pA = distA[eth];
+        const pB = distB[eth];
+        return `<tr>
+          <td>${eth}</td>
+          <td>${pA != null ? `<div class="percentage-bar"><div class="percentage-bar__track"><div class="percentage-bar__fill" style="width:${pA}%"></div></div><span class="percentage-bar__value">${pA}%</span></div>` : "—"}</td>
+          <td>${pB != null ? `<div class="percentage-bar"><div class="percentage-bar__track"><div class="percentage-bar__fill" style="width:${pB}%;background:var(--color-mtdna)"></div></div><span class="percentage-bar__value">${pB}%</span></div>` : "—"}</td>
+        </tr>`;
+      });
+
+    distWrap.innerHTML = `<table><thead><tr><th>Ethnicity</th><th>${hA?.name ?? "A"}</th><th>${hB?.name ?? "B"}</th></tr></thead><tbody>${distRows.join("")}</tbody></table>`;
+  }
+
+  selA?.addEventListener("change", render);
+  selB?.addEventListener("change", render);
+
+  clearBtn?.addEventListener("click", () => {
+    if (selA) selA.value = "";
+    if (selB) selB.value = "";
+    render();
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const paramA = params.get("a");
+  if (paramA && selA) selA.value = paramA;
+
+  render();
+</script>
+
+<style>
+  .compare-page {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .page-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .compare-controls {
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .compare-controls__selects {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+
+  .compare-select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .compare-select-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-faint);
+    font-weight: 600;
+  }
+
+  .compare-empty {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--color-text-muted);
+  }
+
+  .compare-table-wrap {
+    overflow-x: auto;
+  }
+
+  .compare-table {
+    margin-bottom: 0;
+  }
+
+  .compare-table__prop-cell {
+    font-weight: 500;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+
+  .compare-table__col {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+  }
+
+  .dist-compare {
+    margin-top: 2rem;
+  }
+</style>

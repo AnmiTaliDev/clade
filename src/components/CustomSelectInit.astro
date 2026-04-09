@@ -1,0 +1,126 @@
+<script>
+  function initCustomSelect(selectEl) {
+    if (selectEl._csInit) return;
+    selectEl._csInit = true;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "cs-wrap";
+    selectEl.parentNode.insertBefore(wrapper, selectEl);
+
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "cs-trigger";
+    trigger.setAttribute("aria-haspopup", "listbox");
+    trigger.setAttribute("aria-expanded", "false");
+
+    const valueEl = document.createElement("span");
+    valueEl.className = "cs-value";
+
+    const arrowSvg = `<svg class="cs-arrow" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true">
+      <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>`;
+    trigger.appendChild(valueEl);
+    trigger.insertAdjacentHTML("beforeend", arrowSvg);
+
+    const dropdown = document.createElement("ul");
+    dropdown.className = "cs-dropdown";
+    dropdown.setAttribute("role", "listbox");
+    dropdown.hidden = true;
+
+    wrapper.appendChild(trigger);
+    wrapper.appendChild(selectEl);
+    wrapper.appendChild(dropdown);
+
+    function buildOptions() {
+      dropdown.innerHTML = "";
+      Array.from(selectEl.options).forEach((opt) => {
+        const li = document.createElement("li");
+        li.className = "cs-option" + (opt.selected ? " cs-option--selected" : "");
+        li.setAttribute("role", "option");
+        li.setAttribute("aria-selected", String(opt.selected));
+        li.setAttribute("tabindex", "-1");
+        li.dataset.value = opt.value;
+        li.textContent = opt.text;
+        if (opt.selected) valueEl.textContent = opt.text;
+        li.addEventListener("click", () => pick(opt.value, opt.text));
+        dropdown.appendChild(li);
+      });
+      if (!valueEl.textContent && selectEl.options[0]) {
+        valueEl.textContent = selectEl.options[0].text;
+      }
+    }
+
+    function pick(value, label) {
+      selectEl.value = value;
+      valueEl.textContent = label;
+      dropdown.querySelectorAll(".cs-option").forEach((li) => {
+        const sel = li.dataset.value === value;
+        li.classList.toggle("cs-option--selected", sel);
+        li.setAttribute("aria-selected", String(sel));
+      });
+      selectEl.dispatchEvent(new Event("change", { bubbles: true }));
+      close();
+    }
+
+    function open() {
+      document.querySelectorAll(".cs-wrap--open").forEach((w) => {
+        if (w !== wrapper) closeEl(w);
+      });
+      dropdown.hidden = false;
+      trigger.setAttribute("aria-expanded", "true");
+      wrapper.classList.add("cs-wrap--open");
+      const selected = dropdown.querySelector(".cs-option--selected") || dropdown.querySelector(".cs-option");
+      selected?.scrollIntoView({ block: "nearest" });
+    }
+
+    function close() {
+      dropdown.hidden = true;
+      trigger.setAttribute("aria-expanded", "false");
+      wrapper.classList.remove("cs-wrap--open");
+    }
+
+    function closeEl(w) {
+      w.querySelector(".cs-dropdown").hidden = true;
+      w.querySelector(".cs-trigger").setAttribute("aria-expanded", "false");
+      w.classList.remove("cs-wrap--open");
+    }
+
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdown.hidden ? open() : close();
+    });
+
+    wrapper.addEventListener("click", (e) => e.stopPropagation());
+    document.addEventListener("click", close);
+
+    trigger.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); dropdown.hidden ? open() : close(); }
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowDown") { e.preventDefault(); open(); dropdown.querySelector(".cs-option--selected, .cs-option")?.focus(); }
+    });
+
+    dropdown.addEventListener("keydown", (e) => {
+      const opts = [...dropdown.querySelectorAll(".cs-option")];
+      const idx = opts.indexOf(document.activeElement);
+      if (e.key === "ArrowDown") { e.preventDefault(); opts[idx + 1]?.focus(); }
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (idx <= 0) { close(); trigger.focus(); } else opts[idx - 1]?.focus();
+      }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); (document.activeElement).click(); }
+      if (e.key === "Escape") { close(); trigger.focus(); }
+    });
+
+    buildOptions();
+
+    const observer = new MutationObserver(buildOptions);
+    observer.observe(selectEl, { childList: true });
+  }
+
+  function initAll() {
+    document.querySelectorAll("select.select-input:not([data-cs-skip])").forEach(initCustomSelect);
+  }
+
+  initAll();
+  window.initCustomSelect = initCustomSelect;
+</script>

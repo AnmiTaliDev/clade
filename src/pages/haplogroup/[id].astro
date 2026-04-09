@@ -1,0 +1,401 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t } from "@/i18n";
+import { haplogroups, getHaplogroup } from "@/data/haplogroups";
+import type { Haplogroup } from "@/types/haplogroup";
+
+export async function getStaticPaths() {
+  return haplogroups.map((h) => ({
+    params: { id: h.id },
+    props: { haplogroup: h },
+  }));
+}
+
+interface Props {
+  haplogroup: Haplogroup;
+}
+
+const { haplogroup: h } = Astro.props;
+const parent = h.parent ? getHaplogroup(h.parent) : null;
+const children = h.children.map((id) => getHaplogroup(id)).filter(Boolean) as Haplogroup[];
+
+const typeLabel = h.type === "Y-DNA"
+  ? t("haplogroup.type_y")
+  : h.type === "mtDNA"
+  ? t("haplogroup.type_mt")
+  : t("haplogroup.type_auto");
+
+const badgeClass = h.type === "Y-DNA" ? "badge--ydna" : h.type === "mtDNA" ? "badge--mtdna" : "badge--auto";
+
+const sortedDist = [...h.distribution].sort((a, b) => b.percentage - a.percentage);
+
+const clanTypeLabel = (type: string) => {
+  const map: Record<string, string> = {
+    tribe: t("haplogroup.clan_type_tribe"),
+    clan: t("haplogroup.clan_type_clan"),
+    surname: t("haplogroup.clan_type_surname"),
+    ru: t("haplogroup.clan_type_ru"),
+    family: t("haplogroup.clan_type_family"),
+    dynasty: t("haplogroup.clan_type_dynasty"),
+  };
+  return map[type] ?? type;
+};
+---
+
+<Base
+  title={h.name}
+  description={h.description.slice(0, 160)}
+  ogImage={`/og/${h.id}.png`}
+  ogType="article"
+>
+  <div class="container haplogroup-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">{t("nav.home")}</a>
+      <span aria-hidden="true">›</span>
+      <a href="/search">{t("home.browse_all")}</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">{h.name}</span>
+    </nav>
+
+    <div class="haplogroup-page__layout">
+      <aside class="haplogroup-sidebar">
+        <div class="card haplogroup-sidebar__info">
+          <div class="haplogroup-sidebar__header">
+            <h1 class="haplogroup-sidebar__name">{h.name}</h1>
+            <span class={`badge ${badgeClass}`}>{typeLabel}</span>
+          </div>
+
+          <dl class="info-list">
+            <div class="info-list__item">
+              <dt>{t("haplogroup.formed")}</dt>
+              <dd>{h.formed}</dd>
+            </div>
+            {h.mrca && (
+              <div class="info-list__item">
+                <dt>{t("haplogroup.mrca")}</dt>
+                <dd>{h.mrca}</dd>
+              </div>
+            )}
+            <div class="info-list__item">
+              <dt>{t("haplogroup.origin_region")}</dt>
+              <dd>{h.origin.region}</dd>
+            </div>
+            <div class="info-list__item">
+              <dt>{t("haplogroup.parent")}</dt>
+              <dd>
+                {parent
+                  ? <a href={`/haplogroup/${parent.id}`}>{parent.name}</a>
+                  : <span class="text-muted">{t("haplogroup.no_parent")}</span>
+                }
+              </dd>
+            </div>
+            {children.length > 0 && (
+              <div class="info-list__item">
+                <dt>{t("haplogroup.children")}</dt>
+                <dd class="info-list__children">
+                  {children.map((c) => (
+                    <a href={`/haplogroup/${c.id}`} class="tag">{c.name}</a>
+                  ))}
+                </dd>
+              </div>
+            )}
+          </dl>
+        </div>
+
+        <div class="card haplogroup-sidebar__stats">
+          <h2 class="section-title" style="font-size:0.95rem">{t("haplogroup.statistics")}</h2>
+          <dl class="info-list">
+            <div class="info-list__item">
+              <dt>{t("haplogroup.modern_frequency")}</dt>
+              <dd>{h.statistics.modernFrequency}</dd>
+            </div>
+            <div class="info-list__item">
+              <dt>{t("haplogroup.peak_region")}</dt>
+              <dd>{h.statistics.peakRegion}</dd>
+            </div>
+            <div class="info-list__item">
+              <dt>{t("haplogroup.estimated_carriers")}</dt>
+              <dd>{h.statistics.estimatedCarriers.toLocaleString("en-US")}</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="haplogroup-sidebar__actions">
+          <a href={`/compare?a=${h.id}`} class="btn btn--outline btn--sm">Compare</a>
+          <a href={`/calculator?haplogroup=${h.id}`} class="btn btn--ghost btn--sm">Calculator</a>
+        </div>
+      </aside>
+
+      <main class="haplogroup-content">
+        <section class="content-section">
+          <h2 class="section-title">{t("haplogroup.description")}</h2>
+          <p>{h.description}</p>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">{t("haplogroup.interesting_fact")}</h2>
+          <div class="fact-box">{h.interestingFact}</div>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">{t("haplogroup.distribution")}</h2>
+          <table class="dist-table">
+            <thead>
+              <tr>
+                <th>{t("compare.column_ethnicity")}</th>
+                <th>Region</th>
+                <th>Frequency</th>
+                <th>Sample</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedDist.map((d) => (
+                <tr>
+                  <td>{d.ethnicity}</td>
+                  <td class="text-muted">{d.region}</td>
+                  <td>
+                    <div class="percentage-bar">
+                      <div class="percentage-bar__track">
+                        <div class="percentage-bar__fill" style={`width:${d.percentage}%`}></div>
+                      </div>
+                      <span class="percentage-bar__value">{d.percentage}%</span>
+                    </div>
+                  </td>
+                  <td class="text-muted">{d.sampleSize ? `n=${d.sampleSize}` : "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        {h.clans && h.clans.length > 0 && (
+          <section class="content-section">
+            <h2 class="section-title">{t("haplogroup.clans_tribes")}</h2>
+            <div class="clans-grid">
+              {h.clans.map((clan) => (
+                <div class="clan-card card">
+                  <div class="clan-card__type">{clanTypeLabel(clan.type)}</div>
+                  <div class="clan-card__name">{clan.name}</div>
+                  {clan.region && <div class="clan-card__region">{clan.region}</div>}
+                  {clan.note && <div class="clan-card__note">{clan.note}</div>}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section class="content-section">
+          <h2 class="section-title">{t("haplogroup.tags")}</h2>
+          <div class="tags-list">
+            {h.tags.map((tag) => (
+              <a href={`/search?tag=${encodeURIComponent(tag)}`} class="tag">{tag}</a>
+            ))}
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">{t("haplogroup.references")}</h2>
+          <ol class="references-list">
+            {h.references.map((ref) => (
+              <li class="references-list__item">{ref}</li>
+            ))}
+          </ol>
+        </section>
+      </main>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .haplogroup-page {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb a {
+    color: var(--color-accent);
+  }
+
+  .haplogroup-page__layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .haplogroup-sidebar {
+    position: sticky;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .haplogroup-sidebar__info,
+  .haplogroup-sidebar__stats {
+    padding: 1rem 1.25rem;
+  }
+
+  .haplogroup-sidebar__header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .haplogroup-sidebar__name {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  .info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .info-list__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .info-list__item dt {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-faint);
+    font-weight: 600;
+  }
+
+  .info-list__item dd {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  .info-list__children {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .haplogroup-sidebar__actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .btn--sm {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .haplogroup-content {
+    min-width: 0;
+  }
+
+  .content-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .dist-table {
+    margin-top: 0;
+  }
+
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+
+  .clans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .clan-card {
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .clan-card__type {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-faint);
+    font-weight: 600;
+  }
+
+  .clan-card__name {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .clan-card__region {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .clan-card__note {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-top: 0.25rem;
+    line-height: 1.45;
+  }
+
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tags-list .tag {
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .tags-list .tag:hover {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .references-list {
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .references-list__item {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 900px) {
+    .haplogroup-page__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .haplogroup-sidebar {
+      position: static;
+    }
+  }
+</style>

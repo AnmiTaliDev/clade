@@ -1,0 +1,130 @@
+{
+  "site": {
+    "name": "Clade",
+    "tagline": "The Haplogroup Encyclopedia",
+    "description": "An open encyclopedia of human haplogroups — Y-DNA, mtDNA, and autosomal lineages."
+  },
+  "nav": {
+    "home": "Home",
+    "tree": "Phylogenetic Tree",
+    "compare": "Compare",
+    "calculator": "Calculator",
+    "legend": "Legend",
+    "search": "Search haplogroups…"
+  },
+  "home": {
+    "hero_title": "The Haplogroup Encyclopedia",
+    "hero_subtitle": "Explore human genetic lineages — Y-DNA, mtDNA haplogroups, their origins, distributions, and connections to ethnicities, clans, and tribes.",
+    "browse_all": "Browse All Haplogroups",
+    "explore_tree": "Explore Phylogenetic Tree",
+    "stats_haplogroups": "Haplogroups",
+    "stats_ethnicities": "Ethnicities covered",
+    "stats_references": "References",
+    "featured_title": "Featured Haplogroups",
+    "recent_title": "Recently Added"
+  },
+  "haplogroup": {
+    "type_y": "Y-DNA",
+    "type_mt": "mtDNA",
+    "type_auto": "Autosomal",
+    "formed": "Formed",
+    "mrca": "Most Recent Common Ancestor",
+    "parent": "Parent Haplogroup",
+    "children": "Descendant Haplogroups",
+    "origin_region": "Origin Region",
+    "description": "Description",
+    "distribution": "Distribution by Ethnicity",
+    "interesting_fact": "Interesting Fact",
+    "statistics": "Statistics",
+    "clans_tribes": "Associated Clans & Tribes",
+    "modern_frequency": "Modern Frequency",
+    "peak_region": "Peak Region",
+    "estimated_carriers": "Estimated Carriers Worldwide",
+    "references": "References",
+    "no_parent": "Root haplogroup",
+    "clan_type_tribe": "Tribe",
+    "clan_type_clan": "Clan",
+    "clan_type_surname": "Surname",
+    "clan_type_ru": "Ru / Lineage",
+    "clan_type_family": "Family",
+    "clan_type_dynasty": "Dynasty",
+    "tags": "Tags",
+    "related": "Related Haplogroups"
+  },
+  "search": {
+    "placeholder": "Search haplogroups, ethnicities, regions…",
+    "results": "Results",
+    "no_results": "No haplogroups found for \"{query}\".",
+    "filter_type": "Filter by type",
+    "filter_region": "Filter by region",
+    "all_types": "All types",
+    "all_regions": "All regions",
+    "sort_by": "Sort by",
+    "sort_name": "Name",
+    "sort_frequency": "Frequency"
+  },
+  "compare": {
+    "title": "Compare Haplogroups",
+    "subtitle": "Select two or more haplogroups to compare their distributions, statistics, and associations.",
+    "add": "Add haplogroup",
+    "clear": "Clear",
+    "no_selection": "Select at least two haplogroups to compare.",
+    "column_ethnicity": "Ethnic distribution",
+    "column_origin": "Origin",
+    "column_formed": "Formed",
+    "column_frequency": "Global frequency"
+  },
+  "calculator": {
+    "title": "Haplogroup Probability Calculator",
+    "subtitle": "Estimate the probability of belonging to a haplogroup based on ancestry.",
+    "your_ancestry": "Your ancestry",
+    "add_ancestry": "Add ancestry",
+    "ethnicity": "Ethnicity / region",
+    "proportion": "Proportion (%)",
+    "calculate": "Calculate",
+    "results_title": "Probability estimates",
+    "disclaimer": "These are statistical estimates based on population averages and do not constitute genetic testing.",
+    "top_results": "Top haplogroup matches"
+  },
+  "tree": {
+    "title": "Phylogenetic Tree",
+    "subtitle": "Interactive tree of human haplogroup lineages.",
+    "zoom_in": "Zoom in",
+    "zoom_out": "Zoom out",
+    "reset": "Reset view",
+    "click_node": "Click a node to view haplogroup details.",
+    "filter_type": "Show",
+    "toggle_labels": "Labels"
+  },
+  "legend": {
+    "title": "Legend & Glossary",
+    "subtitle": "Definitions of genetic genealogy terms used throughout this encyclopedia.",
+    "wiki_link": "Wikipedia",
+    "categories": {
+      "genetics": "Genetics",
+      "genealogy": "Genealogy",
+      "anthropology": "Anthropology",
+      "statistics": "Statistics"
+    }
+  },
+  "footer": {
+    "content_license": "Content licensed under",
+    "code_license": "Source code licensed under",
+    "contribute": "Contribute on GitHub",
+    "built_with": "Built with Astro"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong.",
+    "back": "Back",
+    "view_all": "View all",
+    "percentage": "{value}%",
+    "years_ago": "~{value} years ago",
+    "bce": "BCE",
+    "ce": "CE",
+    "copy_link": "Copy link",
+    "copied": "Copied!",
+    "share": "Share",
+    "edit_on_github": "Edit on GitHub"
+  }
+}

@@ -1,0 +1,296 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t } from "@/i18n";
+import { haplogroups } from "@/data/haplogroups";
+
+const haplogroupsJson = JSON.stringify(haplogroups.map((h) => ({
+  id: h.id,
+  name: h.name,
+  type: h.type,
+  distribution: h.distribution,
+})));
+
+const allEthnicities = Array.from(
+  new Set(haplogroups.flatMap((h) => h.distribution.map((d) => d.ethnicity)))
+).sort();
+---
+
+<Base title={t("calculator.title")} description={t("calculator.subtitle")}>
+  <div class="container calc-page">
+    <h1>{t("calculator.title")}</h1>
+    <p class="page-subtitle">{t("calculator.subtitle")}</p>
+
+    <div class="calc-layout">
+      <div class="card calc-form-card">
+        <h2 class="section-title">{t("calculator.your_ancestry")}</h2>
+        <div id="ancestry-list" class="ancestry-list"></div>
+        <button class="btn btn--outline" id="add-ancestry-btn">+ {t("calculator.add_ancestry")}</button>
+        <div class="calc-form-actions">
+          <button class="btn btn--primary" id="calculate-btn">{t("calculator.calculate")}</button>
+        </div>
+        <p class="calc-disclaimer">{t("calculator.disclaimer")}</p>
+      </div>
+
+      <div class="calc-results" id="calc-results" hidden>
+        <h2 class="section-title">{t("calculator.results_title")}</h2>
+        <p class="calc-results__subtitle">{t("calculator.top_results")}</p>
+        <div id="results-list" class="results-list"></div>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<script define:vars={{ haplogroupsJson, allEthnicities }}>
+  const data = JSON.parse(haplogroupsJson);
+  const list = document.getElementById("ancestry-list");
+  const addBtn = document.getElementById("add-ancestry-btn");
+  const calcBtn = document.getElementById("calculate-btn");
+  const resultsEl = document.getElementById("calc-results");
+  const resultsList = document.getElementById("results-list");
+
+  let rowCount = 0;
+
+  function addRow(ethnicity = "", proportion = 50) {
+    rowCount++;
+    const row = document.createElement("div");
+    row.className = "ancestry-row";
+    row.dataset.id = rowCount;
+    row.innerHTML = `
+      <select class="select-input ancestry-ethnicity" aria-label="${allEthnicities[0]}">
+        ${allEthnicities.map((e) => `<option value="${e}"${e === ethnicity ? " selected" : ""}>${e}</option>`).join("")}
+      </select>
+      <div class="ancestry-proportion">
+        <input type="number" class="number-input ancestry-pct" min="1" max="100" value="${proportion}" aria-label="Proportion" />
+        <span class="ancestry-pct-label">%</span>
+      </div>
+      <button class="btn btn--ghost ancestry-remove" title="Remove" aria-label="Remove">✕</button>
+    `;
+    row.querySelector(".ancestry-remove").addEventListener("click", () => {
+      row.remove();
+      normalizeProportion();
+    });
+    list.appendChild(row);
+    normalizeProportion();
+    const sel = row.querySelector(".ancestry-ethnicity");
+    if (sel && window.initCustomSelect) window.initCustomSelect(sel);
+  }
+
+  function normalizeProportion() {
+    const rows = list.querySelectorAll(".ancestry-row");
+    if (rows.length === 0) return;
+    const total = Array.from(rows).reduce((sum, r) => sum + Number(r.querySelector(".ancestry-pct").value), 0);
+    if (total !== 100 && rows.length === 1) {
+      rows[0].querySelector(".ancestry-pct").value = 100;
+    }
+  }
+
+  addBtn.addEventListener("click", () => addRow());
+
+  addRow("Irish", 50);
+  addRow("Russians", 50);
+
+  calcBtn.addEventListener("click", () => {
+    const rows = list.querySelectorAll(".ancestry-row");
+    const ancestry = Array.from(rows).map((r) => ({
+      ethnicity: r.querySelector(".ancestry-ethnicity").value,
+      proportion: Number(r.querySelector(".ancestry-pct").value),
+    }));
+
+    const total = ancestry.reduce((s, a) => s + a.proportion, 0);
+    if (total === 0) return;
+
+    const scores = {};
+    for (const h of data) {
+      let weightedPct = 0;
+      for (const a of ancestry) {
+        const match = h.distribution.find((d) => d.ethnicity === a.ethnicity);
+        if (match) {
+          weightedPct += (match.percentage * a.proportion) / total;
+        }
+      }
+      if (weightedPct > 0) scores[h.id] = { h, pct: weightedPct };
+    }
+
+    const sorted = Object.values(scores)
+      .sort((a, b) => b.pct - a.pct)
+      .slice(0, 10);
+
+    if (sorted.length === 0) {
+      resultsList.innerHTML = `<p class="text-muted">No matches found for the selected ancestries.</p>`;
+    } else {
+      resultsList.innerHTML = sorted.map(({ h, pct }, i) => `
+        <div class="result-row">
+          <span class="result-rank">${i + 1}</span>
+          <div class="result-info">
+            <a href="/haplogroup/${h.id}" class="result-name">${h.name}</a>
+            <span class="result-type result-type--${h.type === "Y-DNA" ? "ydna" : h.type === "mtDNA" ? "mtdna" : "auto"}">${h.type}</span>
+          </div>
+          <div class="result-bar">
+            <div class="percentage-bar">
+              <div class="percentage-bar__track">
+                <div class="percentage-bar__fill" style="width:${Math.min(pct, 100)}%"></div>
+              </div>
+              <span class="percentage-bar__value">${pct.toFixed(1)}%</span>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    resultsEl.hidden = false;
+    resultsEl.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+</script>
+
+<style>
+  .calc-page {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 900px;
+  }
+
+  .page-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .calc-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .calc-form-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ancestry-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 2rem;
+  }
+
+  .ancestry-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .ancestry-ethnicity {
+    flex: 1;
+  }
+
+  .ancestry-proportion {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .number-input {
+    width: 70px;
+    padding: 0.35rem 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+  }
+
+  .ancestry-pct-label {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  .ancestry-remove {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .calc-form-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .calc-disclaimer {
+    font-size: 0.78rem;
+    color: var(--color-text-faint);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .calc-results {
+    animation: fadeIn 0.25s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  .calc-results__subtitle {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .result-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.65rem 1rem;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .result-rank {
+    font-size: 0.8rem;
+    color: var(--color-text-faint);
+    font-weight: 700;
+    min-width: 1.2rem;
+    text-align: center;
+  }
+
+  .result-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+  }
+
+  .result-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+
+  .result-type {
+    font-size: 0.7rem;
+    padding: 0.1em 0.45em;
+    border-radius: 100px;
+    font-weight: 600;
+  }
+
+  .result-type--ydna { background: #e0ecf6; color: var(--color-ydna); }
+  .result-type--mtdna { background: #f0e0ef; color: var(--color-mtdna); }
+  .result-type--auto { background: #e0f0e0; color: var(--color-auto); }
+
+  .result-bar {
+    flex: 1;
+  }
+
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+</style>

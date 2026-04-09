@@ -1,0 +1,386 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t } from "@/i18n";
+import { haplogroups } from "@/data/haplogroups";
+
+const treeData = JSON.stringify(
+  haplogroups.map((h) => ({
+    id: h.id,
+    name: h.name,
+    type: h.type,
+    parent: h.parent,
+    formed: h.formed,
+    origin: h.origin.region,
+    distribution: h.distribution.slice(0, 3),
+    description: h.description.slice(0, 120),
+  }))
+);
+---
+
+<Base title={t("tree.title")} description={t("tree.subtitle")}>
+  <div class="container tree-page">
+    <div class="tree-page__header">
+      <div>
+        <h1>{t("tree.title")}</h1>
+        <p class="page-subtitle">{t("tree.subtitle")}</p>
+      </div>
+      <div class="tree-controls">
+        <label class="check-option">
+          <input type="checkbox" id="toggle-labels" checked />
+          {t("tree.toggle_labels")}
+        </label>
+        <div class="tree-type-filter">
+          <span class="filter-label">{t("tree.filter_type")}:</span>
+          <label class="check-option"><input type="radio" name="tree-type" value="all" checked /> All</label>
+          <label class="check-option"><input type="radio" name="tree-type" value="Y-DNA" /> Y-DNA</label>
+          <label class="check-option"><input type="radio" name="tree-type" value="mtDNA" /> mtDNA</label>
+        </div>
+        <div class="zoom-controls">
+          <button class="btn btn--ghost btn--sm" id="zoom-in">+</button>
+          <button class="btn btn--ghost btn--sm" id="zoom-out">−</button>
+          <button class="btn btn--ghost btn--sm" id="zoom-reset">{t("tree.reset")}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree-container card" id="tree-container">
+      <svg id="tree-svg" width="100%" height="600" aria-label={t("tree.title")}></svg>
+    </div>
+
+    <div class="tree-tooltip card" id="tree-tooltip" hidden>
+      <div class="tree-tooltip__header">
+        <strong id="tt-name"></strong>
+        <span id="tt-type" class="badge"></span>
+      </div>
+      <div id="tt-origin" class="tree-tooltip__meta"></div>
+      <div id="tt-formed" class="tree-tooltip__meta"></div>
+      <p id="tt-desc" class="tree-tooltip__desc"></p>
+      <div id="tt-dist" class="tree-tooltip__dist"></div>
+      <a id="tt-link" href="#" class="btn btn--primary btn--sm" style="margin-top:0.5rem">View details</a>
+    </div>
+
+    <p class="tree-hint">{t("tree.click_node")}</p>
+  </div>
+</Base>
+
+<script define:vars={{ treeData }}>
+  const haplogroups = JSON.parse(treeData);
+  const svg = document.getElementById("tree-svg");
+  const container = document.getElementById("tree-container");
+  const tooltip = document.getElementById("tree-tooltip");
+  const labelsToggle = document.getElementById("toggle-labels");
+  const zoomIn = document.getElementById("zoom-in");
+  const zoomOut = document.getElementById("zoom-out");
+  const zoomReset = document.getElementById("zoom-reset");
+
+  const NS = "http://www.w3.org/2000/svg";
+  const typeColor = { "Y-DNA": "#1a4a6e", "mtDNA": "#5a1f4a", "autosomal": "#2a5a2a" };
+  const typeClass = { "Y-DNA": "badge--ydna", "mtDNA": "badge--mtdna", "autosomal": "badge--auto" };
+
+  let scale = 1;
+  let translateX = 0;
+  let translateY = 20;
+  let isDragging = false;
+  let dragStart = { x: 0, y: 0 };
+  let filterType = "all";
+
+  function buildTree(haplos) {
+    const byId = Object.fromEntries(haplos.map((h) => [h.id, { ...h, children: [] }]));
+    const roots = [];
+    for (const h of haplos) {
+      const node = byId[h.id];
+      if (h.parent && byId[h.parent]) {
+        byId[h.parent].children.push(node);
+      } else {
+        roots.push(node);
+      }
+    }
+    return roots.length === 1 ? roots[0] : { id: "__root__", name: "", children: roots, type: null };
+  }
+
+  function countLeaves(node) {
+    if (node.children.length === 0) {
+      node._leaves = 1;
+      return 1;
+    }
+    let total = 0;
+    for (const child of node.children) total += countLeaves(child);
+    node._leaves = total;
+    return total;
+  }
+
+  function assignPositions(node, left, right, depth, levelHeight) {
+    node._x = (left + right) / 2;
+    node._y = 40 + depth * levelHeight;
+    const total = node._leaves || 1;
+    let cursor = left;
+    for (const child of node.children) {
+      const share = ((child._leaves || 1) / total) * (right - left);
+      assignPositions(child, cursor, cursor + share, depth + 1, levelHeight);
+      cursor += share;
+    }
+  }
+
+  function collectNodes(node, acc = []) {
+    acc.push(node);
+    for (const child of node.children) collectNodes(child, acc);
+    return acc;
+  }
+
+  function render() {
+    svg.innerHTML = "";
+    const filtered = filterType === "all"
+      ? haplogroups
+      : haplogroups.filter((h) => h.type === filterType);
+
+    if (filtered.length === 0) return;
+
+    const w = container.clientWidth || 900;
+    const padding = 60;
+    const levelHeight = 100;
+    const tree = buildTree(filtered);
+    countLeaves(tree);
+    assignPositions(tree, padding, w - padding, 0, levelHeight);
+    const nodes = collectNodes(tree);
+
+    const g = document.createElementNS(NS, "g");
+    g.setAttribute("transform", `translate(${translateX},${translateY}) scale(${scale})`);
+    g.id = "tree-g";
+
+    const nodesById = Object.fromEntries(nodes.map((n) => [n.id, n]));
+
+    for (const node of nodes) {
+      if (node.id === "__root__") continue;
+      const parentId = node.parent && nodesById[node.parent] ? node.parent : "__root__";
+      const parentNode = nodesById[parentId];
+      if (!parentNode || parentNode.id === "__root__") continue;
+      const line = document.createElementNS(NS, "path");
+      line.setAttribute("d", `M${node._x},${node._y} C${node._x},${(node._y + parentNode._y) / 2} ${parentNode._x},${(node._y + parentNode._y) / 2} ${parentNode._x},${parentNode._y}`);
+      const isDarkLine = document.documentElement.getAttribute("data-theme") === "dark";
+      line.setAttribute("fill", "none");
+      line.setAttribute("stroke", isDarkLine ? "#3d3830" : "#c8c3b8");
+      line.setAttribute("stroke-width", "1.5");
+      g.appendChild(line);
+    }
+
+    for (const node of nodes) {
+      if (node.id === "__root__") continue;
+      const color = typeColor[node.type] ?? "#888";
+      const circle = document.createElementNS(NS, "circle");
+      circle.setAttribute("cx", node._x);
+      circle.setAttribute("cy", node._y);
+      circle.setAttribute("r", 8);
+      circle.setAttribute("fill", color);
+      const isDarkCircle = document.documentElement.getAttribute("data-theme") === "dark";
+      circle.setAttribute("stroke", isDarkCircle ? "#211f1b" : "white");
+      circle.setAttribute("stroke-width", "2");
+      circle.setAttribute("cursor", "pointer");
+      circle.setAttribute("tabindex", "0");
+      circle.setAttribute("role", "button");
+      circle.setAttribute("aria-label", node.name);
+      circle.dataset.id = node.id;
+
+      if (labelsToggle.checked) {
+        const text = document.createElementNS(NS, "text");
+        text.setAttribute("x", node._x);
+        text.setAttribute("y", node._y + 20);
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("font-size", "11");
+        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        text.setAttribute("fill", isDark ? "#b0a898" : "#3a3530");
+        text.setAttribute("font-family", "Georgia, serif");
+        text.setAttribute("pointer-events", "none");
+        text.textContent = node.name;
+        g.appendChild(text);
+      }
+
+      circle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showTooltip(node);
+      });
+      circle.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") showTooltip(node);
+      });
+      g.appendChild(circle);
+    }
+
+    svg.appendChild(g);
+
+    const allY = nodes.map((n) => n._y).filter(Boolean);
+    const maxY = Math.max(...allY) + 60;
+    svg.setAttribute("height", Math.max(maxY, 400));
+  }
+
+  function showTooltip(node) {
+    const h = haplogroups.find((x) => x.id === node.id);
+    if (!h) return;
+
+    document.getElementById("tt-name").textContent = h.name;
+    const ttType = document.getElementById("tt-type");
+    ttType.textContent = h.type;
+    ttType.className = `badge ${typeClass[h.type] ?? ""}`;
+    document.getElementById("tt-origin").textContent = `Origin: ${h.origin}`;
+    document.getElementById("tt-formed").textContent = `Formed: ${h.formed}`;
+    document.getElementById("tt-desc").textContent = h.description + "…";
+    const distHtml = h.distribution.map((d) => `<span class="tt-dist-item"><b>${d.percentage}%</b> ${d.ethnicity}</span>`).join("");
+    document.getElementById("tt-dist").innerHTML = distHtml;
+    document.getElementById("tt-link").href = `/haplogroup/${h.id}`;
+
+    tooltip.hidden = false;
+  }
+
+  svg.addEventListener("click", () => {
+    tooltip.hidden = true;
+  });
+
+  labelsToggle.addEventListener("change", render);
+
+  document.querySelectorAll("[name=tree-type]").forEach((radio) => {
+    radio.addEventListener("change", (e) => {
+      filterType = e.target.value;
+      render();
+    });
+  });
+
+  zoomIn.addEventListener("click", () => { scale = Math.min(scale * 1.25, 3); render(); });
+  zoomOut.addEventListener("click", () => { scale = Math.max(scale / 1.25, 0.3); render(); });
+  zoomReset.addEventListener("click", () => { scale = 1; translateX = 0; translateY = 20; render(); });
+
+  container.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    dragStart = { x: e.clientX - translateX, y: e.clientY - translateY };
+    container.style.cursor = "grabbing";
+  });
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    translateX = e.clientX - dragStart.x;
+    translateY = e.clientY - dragStart.y;
+    const g = document.getElementById("tree-g");
+    if (g) g.setAttribute("transform", `translate(${translateX},${translateY}) scale(${scale})`);
+  });
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+    container.style.cursor = "grab";
+  });
+
+  container.style.cursor = "grab";
+
+  render();
+  window.addEventListener("resize", render);
+</script>
+
+<style>
+  .tree-page {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .tree-page__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .page-subtitle {
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+  }
+
+  .tree-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .tree-type-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-label {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .zoom-controls {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .tree-container {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-card);
+    user-select: none;
+  }
+
+  .tree-hint {
+    font-size: 0.8rem;
+    color: var(--color-text-faint);
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .tree-tooltip {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    max-width: 320px;
+    padding: 1rem 1.25rem;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .tree-tooltip__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tree-tooltip__meta {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .tree-tooltip__desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  .tree-tooltip__dist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .check-option {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+</style>
+
+<style is:global>
+  .tt-dist-item {
+    font-size: 0.75rem;
+    background: var(--color-bg-alt);
+    padding: 0.1em 0.45em;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border-light);
+  }
+</style>

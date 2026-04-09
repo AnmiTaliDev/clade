@@ -1,0 +1,269 @@
+---
+import { t } from "@/i18n";
+const currentPath = Astro.url.pathname;
+const navLinks = [
+  { href: "/", label: t("nav.home") },
+  { href: "/tree", label: t("nav.tree") },
+  { href: "/compare", label: t("nav.compare") },
+  { href: "/calculator", label: t("nav.calculator") },
+  { href: "/legend", label: t("nav.legend") },
+];
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="site-header__brand" aria-label="Clade — Home">
+      <img src="/logo.svg" alt="" width="28" height="28" class="site-header__logo" />
+      <span class="site-header__name">Clade</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class={`site-nav__link${currentPath === link.href ? " site-nav__link--active" : ""}`}
+          aria-current={currentPath === link.href ? "page" : undefined}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+    <div class="site-header__actions">
+      <a href="/search" class="site-header__search-btn" aria-label={t("nav.search")}>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="10.5" y1="10.5" x2="14.5" y2="14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="site-header__search-text">{t("nav.search")}</span>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="theme-toggle__sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="theme-toggle__moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="site-header__menu-btn" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+    {navLinks.map((link) => (
+      <a href={link.href} class="mobile-nav__link">{link.label}</a>
+    ))}
+    <a href="/search" class="mobile-nav__link">{t("nav.search")}</a>
+  </nav>
+</header>
+
+<script>
+  const menuBtn = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  menuBtn?.addEventListener("click", () => {
+    const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+    menuBtn.setAttribute("aria-expanded", String(!expanded));
+    if (mobileNav) mobileNav.hidden = expanded;
+  });
+
+  const themeToggle = document.getElementById("theme-toggle");
+
+  function applyTheme(dark: boolean) {
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    localStorage.setItem("theme", dark ? "dark" : "light");
+  }
+
+  function getPreferredTheme(): boolean {
+    const stored = localStorage.getItem("theme");
+    if (stored === "dark") return true;
+    if (stored === "light") return false;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  applyTheme(getPreferredTheme());
+
+  themeToggle?.addEventListener("click", () => {
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    applyTheme(!isDark);
+  });
+
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) applyTheme(e.matches);
+  });
+</script>
+
+<style>
+  .site-header {
+    background: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    gap: 0;
+  }
+
+  .site-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--color-text);
+    flex-shrink: 0;
+  }
+
+  .site-header__logo {
+    display: block;
+  }
+
+  .site-header__name {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--color-text);
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    gap: 0.25rem;
+    flex: 1;
+  }
+
+  .site-nav__link {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: color 0.15s, background 0.15s;
+  }
+
+  .site-nav__link:hover {
+    color: var(--color-text);
+    background: var(--color-bg-alt);
+    text-decoration: none;
+  }
+
+  .site-nav__link--active {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .site-header__actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .site-header__search-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    background: var(--color-bg-alt);
+    text-decoration: none;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .site-header__search-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--color-bg-alt);
+  }
+
+  .theme-toggle__moon { display: none; }
+  .theme-toggle__sun { display: block; }
+
+  [data-theme="dark"] .theme-toggle__moon { display: block; }
+  [data-theme="dark"] .theme-toggle__sun { display: none; }
+
+  .site-header__menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+  }
+
+  .site-header__menu-btn span {
+    display: block;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+  }
+
+  .mobile-nav {
+    border-top: 1px solid var(--color-border);
+    padding: 0.5rem 1rem 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    background: var(--color-bg-card);
+  }
+
+  .mobile-nav:not([hidden]) {
+    display: flex;
+  }
+
+  .mobile-nav__link {
+    padding: 0.5rem 0.75rem;
+    color: var(--color-text);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .mobile-nav__link:hover {
+    background: var(--color-bg-alt);
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .site-nav { display: none; }
+    .site-header__search-text { display: none; }
+    .site-header__menu-btn { display: flex; }
+  }
+</style>

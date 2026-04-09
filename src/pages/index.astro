@@ -1,0 +1,146 @@
+---
+import Base from "@/layouts/Base.astro";
+import HaplogroupCard from "@/components/HaplogroupCard.astro";
+import { t } from "@/i18n";
+import { haplogroups, getFeatured } from "@/data/haplogroups";
+
+const featured = getFeatured();
+const recent = [...haplogroups]
+  .sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime())
+  .slice(0, 6);
+
+const stats = {
+  haplogroups: haplogroups.length,
+  ethnicities: new Set(haplogroups.flatMap((h) => h.distribution.map((d) => d.ethnicity))).size,
+  references: haplogroups.reduce((sum, h) => sum + h.references.length, 0),
+};
+---
+
+<Base>
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <h1 class="hero__title">{t("home.hero_title")}</h1>
+        <p class="hero__subtitle">{t("home.hero_subtitle")}</p>
+        <div class="hero__actions">
+          <a href="/search" class="btn btn--primary">{t("home.browse_all")}</a>
+          <a href="/tree" class="btn btn--outline">{t("home.explore_tree")}</a>
+        </div>
+      </div>
+      <div class="hero__stats">
+        <div class="stat-item">
+          <span class="stat-item__value">{stats.haplogroups}</span>
+          <span class="stat-item__label">{t("home.stats_haplogroups")}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__value">{stats.ethnicities}+</span>
+          <span class="stat-item__label">{t("home.stats_ethnicities")}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__value">{stats.references}+</span>
+          <span class="stat-item__label">{t("home.stats_references")}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container page-body">
+    <section class="page-section">
+      <h2 class="section-title">{t("home.featured_title")}</h2>
+      <div class="cards-grid">
+        {featured.map((h) => <HaplogroupCard haplogroup={h} />)}
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2 class="section-title">{t("home.recent_title")}</h2>
+      <div class="cards-grid">
+        {recent.map((h) => <HaplogroupCard haplogroup={h} compact />)}
+      </div>
+      <div class="page-section__more">
+        <a href="/search" class="btn btn--ghost">{t("common.view_all")} →</a>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    padding: 3.5rem 0;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    max-width: 56ch;
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .hero__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero__stats .stat-item {
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .page-body {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .page-section {
+    margin-bottom: 3rem;
+  }
+
+  .page-section__more {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .hero__stats {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .hero__title {
+      font-size: 1.8rem;
+    }
+  }
+</style>

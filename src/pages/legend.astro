@@ -1,0 +1,277 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t } from "@/i18n";
+
+interface GlossaryTerm {
+  term: string;
+  definition: string;
+  category: "genetics" | "genealogy" | "anthropology" | "statistics";
+  wikipediaSlug?: string;
+}
+
+const glossary: GlossaryTerm[] = [
+  {
+    term: "Haplogroup",
+    definition: "A group of similar haplotypes that share a common ancestor with a single nucleotide polymorphism (SNP) mutation. Haplogroups are used to trace deep ancestry on the paternal (Y-DNA) or maternal (mtDNA) lines.",
+    category: "genetics",
+    wikipediaSlug: "Haplogroup",
+  },
+  {
+    term: "Y-DNA",
+    definition: "The Y chromosome, passed from father to son virtually unchanged (except for rare mutations). Y-DNA analysis traces direct paternal lineage and is used to assign paternal haplogroups.",
+    category: "genetics",
+    wikipediaSlug: "Y_chromosome",
+  },
+  {
+    term: "mtDNA",
+    definition: "Mitochondrial DNA, inherited exclusively through the maternal line. Because it is passed from mother to all children (but only daughters pass it on further), it traces direct maternal ancestry.",
+    category: "genetics",
+    wikipediaSlug: "Mitochondrial_DNA",
+  },
+  {
+    term: "SNP (Single Nucleotide Polymorphism)",
+    definition: "A variation in a single nucleotide at a specific position in the genome. SNPs define the boundaries between haplogroups — when a new mutation occurs, it marks the beginning of a new branch in the phylogenetic tree.",
+    category: "genetics",
+    wikipediaSlug: "Single-nucleotide_polymorphism",
+  },
+  {
+    term: "STR (Short Tandem Repeat)",
+    definition: "Repeating sequences of DNA used to distinguish between closely related lineages within a haplogroup. STRs mutate faster than SNPs and are used in genealogical DNA testing to find recent relatives.",
+    category: "genetics",
+    wikipediaSlug: "Short_tandem_repeat",
+  },
+  {
+    term: "Phylogenetic Tree",
+    definition: "A diagram representing evolutionary relationships among groups of organisms or, in this context, among human lineages. Each branch point represents a common ancestor.",
+    category: "genetics",
+    wikipediaSlug: "Phylogenetic_tree",
+  },
+  {
+    term: "MRCA (Most Recent Common Ancestor)",
+    definition: "The most recent individual from whom all members of a group are descended. In haplogroup context, the MRCA date represents when the founding mutation occurred.",
+    category: "genetics",
+    wikipediaSlug: "Most_recent_common_ancestor",
+  },
+  {
+    term: "Subclade",
+    definition: "A lineage nested within a larger haplogroup clade, defined by additional downstream mutations. For example, R1a-Z93 is a subclade of R1a.",
+    category: "genetics",
+    wikipediaSlug: "Clade",
+  },
+  {
+    term: "Autosomal DNA",
+    definition: "DNA from the 22 non-sex chromosomes, inherited from both parents. Autosomal DNA tests can reveal ethnicity percentages and match relatives up to 5–6 generations back.",
+    category: "genetics",
+    wikipediaSlug: "Autosome",
+  },
+  {
+    term: "Haplotype",
+    definition: "A set of DNA variations (polymorphisms) that tend to be inherited together as a unit. A haplogroup is a group of related haplotypes sharing a common ancestral origin.",
+    category: "genetics",
+    wikipediaSlug: "Haplotype",
+  },
+  {
+    term: "Ancient DNA (aDNA)",
+    definition: "DNA recovered from archaeological remains such as bones or teeth. Ancient DNA studies have dramatically reshaped our understanding of haplogroup migrations and prehistory.",
+    category: "genetics",
+    wikipediaSlug: "Ancient_DNA",
+  },
+  {
+    term: "Patrilineal",
+    definition: "Descent or kinship traced through the male (father's) line. Y-DNA haplogroups are patrilineal markers.",
+    category: "genealogy",
+    wikipediaSlug: "Patrilineality",
+  },
+  {
+    term: "Matrilineal",
+    definition: "Descent or kinship traced through the female (mother's) line. mtDNA haplogroups are matrilineal markers.",
+    category: "genealogy",
+    wikipediaSlug: "Matrilineality",
+  },
+  {
+    term: "Ru",
+    definition: "In Kazakh and some other Turkic traditions, a ru (also spelled ruw or род) is a patrilineal sub-clan or lineage group within a larger tribe or zhuz. Members of the same ru consider themselves to have a common male ancestor.",
+    category: "genealogy",
+    wikipediaSlug: "Ru_(clan)",
+  },
+  {
+    term: "Zhuz",
+    definition: "One of three major tribal confederations (Senior, Middle, Junior) within Kazakh society. Each zhuz contains multiple tribes, which in turn contain clans and ru lineages.",
+    category: "anthropology",
+    wikipediaSlug: "Kazakh_Juz",
+  },
+  {
+    term: "Population Genetics",
+    definition: "The study of genetic variation within and between populations, including allele frequencies, mutations, and evolutionary forces such as drift and selection.",
+    category: "genetics",
+    wikipediaSlug: "Population_genetics",
+  },
+  {
+    term: "Genetic Drift",
+    definition: "Random fluctuations in gene frequencies within a population, especially pronounced in small or bottlenecked populations. Can cause a haplogroup to rise or fall in frequency by chance alone.",
+    category: "genetics",
+    wikipediaSlug: "Genetic_drift",
+  },
+  {
+    term: "Founder Effect",
+    definition: "The loss of genetic variation when a new population is established from a small group. Explains why some haplogroups are extremely common in isolated populations.",
+    category: "genetics",
+    wikipediaSlug: "Founder_effect",
+  },
+  {
+    term: "Steppe Ancestry",
+    definition: "Genetic ancestry associated with Bronze Age pastoralists from the Pontic-Caspian steppe (modern Ukraine/Russia). Heavily associated with haplogroups R1a and R1b and the spread of Indo-European languages.",
+    category: "anthropology",
+    wikipediaSlug: "Yamnaya_culture",
+  },
+  {
+    term: "Sample Size (n=)",
+    definition: "In frequency statistics, n refers to the number of individuals tested. Larger sample sizes produce more reliable frequency estimates.",
+    category: "statistics",
+    wikipediaSlug: "Sample_size_determination",
+  },
+  {
+    term: "Frequency",
+    definition: "The proportion of individuals in a population carrying a particular haplogroup, expressed as a percentage. e.g., 'R1a is found in 57% of Poles' means 57 out of 100 Polish men carry R1a.",
+    category: "statistics",
+    wikipediaSlug: "Allele_frequency",
+  },
+];
+
+const categories = ["genetics", "genealogy", "anthropology", "statistics"] as const;
+const byCategory = Object.fromEntries(
+  categories.map((cat) => [cat, glossary.filter((g) => g.category === cat)])
+);
+---
+
+<Base title={t("legend.title")} description={t("legend.subtitle")}>
+  <div class="container legend-page">
+    <h1>{t("legend.title")}</h1>
+    <p class="page-subtitle">{t("legend.subtitle")}</p>
+
+    <div class="legend-nav">
+      {categories.map((cat) => (
+        <a href={`#${cat}`} class="legend-nav__link">{t(`legend.categories.${cat}`)}</a>
+      ))}
+    </div>
+
+    {categories.map((cat) => (
+      <section class="legend-section" id={cat}>
+        <h2 class="section-title">{t(`legend.categories.${cat}`)}</h2>
+        <dl class="glossary">
+          {byCategory[cat].map((entry) => (
+            <div class="glossary__entry" id={`term-${entry.term.replace(/\s+/g, "-").toLowerCase()}`}>
+              <dt class="glossary__term">
+                {entry.term}
+                {entry.wikipediaSlug && (
+                  <a
+                    href={`https://en.wikipedia.org/wiki/${entry.wikipediaSlug}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="glossary__wiki-link"
+                    aria-label={`${entry.term} on Wikipedia`}
+                  >
+                    {t("legend.wiki_link")} ↗
+                  </a>
+                )}
+              </dt>
+              <dd class="glossary__def">{entry.definition}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .legend-page {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    max-width: 800px;
+  }
+
+  .page-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .legend-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .legend-nav__link {
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .legend-nav__link:hover {
+    background: var(--color-accent-light);
+    text-decoration: none;
+  }
+
+  .legend-section {
+    margin-bottom: 3rem;
+  }
+
+  .glossary {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .glossary__entry {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+    scroll-margin-top: 80px;
+  }
+
+  .glossary__entry:last-child {
+    border-bottom: none;
+  }
+
+  .glossary__term {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text);
+    font-family: var(--font-serif);
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.35rem;
+  }
+
+  .glossary__wiki-link {
+    font-size: 0.75rem;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--color-accent);
+    text-decoration: none;
+    border: 1px solid var(--color-border-light);
+    padding: 0.1em 0.45em;
+    border-radius: var(--radius);
+  }
+
+  .glossary__wiki-link:hover {
+    background: var(--color-accent-light);
+    text-decoration: none;
+  }
+
+  .glossary__def {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0;
+  }
+</style>
