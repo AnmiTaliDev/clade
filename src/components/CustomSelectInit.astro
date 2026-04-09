@@ -15,12 +15,8 @@
 
     const valueEl = document.createElement("span");
     valueEl.className = "cs-value";
-
-    const arrowSvg = `<svg class="cs-arrow" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true">
-      <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </svg>`;
     trigger.appendChild(valueEl);
-    trigger.insertAdjacentHTML("beforeend", arrowSvg);
+    trigger.insertAdjacentHTML("beforeend", `<svg class="cs-arrow" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`);
 
     const dropdown = document.createElement("ul");
     dropdown.className = "cs-dropdown";
@@ -29,7 +25,7 @@
 
     wrapper.appendChild(trigger);
     wrapper.appendChild(selectEl);
-    wrapper.appendChild(dropdown);
+    document.body.appendChild(dropdown);
 
     function buildOptions() {
       dropdown.innerHTML = "";
@@ -42,7 +38,8 @@
         li.dataset.value = opt.value;
         li.textContent = opt.text;
         if (opt.selected) valueEl.textContent = opt.text;
-        li.addEventListener("click", () => pick(opt.value, opt.text));
+        li.addEventListener("mousedown", (e) => { e.preventDefault(); pick(opt.value, opt.text); });
+        li.addEventListener("touchend", (e) => { e.preventDefault(); pick(opt.value, opt.text); });
         dropdown.appendChild(li);
       });
       if (!valueEl.textContent && selectEl.options[0]) {
@@ -62,27 +59,62 @@
       close();
     }
 
+    function positionDropdown() {
+      const rect = trigger.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const margin = 8;
+
+      const dropW = Math.min(rect.width, vw - margin * 2);
+      const spaceBelow = vh - rect.bottom - margin;
+      const spaceAbove = rect.top - margin;
+      const maxH = Math.min(260, Math.max(spaceBelow, spaceAbove));
+
+      dropdown.style.width = dropW + "px";
+      dropdown.style.maxHeight = maxH + "px";
+
+      let left = rect.left;
+      if (left + dropW > vw - margin) left = vw - margin - dropW;
+      if (left < margin) left = margin;
+      dropdown.style.left = left + "px";
+
+      if (spaceBelow >= maxH || spaceBelow >= spaceAbove) {
+        dropdown.style.top = (rect.bottom + 1) + "px";
+        dropdown.style.bottom = "auto";
+        wrapper.classList.remove("cs-wrap--above");
+      } else {
+        dropdown.style.top = "auto";
+        dropdown.style.bottom = (vh - rect.top + 1) + "px";
+        wrapper.classList.add("cs-wrap--above");
+      }
+    }
+
     function open() {
       document.querySelectorAll(".cs-wrap--open").forEach((w) => {
-        if (w !== wrapper) closeEl(w);
+        if (w !== wrapper) {
+          w.classList.remove("cs-wrap--open", "cs-wrap--above");
+          w.querySelector(".cs-trigger")?.setAttribute("aria-expanded", "false");
+        }
       });
+      document.querySelectorAll(".cs-dropdown--visible").forEach((d) => {
+        if (d !== dropdown) { d.hidden = true; d.classList.remove("cs-dropdown--visible"); }
+      });
+
+      positionDropdown();
       dropdown.hidden = false;
+      dropdown.classList.add("cs-dropdown--visible");
       trigger.setAttribute("aria-expanded", "true");
       wrapper.classList.add("cs-wrap--open");
+
       const selected = dropdown.querySelector(".cs-option--selected") || dropdown.querySelector(".cs-option");
       selected?.scrollIntoView({ block: "nearest" });
     }
 
     function close() {
       dropdown.hidden = true;
+      dropdown.classList.remove("cs-dropdown--visible");
       trigger.setAttribute("aria-expanded", "false");
-      wrapper.classList.remove("cs-wrap--open");
-    }
-
-    function closeEl(w) {
-      w.querySelector(".cs-dropdown").hidden = true;
-      w.querySelector(".cs-trigger").setAttribute("aria-expanded", "false");
-      w.classList.remove("cs-wrap--open");
+      wrapper.classList.remove("cs-wrap--open", "cs-wrap--above");
     }
 
     trigger.addEventListener("click", (e) => {
@@ -90,8 +122,11 @@
       dropdown.hidden ? open() : close();
     });
 
-    wrapper.addEventListener("click", (e) => e.stopPropagation());
-    document.addEventListener("click", close);
+    function handleOutside(e) {
+      if (!wrapper.contains(e.target) && !dropdown.contains(e.target)) close();
+    }
+    document.addEventListener("mousedown", handleOutside);
+    document.addEventListener("touchstart", handleOutside, { passive: true });
 
     trigger.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); dropdown.hidden ? open() : close(); }
@@ -107,9 +142,12 @@
         e.preventDefault();
         if (idx <= 0) { close(); trigger.focus(); } else opts[idx - 1]?.focus();
       }
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); (document.activeElement).click(); }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); document.activeElement.click(); }
       if (e.key === "Escape") { close(); trigger.focus(); }
     });
+
+    window.addEventListener("resize", () => { if (!dropdown.hidden) positionDropdown(); });
+    window.addEventListener("scroll", () => { if (!dropdown.hidden) positionDropdown(); }, { passive: true });
 
     buildOptions();
 
