@@ -33,6 +33,24 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 - Mobile navigation was always visible due to CSS `display: flex` overriding the `hidden` attribute
-- Phylogenetic tree nodes overlapping — replaced fixed-gap layout with subtree-proportional layout
+- Phylogenetic tree nodes overlapping on mobile — SVG now expands to `leafCount × 56px` minimum width, container scrolls horizontally instead of squashing nodes
+- Phylogenetic tree nodes overlapping (desktop) — replaced fixed-gap layout with subtree-proportional layout
+- Custom select dropdown escaping viewport on mobile — moved dropdown to `<body>`, switched to `position: fixed` with `getBoundingClientRect()` positioning, left edge clamped to `[8px, vw - width - 8px]`
+- Custom select closes on `touchstart` outside (not just `click`)
+- mtDNA H appearing as child of Y-DNA haplogroup F — was an id collision (`"H"` matched mtDNA H); renamed mtDNA H to `id: "H_mt"` following existing convention
+- CT children corrected: CT → DE + CF (not DE + C + F); added CF node, C and F now correctly descend from CF
+- F children corrected: removed erroneous `"H"` (mtDNA) reference; added Y-DNA H as proper child
 - L3 parent reference corrected to `L_mt`; R_mt children updated to `JT_mt`, `U_mt`
 - All haplogroup `addedAt` dates corrected to 2026
+
+### Added
+- Y-DNA haplogroup H (M69) — South Asian / Romani lineage
+- Haplogroup CF — intermediate node between CT and C/F, correcting the phylogenetic tree
+- Custom select dropdown component replacing all native `<select>` elements, with keyboard navigation, above/below auto-positioning, and touch support
+- Touch drag and pinch-to-zoom on the phylogenetic tree
+- Dark mode with system preference detection, localStorage persistence, no-flash inline script
+- Theme toggle button in header (sun/moon icon)
+- `[hidden] { display: none !important }` global rule
+- `overflow-x: hidden` on html/body to prevent horizontal bleed
+- Mobile-responsive home page grid (single column on narrow screens)
+- Tooltip repositions to full-width bottom bar on mobile screens
