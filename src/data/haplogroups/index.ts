@@ -3,6 +3,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 import A from "./A";
 import BT from "./BT";
 import CT from "./CT";
+import CF from "./CF";
 import DE from "./DE";
 import D from "./D";
 import E from "./E";
@@ -45,13 +46,13 @@ import K_mt from "./K_mt";
 export const haplogroups: Haplogroup[] = [
   A, BT, CT,
   DE, D, E, E1b1b,
+  CF, C, C2,
   F, G,
   IJ, I, I1, I2,
   J, J1, J2,
   K,
   NO, N, N1, N1c,
   O,
-  C, C2,
   P, Q,
   R, R1, R1a, R1b,
   L_mt, L3, M_mt,

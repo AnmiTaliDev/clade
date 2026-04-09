@@ -5,7 +5,7 @@ const CT: Haplogroup = {
   name: "CT",
   type: "Y-DNA",
   parent: "BT",
-  children: ["C", "DE", "F"],
+  children: ["DE", "CF"],
   formed: "~88,000 BCE",
   mrca: "~68,000 BCE",
   origin: {
