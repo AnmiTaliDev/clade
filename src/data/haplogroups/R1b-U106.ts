@@ -11,7 +11,7 @@ const R1b_U106: Haplogroup = {
   name: "R1b-U106",
   type: "Y-DNA",
   parent: "R1b-L11",
-  children: [],
+  children: ["R1b-Z156"],
   formed: "~2,500 BCE",
   mrca: "~2,400 BCE",
   origin: {
