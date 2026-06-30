@@ -137,6 +137,40 @@ import T_mt from "./T_mt";
 import U_mt from "./U_mt";
 import U5_mt from "./U5_mt";
 import K_mt from "./K_mt";
+import H1_mt from "./H1_mt";
+import H2_mt from "./H2_mt";
+import H3_mt from "./H3_mt";
+import H5_mt from "./H5_mt";
+import H6_mt from "./H6_mt";
+import H7_mt from "./H7_mt";
+import H13_mt from "./H13_mt";
+import J1_mt from "./J1_mt";
+import J2_mt from "./J2_mt";
+import T1_mt from "./T1_mt";
+import T2_mt from "./T2_mt";
+import D4_mt from "./D4_mt";
+import D5_mt from "./D5_mt";
+import C1_mt from "./C1_mt";
+import C4_mt from "./C4_mt";
+import C5_mt from "./C5_mt";
+import B4_mt from "./B4_mt";
+import B5_mt from "./B5_mt";
+import M7_mt from "./M7_mt";
+import M8_mt from "./M8_mt";
+import E_mt from "./E_mt";
+import U2_mt from "./U2_mt";
+import U3_mt from "./U3_mt";
+import U4_mt from "./U4_mt";
+import U6_mt from "./U6_mt";
+import U8_mt from "./U8_mt";
+import Y_mt from "./Y_mt";
+import S_mt from "./S_mt";
+import P_mt from "./P_mt";
+import L0a_mt from "./L0a_mt";
+import L0d_mt from "./L0d_mt";
+import L1b_mt from "./L1b_mt";
+import L1c_mt from "./L1c_mt";
+import L2a_mt from "./L2a_mt";
 
 export const haplogroups: Haplogroup[] = [
   A,
@@ -275,6 +309,40 @@ export const haplogroups: Haplogroup[] = [
   U_mt,
   U5_mt,
   K_mt,
+  H1_mt,
+  H2_mt,
+  H3_mt,
+  H5_mt,
+  H6_mt,
+  H7_mt,
+  H13_mt,
+  J1_mt,
+  J2_mt,
+  T1_mt,
+  T2_mt,
+  D4_mt,
+  D5_mt,
+  C1_mt,
+  C4_mt,
+  C5_mt,
+  B4_mt,
+  B5_mt,
+  M7_mt,
+  M8_mt,
+  E_mt,
+  U2_mt,
+  U3_mt,
+  U4_mt,
+  U6_mt,
+  U8_mt,
+  Y_mt,
+  S_mt,
+  P_mt,
+  L0a_mt,
+  L0d_mt,
+  L1b_mt,
+  L1c_mt,
+  L2a_mt,
 ];
 
 export function getHaplogroup(id: string): Haplogroup | undefined {
