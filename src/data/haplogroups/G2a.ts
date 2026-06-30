@@ -1,0 +1,27 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const G2a: Haplogroup = {
+  id: "G2a",
+  name: "G2a (P15)",
+  type: "Y-DNA",
+  parent: "G2",
+  children: ["G2a2"],
+  formed: "~20,000 BCE",
+  mrca: "~12,000 BCE",
+  origin: { region: "Near East / Anatolia", period: "Epipaleolithic", coordinates: [38, 38] },
+  description: "Haplogroup G2a (P15) is by far the most important subclade of haplogroup G and the defining Y-DNA lineage of Neolithic farmers who brought agriculture from Anatolia to Europe approximately 8,000–6,000 years ago. In ancient DNA studies, G2a is found at frequencies of 80–100% in early Neolithic European farmers, dramatically higher than in any modern European population, indicating a massive genetic replacement occurred after the Neolithic. Today, G2a survives at highest frequencies in the Caucasus, Sardinia, and isolated mountain populations that best preserve the Neolithic genetic substrate.",
+  interestingFact: "The famous 'Tyrolean Iceman' Ötzi (c. 3,300 BCE) belonged to haplogroup G2a2b — making him genetically most similar to modern Sardinians among contemporary Europeans. His genome revealed he had no known living patrilineal descendants, suggesting his specific G2a branch went extinct in the millennia following the Neolithic.",
+  distribution: [
+    { ethnicity: "Georgians", region: "Caucasus", percentage: 30, sampleSize: 500 },
+    { ethnicity: "Sardinians", region: "Southern Europe", percentage: 10, sampleSize: 400 },
+    { ethnicity: "Iranians", region: "West Asia", percentage: 8, sampleSize: 500 },
+    { ethnicity: "Armenians", region: "Caucasus / West Asia", percentage: 12, sampleSize: 400 },
+    { ethnicity: "Italians (north)", region: "Southern Europe", percentage: 5, sampleSize: 600 },
+  ],
+  statistics: { modernFrequency: "~1.5% of global male population", peakRegion: "Caucasus / Sardinia", estimatedCarriers: 60_000_000 },
+  tags: ["Caucasus", "Neolithic", "Anatolia", "Europe", "Sardinia", "Ötzi", "Agriculture"],
+  references: ["Haak et al. (2010) — Ancient DNA from European early Neolithic farmers reveals their Near Eastern affinities. PLOS Biology 8(11), e1000536."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default G2a;
