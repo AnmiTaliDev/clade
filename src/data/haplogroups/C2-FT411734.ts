@@ -1,0 +1,37 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const C2_FT411734: Haplogroup = {
+  id: "C2-FT411734",
+  name: "C2-FT411734",
+  type: "Y-DNA",
+  parent: "C2",
+  children: [],
+  formed: "~25,000 BCE",
+  mrca: "~15,000 BCE",
+  origin: {
+    region: "Central / East Asia",
+    period: "Upper Paleolithic",
+    coordinates: [110, 45],
+  },
+  description:
+    "C2-FT411734 is a basal C2 subclade defined by the FT411734 SNP marker, discovered through large-scale commercial Y-chromosome sequencing (FamilyTreeDNA). It represents a lineage that diverged early within the C2 radiation and does not fall within the major C2a or C2b branches. Its distribution and ethnic affiliations are not yet fully characterized due to limited sample size, but it appears to be a rare relic lineage within the broader C2 phylogeny.",
+  interestingFact:
+    "FamilyTreeDNA (FT) markers like FT411734 are identified through the company's Big Y testing platform, which sequences a large portion of the Y chromosome. These markers often reveal previously unknown deep branches of established haplogroups that were missed in earlier targeted SNP studies.",
+  distribution: [
+    { ethnicity: "East / Central Asian (general)", region: "Central / East Asia", percentage: 0.1, sampleSize: 500 },
+  ],
+  statistics: {
+    modernFrequency: "<0.01% of global male population",
+    peakRegion: "Central / East Asia",
+    estimatedCarriers: 100_000,
+  },
+  tags: ["C2", "Basal", "Paleolithic", "Central Asia", "FamilyTreeDNA"],
+  references: [
+    "YFull YTree — Haplogroup C2 (M217) phylogeny. https://www.yfull.com/tree/C2/",
+    "ISOGG Y-DNA Haplogroup C — 2024 phylogenetic tree.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default C2_FT411734;
