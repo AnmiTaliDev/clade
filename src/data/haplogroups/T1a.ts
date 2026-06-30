@@ -1,0 +1,27 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const T1a: Haplogroup = {
+  id: "T1a",
+  name: "T1a (M70)",
+  type: "Y-DNA",
+  parent: "T1",
+  children: [],
+  formed: "~12,000 BCE",
+  mrca: "~7,000 BCE",
+  origin: { region: "Near East / East Africa", period: "Epipaleolithic", coordinates: [42, 20] },
+  description: "Haplogroup T1a (M70) is the dominant subclade of T1 and contains the majority of global T-lineage carriers. It is distributed across the Near East, East Africa (especially the Horn of Africa), South Asia, and the Mediterranean. T1a is particularly notable among Omani, Yemeni, Ethiopian, and Somali populations, as well as among some South Indian groups. Ancient DNA has recovered T1a from Neolithic and Bronze Age Anatolian, Levantine, and East African individuals. The broad distribution of T1a from Africa to South Asia suggests it spread with early Neolithic population movements from the Near East and possibly also via East African coastal routes.",
+  interestingFact: "T1a has been detected in ancient Neolithic DNA from the Levant and Anatolia (~8,000–6,000 BCE), making it one of the documented paternal lineages of the Neolithic Revolution. Its modern distribution — bridging East Africa, the Arabian Peninsula, and South Asia — may reflect the genetic legacy of ancient seafaring communities that connected these regions along the Indian Ocean rim thousands of years before the historical period.",
+  distribution: [
+    { ethnicity: "Omanis", region: "Arabian Peninsula", percentage: 10, sampleSize: 300 },
+    { ethnicity: "Ethiopians", region: "East Africa", percentage: 7, sampleSize: 400 },
+    { ethnicity: "Somalis", region: "Horn of Africa", percentage: 5, sampleSize: 300 },
+    { ethnicity: "South Indians", region: "South Asia", percentage: 6, sampleSize: 600 },
+    { ethnicity: "Egyptians", region: "North Africa", percentage: 5, sampleSize: 500 },
+  ],
+  statistics: { modernFrequency: "~0.7% of global male population", peakRegion: "Arabian Peninsula / Horn of Africa", estimatedCarriers: 28_000_000 },
+  tags: ["Near East", "East Africa", "South Asia", "Arabia", "Neolithic", "Oman", "Indian Ocean"],
+  references: ["Cerny et al. (2009) — migration of haplogroup T from the Near East to Africa and Europe — insights from mtDNA and Y chromosomes. Annals of Human Biology 36(6), 682–697."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default T1a;
