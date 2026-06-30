@@ -5,7 +5,7 @@ const R1a: Haplogroup = {
   name: "R1a",
   type: "Y-DNA",
   parent: "R1",
-  children: ["R1a1", "R1a1a"],
+  children: ["R1a1"],
   formed: "~22,000 BCE",
   mrca: "~10,000 BCE",
   origin: {
