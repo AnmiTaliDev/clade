@@ -5,7 +5,7 @@ const H1_mt: Haplogroup = {
   name: "H1 (mtDNA)",
   type: "mtDNA",
   parent: "H_mt",
-  children: [],
+  children: ["H1a_mt", "H1b_mt"],
   formed: "~10,000 BCE",
   mrca: "~8,000 BCE",
   origin: { region: "Iberian Peninsula / Western Europe", period: "Mesolithic", coordinates: [-5, 40] },
