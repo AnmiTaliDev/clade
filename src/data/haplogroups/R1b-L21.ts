@@ -10,8 +10,8 @@ const R1b_L21: Haplogroup = {
   id: "R1b-L21",
   name: "R1b-L21",
   type: "Y-DNA",
-  parent: "R1b-P312",
-  children: [],
+  parent: "R1b-DF13",
+  children: ["R1b-M222"],
   formed: "~2,500 BCE",
   mrca: "~2,400 BCE",
   origin: {
