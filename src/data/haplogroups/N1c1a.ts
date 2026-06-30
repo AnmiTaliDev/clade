@@ -1,0 +1,26 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const N1c1a: Haplogroup = {
+  id: "N1c1a",
+  name: "N1c1a (VL29)",
+  type: "Y-DNA",
+  parent: "N1c1",
+  children: [],
+  formed: "~4,000 BCE",
+  mrca: "~2,500 BCE",
+  origin: { region: "Eastern Baltic / Northwestern Russia", period: "Bronze Age", coordinates: [26, 58] },
+  description: "Haplogroup N1c1a (VL29) is the primary European subclade of N1c1, the so-called 'Baltic N' lineage concentrated in Estonia, Latvia, Lithuania, and northwestern Russia. It represents the western branch of the N1c1 expansion into Europe and is distinct from the eastern Siberian N1c1 lineages. VL29 shows a pronounced gradient from very high frequency in the Baltic states (~50% in Estonians and Latvians) to much lower levels in Slavic and Germanic populations. The VL29 expansion into the Baltic region appears to have occurred approximately 3,000–4,000 years ago, coinciding with the spread of Uralic-speaking groups (ancestors of modern Baltic Finns and Livonians) into the region.",
+  interestingFact: "N1c1a (VL29) has been proposed as a direct genetic marker of the ancient Baltic Finnic populations who were present in the Eastern Baltic region before the arrival of Bronze Age Indo-European-speaking peoples — the high frequency in modern Estonians and Latvians reflects the survival of pre-Indo-European Uralic male lineages in a region that has seen successive waves of cultural and linguistic change.",
+  distribution: [
+    { ethnicity: "Estonians", region: "Northern Europe (Baltic)", percentage: 34, sampleSize: 400 },
+    { ethnicity: "Latvians", region: "Northern Europe (Baltic)", percentage: 38, sampleSize: 300 },
+    { ethnicity: "Finns", region: "Northern Europe", percentage: 45, sampleSize: 600 },
+    { ethnicity: "Russians (northwest)", region: "Eastern Europe", percentage: 15, sampleSize: 400 },
+  ],
+  statistics: { modernFrequency: "~0.5% of global male population", peakRegion: "Baltic states / Finland", estimatedCarriers: 20_000_000 },
+  tags: ["Estonia", "Latvia", "Finland", "Baltic", "Uralic", "Bronze Age", "Northern Europe"],
+  references: ["Lappalainen et al. (2008) — Migration waves to the Baltic Sea region. Annals of Human Genetics 72(3), 337–348."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default N1c1a;
