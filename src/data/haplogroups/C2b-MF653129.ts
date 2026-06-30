@@ -1,0 +1,39 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const C2b_MF653129: Haplogroup = {
+  id: "C2b-MF653129",
+  name: "C2b-MF653129",
+  type: "Y-DNA",
+  parent: "C2b-CTS4660",
+  children: [],
+  formed: "~6,000 BCE",
+  mrca: "~3,000 BCE",
+  origin: {
+    region: "Eastern Siberia / Amur region",
+    period: "Neolithic",
+    coordinates: [128, 52],
+  },
+  description:
+    "C2b-MF653129 is a subclade of C2b-CTS4660 within the Tungusic-Siberian C2b1b branch, sister to C2b-MF630546. The MF653129 marker is a GenBank-registered Y-chromosome variant. This lineage shows an affinity with populations of the Amur River basin region, including Nanai and Ulchi groups, and represents a distinct eastern subdivision of the CTS4660 branch.",
+  interestingFact:
+    "The parallel structure of MF630546 and MF653129 under CTS4660 suggests that within the Tungusic C2b1b branch, two distinct population groups diverged during the Neolithic — one associated more with the Baikal interior, the other with the Amur River valley populations of the Russian Far East.",
+  distribution: [
+    { ethnicity: "Nanai", region: "Siberia (Amur River)", percentage: 4, sampleSize: 80 },
+    { ethnicity: "Ulchi", region: "Siberia", percentage: 3, sampleSize: 60 },
+    { ethnicity: "Evenks (eastern)", region: "Siberia", percentage: 2, sampleSize: 100 },
+  ],
+  statistics: {
+    modernFrequency: "<0.02% of global male population",
+    peakRegion: "Amur River basin / Russian Far East",
+    estimatedCarriers: 400_000,
+  },
+  tags: ["Siberia", "Tungusic", "Nanai", "Amur", "Neolithic"],
+  references: [
+    "ISOGG Y-DNA Haplogroup C — 2024 phylogenetic tree.",
+    "YFull YTree — Haplogroup C2b1b phylogeny.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default C2b_MF653129;
