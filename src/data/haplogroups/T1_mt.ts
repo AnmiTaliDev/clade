@@ -5,7 +5,7 @@ const T1_mt: Haplogroup = {
   name: "T1 (mtDNA)",
   type: "mtDNA",
   parent: "T_mt",
-  children: [],
+  children: ["T1a_mt"],
   formed: "~20,000 BCE",
   mrca: "~9,000 BCE",
   origin: { region: "Near East / Mesopotamia", period: "Epipaleolithic", coordinates: [44, 34] },
