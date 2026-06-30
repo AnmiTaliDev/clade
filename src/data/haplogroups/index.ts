@@ -171,6 +171,34 @@ import L0d_mt from "./L0d_mt";
 import L1b_mt from "./L1b_mt";
 import L1c_mt from "./L1c_mt";
 import L2a_mt from "./L2a_mt";
+import D1 from "./D1";
+import D1a from "./D1a";
+import D1b from "./D1b";
+import E1b1a1 from "./E1b1a1";
+import E1b1b1 from "./E1b1b1";
+import E1b1b1a from "./E1b1b1a";
+import E1b1b1b from "./E1b1b1b";
+import E1b1b1c from "./E1b1b1c";
+import G2a from "./G2a";
+import G2a2 from "./G2a2";
+import G2b from "./G2b";
+import I1a from "./I1a";
+import I2a from "./I2a";
+import I2a1 from "./I2a1";
+import I2a2 from "./I2a2";
+import I2b from "./I2b";
+import J1b from "./J1b";
+import J2a from "./J2a";
+import J2a1 from "./J2a1";
+import J2b from "./J2b";
+import J2b2 from "./J2b2";
+import N1c1 from "./N1c1";
+import N1c1a from "./N1c1a";
+import Q1a from "./Q1a";
+import Q1b from "./Q1b";
+import T1 from "./T1";
+import T1a from "./T1a";
+import H1 from "./H1";
 
 export const haplogroups: Haplogroup[] = [
   A,
@@ -343,6 +371,34 @@ export const haplogroups: Haplogroup[] = [
   L1b_mt,
   L1c_mt,
   L2a_mt,
+  D1,
+  D1a,
+  D1b,
+  E1b1a1,
+  E1b1b1,
+  E1b1b1a,
+  E1b1b1b,
+  E1b1b1c,
+  G2a,
+  G2a2,
+  G2b,
+  I1a,
+  I2a,
+  I2a1,
+  I2a2,
+  I2b,
+  J1b,
+  J2a,
+  J2a1,
+  J2b,
+  J2b2,
+  N1c1,
+  N1c1a,
+  Q1a,
+  Q1b,
+  T1,
+  T1a,
+  H1,
 ];
 
 export function getHaplogroup(id: string): Haplogroup | undefined {
