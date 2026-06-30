@@ -5,7 +5,7 @@ const N_mt: Haplogroup = {
   name: "N (mtDNA)",
   type: "mtDNA",
   parent: "L3",
-  children: ["R_mt"],
+  children: ["R_mt", "A_mt", "X_mt", "W_mt", "I_mt"],
   formed: "~65,000 BCE",
   mrca: "~60,000 BCE",
   origin: {
