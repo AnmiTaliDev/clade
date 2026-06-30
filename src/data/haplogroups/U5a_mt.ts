@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup U5a.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const U5a_mt: Haplogroup = {
+  id: "U5a_mt",
+  name: "U5a",
+  type: "mtDNA",
+  parent: "U5_mt",
+  children: [],
+  formed: "~16,000 BCE",
+  mrca: "~11,000 BCE",
+  origin: {
+    region: "Eastern Europe / Eurasian Steppe",
+    period: "Upper Paleolithic / Mesolithic",
+    coordinates: [30, 55],
+  },
+  description:
+    "Haplogroup U5a is a major subclade of U5, found primarily in Eastern Europe and among populations of the Eurasian Steppe and Uralic-speaking peoples. U5a is associated with Mesolithic hunter-gatherers of Eastern Europe and the forest-steppe zone, and is found at elevated frequencies in populations such as the Saami, Finns, Estonians, and various Siberian groups. Ancient DNA has consistently found U5a (along with U5b) dominating the maternal lineages of pre-Neolithic European hunter-gatherers.",
+  interestingFact:
+    "U5a and U5b together are often called the 'Paleolithic European' mtDNA lineages — they were the dominant maternal haplogroups of hunter-gatherers across Europe before the Neolithic and Bronze Age migrations drastically changed the continent's maternal gene pool. U5a in particular has survived at high frequencies among the Saami of Scandinavia (up to 50%), who maintain a disproportionately large hunter-gatherer genetic heritage.",
+  distribution: [
+    { ethnicity: "Saami", region: "Northern Europe", percentage: 50, sampleSize: 100 },
+    { ethnicity: "Finns", region: "Northern Europe", percentage: 12, sampleSize: 400 },
+    { ethnicity: "Estonians", region: "Baltic", percentage: 10, sampleSize: 200 },
+    { ethnicity: "Russians", region: "Eastern Europe", percentage: 6, sampleSize: 500 },
+    { ethnicity: "Poles", region: "Eastern Europe", percentage: 5, sampleSize: 400 },
+  ],
+  statistics: {
+    modernFrequency: "~4-5% in Europe; up to 50% among Saami",
+    peakRegion: "Northern and Eastern Europe",
+    estimatedCarriers: 30_000_000,
+  },
+  tags: ["Eastern Europe", "Saami", "Paleolithic", "Hunter-gatherer", "Uralic", "Mesolithic", "mtDNA"],
+  references: [
+    "Bramanti et al. (2009) — Genetic discontinuity between local hunter-gatherers and central Europe's first farmers. Science 326(5949), 137–140.",
+    "Haak et al. (2005) — Ancient DNA from the first European farmers in 7500-year-old Neolithic sites. Science 310(5750), 1016–1018.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default U5a_mt;
