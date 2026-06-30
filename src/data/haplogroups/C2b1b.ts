@@ -1,0 +1,47 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const C2b1b: Haplogroup = {
+  id: "C2b1b",
+  name: "C2b1b (Z1338)",
+  type: "Y-DNA",
+  parent: "C2b1",
+  children: ["C2b-CTS4660"],
+  formed: "~15,000 BCE",
+  mrca: "~8,000 BCE",
+  origin: {
+    region: "Southern Siberia / Baikal region",
+    period: "Mesolithic",
+    coordinates: [110, 55],
+  },
+  description:
+    "Haplogroup C2b1b (C-Z1338) is the Tungusic-Siberian branch of C2b1, found at high frequencies among the Evenks, Nanai, Ulchi, Negidal, and Manchu peoples of Siberia and northeastern China. It is the sister clade of C2b1a (Mongolic) and represents an entirely different ecological and cultural adaptation — the Tungusic taiga hunters and reindeer herders of the eastern Siberian forests. C2b1b is also the branch that crossed into North America, where it is found among Na-Dené-speaking peoples (Athapaskans, Navajo, Apache) as a distinct subclade. The presence of C2b1b among both Siberian Tungusic peoples and North American Na-Dené peoples provides a genetic link between these geographically distant but linguistically related groups.",
+  interestingFact:
+    "C2b1b connects the Evenks of Siberia — reindeer hunters of the eastern taiga — with the Navajo and Apache of the American Southwest, both of whom speak languages belonging to the Dené-Yeniseian macrofamily. This genetic link is one of the strongest genetic confirmations of a hypothesis proposing a shared ancestry between Siberian and North American indigenous peoples far more recent than the initial Beringian crossing.",
+  distribution: [
+    { ethnicity: "Evenks", region: "Siberia", percentage: 60, sampleSize: 150 },
+    { ethnicity: "Nanai", region: "Siberia (Amur River)", percentage: 45, sampleSize: 80 },
+    { ethnicity: "Manchu", region: "East Asia", percentage: 22, sampleSize: 150 },
+    { ethnicity: "Ulchi", region: "Siberia", percentage: 40, sampleSize: 60 },
+    { ethnicity: "Navajo", region: "North America (Southwest)", percentage: 5, sampleSize: 150 },
+    { ethnicity: "Athapaskan peoples", region: "North America (Subarctic)", percentage: 8, sampleSize: 200 },
+  ],
+  clans: [
+    { type: "tribe", name: "Evenks", region: "Siberia", note: "The primary ethnic group of the Siberian taiga; C2b1b is the defining paternal lineage of Tungusic forest peoples" },
+    { type: "tribe", name: "Manchu", region: "East Asia (Manchuria)", note: "The Qing dynasty ruling group; significant C2b1b presence among Manchurian populations" },
+  ],
+  statistics: {
+    modernFrequency: "~0.5% of global male population",
+    peakRegion: "Siberia (Evenks / Amur region)",
+    estimatedCarriers: 18_000_000,
+  },
+  tags: ["Tungusic", "Siberia", "Evenks", "Manchu", "Na-Dene", "Taiga", "Native Americans", "Mesolithic"],
+  references: [
+    "Dulik et al. (2012) — Y-chromosome analysis in Athapaskan-speaking populations from central Alaska and western Canada. American Journal of Physical Anthropology 147(4), 533–549.",
+    "Pakendorf et al. (2006) — Investigating the effects of prehistoric migrations in Siberia: genetic variation and the origins of Yakuts. Human Genetics 120(3), 334–353.",
+    "Vajda (2010) — Yeniseian, Na-Dene, and historical linguistics. The Dene-Yeniseian Connection. Anthropological Papers of the University of Alaska 5, 100–118.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default C2b1b;
