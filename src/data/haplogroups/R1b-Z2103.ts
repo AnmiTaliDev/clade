@@ -2,7 +2,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const R1b_Z2103: Haplogroup = {
   id: "R1b-Z2103",
-  name: "R1b-Z2103",
+  name: "R1b1a1b1b1 (Z2103)",
   type: "Y-DNA",
   parent: "R1b-L23",
   children: [],
