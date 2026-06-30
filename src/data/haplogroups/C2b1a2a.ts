@@ -1,0 +1,39 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const C2b1a2a: Haplogroup = {
+  id: "C2b1a2a",
+  name: "C2b1a2a (M77)",
+  type: "Y-DNA",
+  parent: "C2b1a2",
+  children: ["C2b1a2a1"],
+  formed: "~4,000 BCE",
+  mrca: "~2,000 BCE",
+  origin: {
+    region: "Mongolia / Northern China",
+    period: "Bronze Age",
+    coordinates: [108, 45],
+  },
+  description:
+    "C2b1a2a (M77) is a subclade of C2b1a2 (M48) within the Mongolic C2b1a branch. It represents a further diversification of the non-Star-Cluster Mongolic C2b lineages, found among Mongolian, Manchu, and northern Chinese populations. The M77 marker defines a Bronze Age clade that co-existed alongside the Star Cluster (C2b1a1) on the Mongolian Plateau without undergoing the same medieval founder-effect explosion.",
+  interestingFact:
+    "C2b1a2a (M77) carriers share the same Bronze Age Mongolic ancestry as the Star Cluster lineage but represent the 'ordinary' patrilineal background of Mongolian populations — men whose lines survived through everyday demographic processes rather than imperial conquest.",
+  distribution: [
+    { ethnicity: "Mongols", region: "East Asia / Central Asia", percentage: 4, sampleSize: 500 },
+    { ethnicity: "Inner Mongols", region: "East Asia (China)", percentage: 5, sampleSize: 200 },
+    { ethnicity: "Manchu", region: "East Asia (Manchuria)", percentage: 3, sampleSize: 150 },
+    { ethnicity: "Northern Han Chinese", region: "East Asia", percentage: 1, sampleSize: 800 },
+  ],
+  statistics: {
+    modernFrequency: "~0.1% of global male population",
+    peakRegion: "Mongolia / Inner Mongolia",
+    estimatedCarriers: 4_000_000,
+  },
+  tags: ["Mongols", "Bronze Age", "Mongolia", "Steppe", "Manchu"],
+  references: [
+    "Balaresque et al. (2015) — Y-chromosome descent clusters and male differential reproductive success. European Journal of Human Genetics 23, 1357–1362.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default C2b1a2a;
