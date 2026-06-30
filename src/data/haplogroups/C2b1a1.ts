@@ -10,8 +10,8 @@ const C2b1a1: Haplogroup = {
   id: "C2b1a1",
   name: "C2b1a1 (Star Cluster)",
   type: "Y-DNA",
-  parent: "C2b",
-  children: [],
+  parent: "C2b1a",
+  children: ["C2b1a1a", "C2b1a1b", "C2b1a1c"],
   formed: "~1,000 BCE",
   mrca: "~800 CE",
   origin: {
