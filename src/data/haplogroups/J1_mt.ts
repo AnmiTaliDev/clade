@@ -1,0 +1,26 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const J1_mt: Haplogroup = {
+  id: "J1_mt",
+  name: "J1 (mtDNA)",
+  type: "mtDNA",
+  parent: "J_mt",
+  children: [],
+  formed: "~25,000 BCE",
+  mrca: "~10,000 BCE",
+  origin: { region: "Near East / Caucasus", period: "Epipaleolithic", coordinates: [38, 36] },
+  description: "Haplogroup J1 (mtDNA) is the more widespread of the two J subclades, found throughout Europe, the Near East, and Central Asia. J1c is the most common sub-branch, dominant in Europe and associated with the Neolithic farmer expansion from Anatolia. J1 is also found at notable frequencies in the Arabian Peninsula and Caucasus. Ancient DNA confirms J1 presence among early Neolithic European farmers (~6,000 BCE), strongly linking this lineage to the agricultural revolution's demographic impact on Europe.",
+  interestingFact: "J1c, the most common sub-branch of J1, has been proposed by some researchers as a possible marker of the demographic spread associated with early cattle herders and Neolithic farmers across Europe — it is found at elevated frequencies in populations with strong Neolithic farmer ancestry.",
+  distribution: [
+    { ethnicity: "Europeans (general)", region: "Europe", percentage: 5, sampleSize: 3000 },
+    { ethnicity: "Near Easterners", region: "Near East", percentage: 8, sampleSize: 1000 },
+    { ethnicity: "Caucasians", region: "Caucasus", percentage: 6, sampleSize: 600 },
+    { ethnicity: "Arabians", region: "Arabian Peninsula", percentage: 7, sampleSize: 400 },
+  ],
+  statistics: { modernFrequency: "~2% of global female population", peakRegion: "Near East / Europe", estimatedCarriers: 40_000_000 },
+  tags: ["Europe", "Near East", "Neolithic", "Caucasus", "Agriculture", "Arabian Peninsula"],
+  references: ["Pala et al. (2012) — Mitochondrial DNA signals of late glacial recolonization of Europe from near eastern refugia. American Journal of Human Genetics 90(5), 915–924."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default J1_mt;
