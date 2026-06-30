@@ -1,0 +1,27 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const J1b: Haplogroup = {
+  id: "J1b",
+  name: "J1b (P58)",
+  type: "Y-DNA",
+  parent: "J1",
+  children: [],
+  formed: "~15,000 BCE",
+  mrca: "~3,000 BCE",
+  origin: { region: "Arabian Peninsula / Fertile Crescent", period: "Epipaleolithic", coordinates: [44, 22] },
+  description: "Haplogroup J1b (P58) is the dominant subclade of J1, accounting for the vast majority of J1 carriers in the Near East and accounting for the 'Arabian J1' lineage. It is extremely common across the Arabian Peninsula (Saudi Arabia, Yemen, Oman, UAE), the Levant, and East Africa, and has spread through Arab historical expansions into North Africa, the Sahel, and beyond. J1b underwent a massive demographic expansion approximately 3,000–5,000 years ago that may be associated with the Arabian Neolithic pastoral expansion and, later, the spread of Semitic-speaking peoples. It is one of the most common Y-DNA lineages among Arab populations.",
+  interestingFact: "J1b reached an extraordinary frequency of ~72% among bedouin Arab populations of the Arabian Peninsula — one of the highest single-haplogroup frequencies recorded for any large human population — reflecting both the extreme consanguinity of traditional Arabian tribal society and the massive demographic expansion associated with the spread of Arab tribal confederations across the Old World.",
+  distribution: [
+    { ethnicity: "Saudi Arabians", region: "Arabian Peninsula", percentage: 60, sampleSize: 400 },
+    { ethnicity: "Yemenis", region: "Arabian Peninsula", percentage: 72, sampleSize: 300 },
+    { ethnicity: "Omanis", region: "Arabian Peninsula", percentage: 45, sampleSize: 300 },
+    { ethnicity: "Levantine Arabs", region: "Near East", percentage: 35, sampleSize: 400 },
+    { ethnicity: "Somalis", region: "Horn of Africa", percentage: 20, sampleSize: 300 },
+  ],
+  statistics: { modernFrequency: "~3% of global male population", peakRegion: "Arabian Peninsula", estimatedCarriers: 120_000_000 },
+  tags: ["Arabia", "Saudi Arabia", "Yemen", "Near East", "Semitic", "Bedouin", "Islam", "Arab expansion"],
+  references: ["Chiaroni et al. (2010) — The emergence of Y-chromosome haplogroup J1e among Arabic-speaking populations. European Journal of Human Genetics 18(3), 348–353."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default J1b;
