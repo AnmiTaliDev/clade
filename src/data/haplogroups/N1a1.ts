@@ -1,0 +1,39 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const N1a1: Haplogroup = {
+  id: "N1a1",
+  name: "N1a1 (L1026)",
+  type: "Y-DNA",
+  parent: "N1a",
+  children: ["N1a1a"],
+  formed: "~14,000 BCE",
+  mrca: "~10,000 BCE",
+  origin: {
+    region: "Western Siberia / Ural region",
+    period: "Mesolithic",
+    coordinates: [62, 60],
+  },
+  description:
+    "Haplogroup N1a1 (L1026) is the primary subclade of N1a, encompassing virtually all the major N lineages found in Northern Europe and Western Siberia. Defined by the L1026 marker, it contains the large Uralic clade N1a1a (Z1936) that is characteristic of Finno-Ugric and Samoyedic peoples, and represents the westward expansion of haplogroup N from Central Siberia toward the Ural Mountains and eventually the Baltic.",
+  interestingFact:
+    "N1a1 (L1026) is the gateway haplogroup between the deep Asian origins of N and its modern dominance in Northern Europe — its carriers followed the retreating glaciers northward and westward after the Last Glacial Maximum, eventually becoming the paternal ancestors of populations from the Urals to Scandinavia.",
+  distribution: [
+    { ethnicity: "Finns", region: "Northern Europe", percentage: 55, sampleSize: 700 },
+    { ethnicity: "Estonians", region: "Northern Europe", percentage: 33, sampleSize: 400 },
+    { ethnicity: "Yakuts", region: "Siberia", percentage: 85, sampleSize: 300 },
+    { ethnicity: "Nenets", region: "Arctic Siberia", percentage: 75, sampleSize: 100 },
+  ],
+  statistics: {
+    modernFrequency: "~2% of global male population",
+    peakRegion: "Finland / Siberia",
+    estimatedCarriers: 75_000_000,
+  },
+  tags: ["Uralic", "Siberia", "Finland", "Mesolithic", "Finno-Ugric"],
+  references: [
+    "Ilumäe et al. (2016) — Human Y Chromosome Haplogroup N: A Non-trivial Time-Resolved Phylogeography that Cuts across Language Families. AJHG 99(1), 163–173.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default N1a1;
