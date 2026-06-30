@@ -1,0 +1,48 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const C2b1a1a: Haplogroup = {
+  id: "C2b1a1a",
+  name: "C2b1a1a (Borjigin branch)",
+  type: "Y-DNA",
+  parent: "C2b1a1",
+  children: [],
+  formed: "~800 BCE",
+  mrca: "~1,100 CE",
+  origin: {
+    region: "Mongolia (Onon–Kherlen river basin)",
+    period: "Medieval",
+    coordinates: [110, 49],
+  },
+  description:
+    "C2b1a1a is the subclade of the Star Cluster most strongly associated with the Borjigin clan — the direct paternal lineage of Genghis Khan and his descendants. It is disproportionately elevated in the Hazara of Afghanistan (~33%), who claim and genetically reflect Mongol descent from garrisons left by Genghis Khan's successors, and among the Tore (White Bone) aristocracy of Kazakhstan (~70%), a social class that claims patrilineal descent from the Chinggisid ruling house. The very recent MRCA (~1,100 CE) places the common ancestor of this subclade within or immediately before the historical Genghis Khan (~1162–1227 CE), and microsatellite analysis in Balaresque et al. (2015) identifies this branch as Cluster 1 — the closest in haplotype space to the proposed Genghis Khan reference sequence. This is the branch that most likely represents actual patrilineal descent from the Mongol imperial founder.",
+  interestingFact:
+    "The Hazara of Afghanistan are the single population outside Mongolia with the highest frequency of C2b1a1a. Historical records, oral tradition, and now genetic evidence all converge on the same explanation: the Hazara are largely descended from Mongol soldiers stationed in the region by Genghis Khan's successors — men who carried the Star Cluster and whose patrilineal lines survive today in Afghanistan's central highlands.",
+  distribution: [
+    { ethnicity: "Tore Kazakhs", region: "Central Asia (Kazakhstan)", percentage: 70, sampleSize: 100 },
+    { ethnicity: "Hazara", region: "South Asia (Afghanistan)", percentage: 33, sampleSize: 150 },
+    { ethnicity: "Mongols (Borjigin clans)", region: "East Asia / Central Asia", percentage: 25, sampleSize: 200 },
+    { ethnicity: "Buryats", region: "Siberia", percentage: 12, sampleSize: 300 },
+    { ethnicity: "Oirats", region: "Central Asia / Xinjiang", percentage: 10, sampleSize: 120 },
+  ],
+  clans: [
+    { type: "dynasty", name: "House of Borjigin", region: "Mongolia", note: "The ruling dynasty of the Mongol Empire; this subclade is the proposed direct patrilineal lineage of Genghis Khan" },
+    { type: "dynasty", name: "Chagatai Khanate", region: "Central Asia", note: "Western Mongol khanate founded by Genghis Khan's son Chagatai; Hazara populations in this territory carry C2b1a1a at high frequency" },
+    { type: "dynasty", name: "Ilkhanate", region: "Persia / Afghanistan", note: "Mongol dynasty of Persia founded by Hulagu Khan; garrison populations in Afghanistan are ancestral to modern Hazara C2b1a1a carriers" },
+    { type: "ru", name: "Tore (Aq Suyek)", region: "Kazakhstan", note: "'White Bone' aristocracy of Kazakhstan; the only social class permitted to claim Chinggisid descent, carrying C2b1a1a at ~70%" },
+  ],
+  statistics: {
+    modernFrequency: "~0.25% of global male population",
+    peakRegion: "Tore Kazakhs / Hazara",
+    estimatedCarriers: 9_000_000,
+  },
+  tags: ["Genghis Khan", "Borjigin", "Mongol Empire", "Hazara", "Star Cluster", "Steppe", "Medieval", "Dynasty"],
+  references: [
+    "Zerjal et al. (2003) — The Genetic Legacy of the Mongols. American Journal of Human Genetics 72(3), 717–721.",
+    "Balaresque et al. (2015) — Y-chromosome descent clusters and male differential reproductive success. European Journal of Human Genetics 23, 1357–1362.",
+    "Keyser-Tracqui et al. (2006) — Nuclear and mitochondrial DNA analysis of a 2,000-year-old necropolis in the Egyin Gol Valley of Mongolia. Annals of Human Genetics 70(2), 247–260.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default C2b1a1a;
