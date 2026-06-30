@@ -11,7 +11,7 @@ const T: Haplogroup = {
   name: "T (M184)",
   type: "Y-DNA",
   parent: "LT",
-  children: [],
+  children: ["T1"],
   formed: "~40,000 BCE",
   mrca: "~24,000 BCE",
   origin: {
