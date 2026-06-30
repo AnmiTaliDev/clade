@@ -7,9 +7,12 @@ import CF from "./CF";
 import DE from "./DE";
 import D from "./D";
 import E from "./E";
+import E1b1a from "./E1b1a";
 import E1b1b from "./E1b1b";
 import F from "./F";
 import G from "./G";
+import G1 from "./G1";
+import G2 from "./G2";
 import H from "./H";
 import I from "./I";
 import I1 from "./I1";
@@ -27,6 +30,8 @@ import N from "./N";
 import N1 from "./N1";
 import N1c from "./N1c";
 import O from "./O";
+import O1 from "./O1";
+import O2 from "./O2";
 import C from "./C";
 import C1 from "./C1";
 import C1a from "./C1a";
@@ -39,26 +44,99 @@ import C1b2a from "./C1b2a";
 import C1b2b from "./C1b2b";
 import C2 from "./C2";
 import C2a from "./C2a";
+import C2a1 from "./C2a1";
 import C2b from "./C2b";
+import C2b1 from "./C2b1";
+import C2b1a from "./C2b1a";
+import C2b1a2 from "./C2b1a2";
+import C2b1b from "./C2b1b";
 import C2b1a1 from "./C2b1a1";
+import C2b1a1a from "./C2b1a1a";
+import C2b1a1b from "./C2b1a1b";
+import C2b1a1c from "./C2b1a1c";
+import C2a1a from "./C2a1a";
+import C2a1a1 from "./C2a1a1";
+import C2a1a2 from "./C2a1a2";
+import C2a1a3 from "./C2a1a3";
+import C2a1a3a from "./C2a1a3a";
+import C2a1a3a1 from "./C2a1a3a1";
+import C2b_CTS4660 from "./C2b-CTS4660";
+import C2b_MF630546 from "./C2b-MF630546";
+import C2b_MF653129 from "./C2b-MF653129";
+import C2a1a3a1a from "./C2a1a3a1a";
+import C2a1a3a1b from "./C2a1a3a1b";
+import C2a1a3a1b1 from "./C2a1a3a1b1";
+import C1a2a from "./C1a2a";
+import C1b2a1 from "./C1b2a1";
+import C1b2b1 from "./C1b2b1";
+import C2b1a2a from "./C2b1a2a";
+import C2b1a2a1 from "./C2b1a2a1";
+import C2b1a2a1b from "./C2b1a2a1b";
+import C3 from "./C3";
+import N1a from "./N1a";
+import N1a1 from "./N1a1";
+import N1a1a from "./N1a1a";
+import N1a2b from "./N1a2b";
+import O2a from "./O2a";
+import O2a2 from "./O2a2";
+import O2a2b from "./O2a2b";
+import O2a2b1 from "./O2a2b1";
+import O_Y22112 from "./O-Y22112";
+import R1a1 from "./R1a1";
 import P from "./P";
 import Q from "./Q";
+import Q1 from "./Q1";
 import R from "./R";
+import R2 from "./R2";
 import R1 from "./R1";
 import R1a from "./R1a";
+import R1a_M417 from "./R1a-M417";
+import R1a_Z282 from "./R1a-Z282";
+import R1a_Z93 from "./R1a-Z93";
 import R1b from "./R1b";
+import R1b_M269 from "./R1b-M269";
+import R1b_L23 from "./R1b-L23";
+import R1b_L51 from "./R1b-L51";
+import R1b_L11 from "./R1b-L11";
+import R1b_P312 from "./R1b-P312";
+import R1b_DF13 from "./R1b-DF13";
+import R1b_DF19 from "./R1b-DF19";
+import R1b_U106 from "./R1b-U106";
+import R1b_U152 from "./R1b-U152";
+import R1b_DF27 from "./R1b-DF27";
+import R1b_L21 from "./R1b-L21";
+import R1b_M222 from "./R1b-M222";
+import R1b_Z156 from "./R1b-Z156";
+import R1b_Z2103 from "./R1b-Z2103";
+import R1b_V88 from "./R1b-V88";
+import R1b_M73 from "./R1b-M73";
 
 import L_mt from "./L_mt";
+import L0 from "./L0";
+import L1 from "./L1";
+import L2 from "./L2";
 import L3 from "./L3";
 import M_mt from "./M_mt";
+import C_mt from "./C_mt";
+import Z_mt from "./Z_mt";
+import D_mt from "./D_mt";
+import G_mt from "./G_mt";
 import N_mt from "./N_mt";
+import A_mt from "./A_mt";
+import X_mt from "./X_mt";
+import W_mt from "./W_mt";
+import I_mt from "./I_mt";
 import R_mt from "./R_mt";
+import B_mt from "./B_mt";
+import F_mt from "./F_mt";
 import HV from "./HV";
 import H_mt from "./H_mt";
+import V_mt from "./V_mt";
 import JT_mt from "./JT_mt";
 import J_mt from "./J_mt";
 import T_mt from "./T_mt";
 import U_mt from "./U_mt";
+import U5_mt from "./U5_mt";
 import K_mt from "./K_mt";
 
 export const haplogroups: Haplogroup[] = [
@@ -68,6 +146,7 @@ export const haplogroups: Haplogroup[] = [
   DE,
   D,
   E,
+  E1b1a,
   E1b1b,
   CF,
   C,
@@ -82,10 +161,39 @@ export const haplogroups: Haplogroup[] = [
   C1b2b,
   C2,
   C2a,
+  C2a1,
   C2b,
+  C2b1,
+  C2b1a,
+  C2b1a2,
+  C2b1b,
   C2b1a1,
+  C2b1a1a,
+  C2b1a1b,
+  C2b1a1c,
+  C2a1a,
+  C2a1a1,
+  C2a1a2,
+  C2a1a3,
+  C2a1a3a,
+  C2a1a3a1,
+  C2b_CTS4660,
+  C2b_MF630546,
+  C2b_MF653129,
+  C2a1a3a1a,
+  C2a1a3a1b,
+  C2a1a3a1b1,
+  C1a2a,
+  C1b2a1,
+  C1b2b1,
+  C2b1a2a,
+  C2b1a2a1,
+  C2b1a2a1b,
+  C3,
   F,
   G,
+  G1,
+  G2,
   H,
   IJ,
   I,
@@ -102,24 +210,72 @@ export const haplogroups: Haplogroup[] = [
   N,
   N1,
   N1c,
+  N1a,
+  N1a1,
+  N1a1a,
+  N1a2b,
   O,
+  O1,
+  O2,
+  O2a,
+  O2a2,
+  O2a2b,
+  O2a2b1,
+  O_Y22112,
   P,
   Q,
+  Q1,
   R,
+  R2,
   R1,
   R1a,
+  R1a1,
+  R1a_M417,
+  R1a_Z282,
+  R1a_Z93,
   R1b,
+  R1b_M269,
+  R1b_L23,
+  R1b_L51,
+  R1b_L11,
+  R1b_P312,
+  R1b_DF13,
+  R1b_DF19,
+  R1b_U106,
+  R1b_U152,
+  R1b_DF27,
+  R1b_L21,
+  R1b_M222,
+  R1b_Z156,
+  R1b_Z2103,
+  R1b_V88,
+  R1b_M73,
   L_mt,
+  L0,
+  L1,
+  L2,
   L3,
   M_mt,
+  C_mt,
+  Z_mt,
+  D_mt,
+  G_mt,
   N_mt,
+  A_mt,
+  X_mt,
+  W_mt,
+  I_mt,
   R_mt,
+  B_mt,
+  F_mt,
   HV,
   H_mt,
+  V_mt,
   JT_mt,
   J_mt,
   T_mt,
   U_mt,
+  U5_mt,
   K_mt,
 ];
 
