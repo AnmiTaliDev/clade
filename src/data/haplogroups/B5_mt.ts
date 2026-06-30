@@ -1,0 +1,26 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const B5_mt: Haplogroup = {
+  id: "B5_mt",
+  name: "B5 (mtDNA)",
+  type: "mtDNA",
+  parent: "B_mt",
+  children: [],
+  formed: "~50,000 BCE",
+  mrca: "~20,000 BCE",
+  origin: { region: "East Asia", period: "Upper Paleolithic", coordinates: [115, 30] },
+  description: "Haplogroup B5 is a subclade of mtDNA haplogroup B found predominantly in East Asia, particularly in China, Japan, and Southeast Asia. It is less common than B4 and shows a more restricted distribution. B5a and B5b are the main sub-branches, with B5a being more common in Japan and Korea, while B5b occurs more frequently in China and Vietnam. B5 represents a distinct evolutionary lineage within the B radiation that remained largely confined to mainland and island East Asia rather than expanding into the Pacific or Americas like B4.",
+  interestingFact: "B5a has been found in ancient Japanese Jomon individuals (pre-agricultural hunter-gatherers), placing it among the oldest identifiable genetic lineages in the Japanese archipelago — predating the Yayoi farming migration from mainland China by several thousand years.",
+  distribution: [
+    { ethnicity: "Japanese", region: "East Asia", percentage: 5, sampleSize: 1000 },
+    { ethnicity: "Chinese (Han)", region: "East Asia", percentage: 3, sampleSize: 2000 },
+    { ethnicity: "Vietnamese", region: "Southeast Asia", percentage: 4, sampleSize: 500 },
+    { ethnicity: "Koreans", region: "East Asia", percentage: 3, sampleSize: 600 },
+  ],
+  statistics: { modernFrequency: "~0.7% of global female population", peakRegion: "East Asia", estimatedCarriers: 14_000_000 },
+  tags: ["East Asia", "Japan", "China", "Jomon", "Southeast Asia"],
+  references: ["Tanaka et al. (2004) — Mitochondrial genome variation in eastern Asia and the peopling of Japan. Genome Research 14(10A), 1832–1850."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default B5_mt;
