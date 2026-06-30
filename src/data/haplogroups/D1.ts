@@ -1,0 +1,26 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const D1: Haplogroup = {
+  id: "D1",
+  name: "D1 (CTS11577)",
+  type: "Y-DNA",
+  parent: "D",
+  children: ["D1a", "D1b"],
+  formed: "~53,000 BCE",
+  mrca: "~45,000 BCE",
+  origin: { region: "Central / South Asia", period: "Upper Paleolithic", coordinates: [80, 30] },
+  description: "Haplogroup D1 (CTS11577) is the principal surviving branch of Y-DNA haplogroup D, encompassing both the Tibetan/Himalayan lineage (D1a) and the Japanese Jomon lineage (D1b). D1 diverged from the broader D clade deep in the Upper Paleolithic and subsequently split into geographically distinct branches — one that settled the high-altitude Himalayan plateau and one that followed ancient routes into East Asia and ultimately Japan. The D1 lineage is remarkable for its antiquity and its restriction to a few isolated geographic pockets in modern populations.",
+  interestingFact: "D1 is one of the clearest genetic signatures of ancient human populations that predated the major Bronze Age expansions in Asia — both Tibetans and the Jomon people of Japan carry D1 as a marker of populations that occupied their respective regions long before the major agricultural migrations swept across East Asia.",
+  distribution: [
+    { ethnicity: "Tibetans", region: "High Asia (Tibet)", percentage: 50, sampleSize: 400 },
+    { ethnicity: "Bhutanese", region: "Himalaya", percentage: 40, sampleSize: 200 },
+    { ethnicity: "Japanese", region: "East Asia", percentage: 35, sampleSize: 1000 },
+    { ethnicity: "Sherpa", region: "Nepal / Himalaya", percentage: 45, sampleSize: 150 },
+  ],
+  statistics: { modernFrequency: "~1% of global male population", peakRegion: "Tibet / Japan", estimatedCarriers: 40_000_000 },
+  tags: ["Tibet", "Japan", "Himalaya", "Paleolithic", "Jomon", "East Asia"],
+  references: ["Shi et al. (2008) — Y chromosome evidence of earliest modern human settlement in East Asia and multiple origins of Tibetan and Japanese populations. BMC Biology 6, 45."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default D1;
