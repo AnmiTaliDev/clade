@@ -1,0 +1,26 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const E1b1b1c: Haplogroup = {
+  id: "E1b1b1c",
+  name: "E1b1b1c (M123)",
+  type: "Y-DNA",
+  parent: "E1b1b1",
+  children: [],
+  formed: "~14,000 BCE",
+  mrca: "~7,000 BCE",
+  origin: { region: "Near East / Levant", period: "Epipaleolithic / Neolithic", coordinates: [36, 32] },
+  description: "Haplogroup E1b1b1c (M123) is a subclade of E1b1b1 found predominantly in the Near East, especially the Levant and Arabian Peninsula, as well as in the Horn of Africa and among Ethiopian Semitic-speaking populations. It is one of the few E lineages with a significant Near Eastern presence, suggesting either an early migration from Northeast Africa into the Levant or a secondary expansion back into East Africa from the Near East. E1b1b1c is particularly notable among Jews, Levantine Arabs, and some Ethiopian groups, and has been detected in Neolithic Levantine ancient DNA.",
+  interestingFact: "E1b1b1c (M123) is found at elevated frequencies among Ethiopian Jews (Beta Israel), suggesting this lineage may reflect ancient population connections between the Levant and the Ethiopian Highlands — possibly linked to ancient Semitic-speaking migrations that brought both linguistic and genetic influence from the Near East into Ethiopia.",
+  distribution: [
+    { ethnicity: "Levantine Arabs", region: "Near East", percentage: 8, sampleSize: 400 },
+    { ethnicity: "Yemenis", region: "Arabian Peninsula", percentage: 12, sampleSize: 300 },
+    { ethnicity: "Ethiopians (Semitic)", region: "East Africa", percentage: 7, sampleSize: 300 },
+    { ethnicity: "Jews (general)", region: "Near East / Diaspora", percentage: 6, sampleSize: 500 },
+  ],
+  statistics: { modernFrequency: "~0.5% of global male population", peakRegion: "Near East / Horn of Africa", estimatedCarriers: 20_000_000 },
+  tags: ["Near East", "Levant", "Yemen", "Ethiopia", "Jews", "Semitic", "Neolithic"],
+  references: ["Semino et al. (2004) — Origin, diffusion, and differentiation of Y-chromosome haplogroups E and J: inferences on the neolithization of Europe and later migratory events in the Mediterranean area. American Journal of Human Genetics 74(5), 1023–1034."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default E1b1b1c;
