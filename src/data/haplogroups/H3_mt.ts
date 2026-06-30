@@ -5,7 +5,7 @@ const H3_mt: Haplogroup = {
   name: "H3 (mtDNA)",
   type: "mtDNA",
   parent: "H_mt",
-  children: [],
+  children: ["H3a_mt"],
   formed: "~10,000 BCE",
   mrca: "~8,000 BCE",
   origin: { region: "Western Europe / Iberian Peninsula", period: "Mesolithic", coordinates: [-3, 38] },
