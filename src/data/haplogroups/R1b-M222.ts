@@ -2,7 +2,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const R1b_M222: Haplogroup = {
   id: "R1b-M222",
-  name: "R1b-M222",
+  name: "R1b1a1b1a2a1a (M222)",
   type: "Y-DNA",
   parent: "R1b-L21",
   children: [],
