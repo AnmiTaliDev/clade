@@ -8,7 +8,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const R1a_Z93: Haplogroup = {
   id: "R1a-Z93",
-  name: "R1a-Z93",
+  name: "R1a1a1c (Z93)",
   type: "Y-DNA",
   parent: "R1a-M417",
   children: [],
