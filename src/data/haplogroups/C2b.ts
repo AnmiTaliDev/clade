@@ -11,7 +11,7 @@ const C2b: Haplogroup = {
   name: "C2b (L1373)",
   type: "Y-DNA",
   parent: "C2",
-  children: ["C2b1a1"],
+  children: ["C2b1"],
   formed: "~30,000 BCE",
   mrca: "~15,000 BCE",
   origin: {
