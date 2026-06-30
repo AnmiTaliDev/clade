@@ -8,7 +8,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const R1b_L11: Haplogroup = {
   id: "R1b-L11",
-  name: "R1b-L11",
+  name: "R1b1a1b1a1 (L11)",
   type: "Y-DNA",
   parent: "R1b-L51",
   children: ["R1b-P312", "R1b-U106"],
