@@ -5,7 +5,7 @@ const J1: Haplogroup = {
   name: "J1",
   type: "Y-DNA",
   parent: "J",
-  children: [],
+  children: ["J1b"],
   formed: "~25,000 BCE",
   mrca: "~10,000 BCE",
   origin: {
