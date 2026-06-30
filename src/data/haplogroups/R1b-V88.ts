@@ -2,7 +2,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const R1b_V88: Haplogroup = {
   id: "R1b-V88",
-  name: "R1b-V88",
+  name: "R1b1c (V88)",
   type: "Y-DNA",
   parent: "R1b",
   children: [],
