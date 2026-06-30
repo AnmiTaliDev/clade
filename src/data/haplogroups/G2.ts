@@ -1,0 +1,47 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const G2: Haplogroup = {
+  id: "G2",
+  name: "G2",
+  type: "Y-DNA",
+  parent: "G",
+  children: [],
+  formed: "~25,000 BCE",
+  mrca: "~20,000 BCE",
+  origin: {
+    region: "Near East / South Caucasus",
+    period: "Upper Paleolithic",
+    coordinates: [44, 38],
+  },
+  description:
+    "Haplogroup G2 — and especially its subclade G2a — is one of the defining genetic signatures of Neolithic farmers who spread agriculture from Anatolia into Europe beginning around 7000 BCE. Ancient DNA studies have confirmed that G2a was the dominant or co-dominant haplogroup at dozens of Neolithic sites across Europe, from the Iberian Peninsula to Hungary and Ukraine. This Neolithic farmer ancestry was substantially diluted by the later Bronze Age Yamnaya steppe migration (~3000 BCE), but G2a survived at highest frequencies in refugia such as Sardinia, the South Caucasus (Georgians ~45%, Ossetes ~60%), and isolated Alpine communities. The Tyrolean Iceman Ötzi (~3300 BCE) carried G2a2b, placing him squarely in the Neolithic farmer lineage.",
+  interestingFact:
+    "Ancient DNA from dozens of Neolithic sites across Europe — spanning France, Germany, Hungary, Spain, and Sweden — shows that G2a was among the most common paternal lineages of early European farmers, yet today it is carried by only ~2% of Western Europeans, demonstrating how dramatically the Bronze Age steppe migration reshaped the European paternal gene pool.",
+  distribution: [
+    { ethnicity: "Georgians", region: "South Caucasus", percentage: 45, sampleSize: 400 },
+    { ethnicity: "Ossetes", region: "North Caucasus", percentage: 60, sampleSize: 150 },
+    { ethnicity: "Armenians", region: "South Caucasus", percentage: 10, sampleSize: 300 },
+    { ethnicity: "Sardinians", region: "Southern Europe", percentage: 10, sampleSize: 200 },
+    { ethnicity: "Iranians", region: "Near East", percentage: 7, sampleSize: 500 },
+    { ethnicity: "Europeans (average)", region: "Europe", percentage: 2, sampleSize: 5000 },
+  ],
+  clans: [
+    { type: "tribe", name: "Neolithic Anatolian Farmers", region: "Europe", note: "G2a-carrying agriculturalists dominated the European paternal gene pool for thousands of years before the Bronze Age steppe expansion" },
+    { type: "family", name: "Ötzi the Iceman", region: "Alpine Europe", note: "The 5,300-year-old Tyrolean Iceman belongs to G2a2b; his closest living relatives are Sardinians" },
+  ],
+  statistics: {
+    modernFrequency: "~1.5% of global male population",
+    peakRegion: "South Caucasus / Georgia",
+    estimatedCarriers: 55_000_000,
+  },
+  tags: ["Caucasus", "Neolithic", "Georgia", "Ötzi", "Anatolia", "Farmer", "Europe"],
+  references: [
+    "Haak et al. (2015) — Massive migration from the steppe was a source for Indo-European languages in Europe. Nature 522, 207–211.",
+    "Keller et al. (2012) — New insights into the Tyrolean Iceman's origin and phenotype as inferred by whole-genome sequencing. Nature Communications 3, 698.",
+    "Lazaridis et al. (2014) — Ancient human genomes suggest three ancestral populations for present-day Europeans. Nature 513, 409–413.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default G2;
