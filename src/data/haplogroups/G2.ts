@@ -5,7 +5,7 @@ const G2: Haplogroup = {
   name: "G2",
   type: "Y-DNA",
   parent: "G",
-  children: [],
+  children: ["G2a", "G2b"],
   formed: "~25,000 BCE",
   mrca: "~20,000 BCE",
   origin: {
