@@ -11,7 +11,7 @@ const J_mt: Haplogroup = {
   name: "J (mtDNA)",
   type: "mtDNA",
   parent: "JT_mt",
-  children: [],
+  children: ["J1_mt", "J2_mt"],
   formed: "~43,000 BCE",
   mrca: "~25,000 BCE",
   origin: {
