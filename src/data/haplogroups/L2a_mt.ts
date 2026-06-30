@@ -5,7 +5,7 @@ const L2a_mt: Haplogroup = {
   name: "L2a (mtDNA)",
   type: "mtDNA",
   parent: "L2",
-  children: [],
+  children: ["L2a1_mt"],
   formed: "~70,000 BCE",
   mrca: "~40,000 BCE",
   origin: { region: "Sub-Saharan Africa (West/Central)", period: "Late Stone Age", coordinates: [15, 5] },
