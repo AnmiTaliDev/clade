@@ -2,7 +2,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const R1b_P312: Haplogroup = {
   id: "R1b-P312",
-  name: "R1b-P312",
+  name: "R1b1a1b1a2 (P312)",
   type: "Y-DNA",
   parent: "R1b-L11",
   children: ["R1b-DF13", "R1b-DF19", "R1b-U152", "R1b-DF27"],
