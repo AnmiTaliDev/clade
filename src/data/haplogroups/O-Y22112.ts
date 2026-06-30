@@ -2,7 +2,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const O_Y22112: Haplogroup = {
   id: "O-Y22112",
-  name: "O-Y22112",
+  name: "O (Y22112)",
   type: "Y-DNA",
   parent: "O",
   children: [],
