@@ -11,7 +11,7 @@ const C1b2a: Haplogroup = {
   name: "C1b2a (M38)",
   type: "Y-DNA",
   parent: "C1b2",
-  children: [],
+  children: ["C1b2a1"],
   formed: "~44,000 BCE",
   mrca: "~10,000 BCE",
   origin: {
