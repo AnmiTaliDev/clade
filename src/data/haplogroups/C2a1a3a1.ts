@@ -14,26 +14,26 @@ const C2a1a3a1: Haplogroup = {
     coordinates: [78, 48],
   },
   description:
-    "Haplogroup C2a1a3a1 (F5481) is the common paternal ancestor of the Абак (Abak) and Ашамайлы (Ashamaily) clans of the Kazakh Kerey tribe (Middle Zhuz). Based on Y-STR and whole Y-chromosome sequencing, the TMRCA of this lineage is estimated at approximately the mid-9th century CE. Together, the F5481 descendants account for the majority of the Kerey tribe's male line — C2a1a3a1b1 (FT224144, Ашамайлы) at 77.3% within Ashamaily, and C2a1a3a1a (FT411734, Абак) at 69.8% within Abak. The traditional Kazakh genealogy holds Абак and Ашамайлы as brothers descended from a single common ancestor, which is consistent with the genetic finding of a shared F5481 ancestor.",
+    "Haplogroup C2a1a3a1 (F5481) is the common paternal ancestor of the Abak and Ashamaily clans of the Kazakh Kerey tribe (Middle Zhuz). Based on Y-STR and whole Y-chromosome sequencing, the TMRCA of this lineage is estimated at approximately the mid-9th century CE. Together, the F5481 descendants account for the majority of the Kerey tribe's male line — C2a1a3a1b1 (FT224144, Ashamaily) at 77.3% within Ashamaily, and C2a1a3a1a (FT411734, Abak) at 69.8% within Abak. The traditional Kazakh genealogy holds Abak and Ashamaily as brothers descended from a single common ancestor, which is consistent with the genetic finding of a shared F5481 ancestor.",
   interestingFact:
-    "The genetics of C2a1a3a1 (F5481) largely supports traditional Kazakh oral genealogy (шежіре): the ancestor who lived ~850 CE corresponds to the legendary common forebear of Абак and Ашамайлы, though the TMRCA divergence between the two lineages suggests they may not have been as close as brothers — more likely cousins or more distant patrilineal relatives.",
+    "The genetics of C2a1a3a1 (F5481) largely supports traditional Kazakh oral genealogy (shejire): the ancestor who lived ~850 CE corresponds to the legendary common forebear of Abak and Ashamaily, though the TMRCA divergence between the two lineages suggests they may not have been as close as brothers — more likely cousins or more distant patrilineal relatives.",
   distribution: [
-    { ethnicity: "Kerey tribe — Ашамайлы clan", region: "Kazakhstan", percentage: 77, sampleSize: 110, source: "Zhumadilova et al. 2024" },
-    { ethnicity: "Kerey tribe — Абак clan", region: "Kazakhstan", percentage: 70, sampleSize: 130, source: "Zhumadilova et al. 2024" },
+    { ethnicity: "Kerey tribe — Ashamaily clan", region: "Kazakhstan", percentage: 77, sampleSize: 110, source: "Zhumadilova et al. 2024" },
+    { ethnicity: "Kerey tribe — Abak clan", region: "Kazakhstan", percentage: 70, sampleSize: 130, source: "Zhumadilova et al. 2024" },
     { ethnicity: "Kazakhs (Kerey, all)", region: "Central Asia", percentage: 59, sampleSize: 400 },
     { ethnicity: "Kyrgyz", region: "Central Asia", percentage: 4, sampleSize: 300 },
   ],
   clans: [
-    { type: "tribe", name: "Kerey (Кереі)", region: "Kazakhstan", note: "The dominant patrilineal tribe of the Kazakh Middle Zhuz; F5481 is the defining ancestor of its two main sub-divisions" },
-    { type: "clan", name: "Абак (Abak)", region: "Kazakhstan", note: "One of the two primary Kerey clans; FT411734 (C2a1a3a1a) defines the Abak patriline" },
-    { type: "clan", name: "Ашамайлы (Ashamaily)", region: "Kazakhstan", note: "Sister clan to Abak; FT224144 (C2a1a3a1b1) defines the Ashamaily patriline" },
+    { type: "tribe", name: "Kerey", region: "Kazakhstan", note: "The dominant patrilineal tribe of the Kazakh Middle Zhuz; F5481 is the defining ancestor of its two main sub-divisions" },
+    { type: "clan", name: "Abak", region: "Kazakhstan", note: "One of the two primary Kerey clans; FT411734 (C2a1a3a1a) defines the Abak patriline" },
+    { type: "clan", name: "Ashamaily", region: "Kazakhstan", note: "Sister clan to Abak; FT224144 (C2a1a3a1b1) defines the Ashamaily patriline" },
   ],
   statistics: {
     modernFrequency: "~0.15% of global male population",
     peakRegion: "Kazakhstan (Kerey homeland)",
     estimatedCarriers: 5_000_000,
   },
-  tags: ["Kazakhstan", "Kerey", "Абак", "Ашамайлы", "Middle Zhuz", "Medieval", "Kazakh", "Steppe", "Genealogy"],
+  tags: ["Kazakhstan", "Kerey", "Abak", "Ashamaily", "Middle Zhuz", "Medieval", "Kazakh", "Steppe", "Genealogy"],
   references: [
     "Zhumadilova et al. (2024) — Y-Chromosomal insights into the paternal genealogy of the Kerey tribe have called into question their descent from the Stepfather of Genghis Khan. PLOS ONE. PMC11373838.",
     "Lan et al. (2022) — Whole-sequence analysis indicates that the Y chromosome C2*-Star Cluster traces back to ordinary Mongols. European Journal of Human Genetics.",
