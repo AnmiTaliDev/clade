@@ -24,7 +24,7 @@ const C2a1a3a: Haplogroup = {
     { ethnicity: "Mongols (commoner clans)", region: "Mongolia", percentage: 4, sampleSize: 500 },
   ],
   clans: [
-    { type: "tribe", name: "Kerey (Кереі)", region: "Kazakhstan", note: "The Kerey tribe of the Kazakh Middle Zhuz is the primary carrier of the C2*-ST (F3796) lineage; 58.9% of Kerey males belong to C2a1a3a1b1 (FT224144)" },
+    { type: "tribe", name: "Kerey", region: "Kazakhstan", note: "The Kerey tribe of the Kazakh Middle Zhuz is the primary carrier of the C2*-ST (F3796) lineage; 58.9% of Kerey males belong to C2a1a3a1b1 (FT224144)" },
   ],
   statistics: {
     modernFrequency: "~0.2% of global male population",
