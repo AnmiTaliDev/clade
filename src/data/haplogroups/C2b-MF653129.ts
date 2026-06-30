@@ -2,7 +2,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const C2b_MF653129: Haplogroup = {
   id: "C2b-MF653129",
-  name: "C2b-MF653129",
+  name: "C2b1b (MF653129)",
   type: "Y-DNA",
   parent: "C2b-CTS4660",
   children: [],
