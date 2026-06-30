@@ -1,0 +1,46 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup H8.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const H8_mt: Haplogroup = {
+  id: "H8_mt",
+  name: "H8",
+  type: "mtDNA",
+  parent: "H_mt",
+  children: [],
+  formed: "~13,000 BCE",
+  mrca: "~9,000 BCE",
+  origin: {
+    region: "Eastern Europe / Near East",
+    period: "Late Upper Paleolithic",
+    coordinates: [32, 46],
+  },
+  description:
+    "Haplogroup H8 is a rare subclade of H distributed primarily in Eastern Europe and the Near East. It has been found in populations of Ukraine, Russia, and parts of the Middle East. Ancient DNA studies have identified H8 in archaeological sites from the post-glacial period, indicating its presence in the early resettlement of Eastern Europe following the Last Glacial Maximum. H8 is genetically close to H2 and likely diverged from the main H lineage during or shortly after the Last Glacial Maximum.",
+  interestingFact:
+    "H8 has been identified in ancient remains from the Copper Age in Ukraine (Sredny Stog culture), making it one of the lineages that may have been present among proto-Steppe pastoralists before the Yamnaya expansion.",
+  distribution: [
+    { ethnicity: "Ukrainians", region: "Eastern Europe", percentage: 1.5, sampleSize: 300 },
+    { ethnicity: "Russians", region: "Eastern Europe", percentage: 1, sampleSize: 500 },
+    { ethnicity: "Turks", region: "Near East", percentage: 1, sampleSize: 250 },
+    { ethnicity: "Iranians", region: "Middle East", percentage: 0.8, sampleSize: 200 },
+  ],
+  statistics: {
+    modernFrequency: "~0.3% of European and Near Eastern females",
+    peakRegion: "Eastern Europe",
+    estimatedCarriers: 3_000_000,
+  },
+  tags: ["Eastern Europe", "Near East", "Paleolithic", "Steppe", "mtDNA"],
+  references: [
+    "Mathieson et al. (2015) — Genome-wide patterns of selection in 230 ancient Eurasians. Nature 528, 499–503.",
+    "Haak et al. (2015) — Massive migration from the steppe was a source for Indo-European languages in Europe. Nature 522, 207–211.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default H8_mt;
