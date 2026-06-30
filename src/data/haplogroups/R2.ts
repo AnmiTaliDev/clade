@@ -1,0 +1,43 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const R2: Haplogroup = {
+  id: "R2",
+  name: "R2",
+  type: "Y-DNA",
+  parent: "R",
+  children: [],
+  formed: "~25,000 BCE",
+  mrca: "~20,000 BCE",
+  origin: {
+    region: "South Asia / Central Asia",
+    period: "Upper Paleolithic",
+    coordinates: [68, 30],
+  },
+  description:
+    "Haplogroup R2 is the South Asian sister clade of R1, found predominantly in the Indian subcontinent, Afghanistan, and Central Asia. Unlike R1a and R1b — which spread dramatically with Bronze Age steppe migrations — R2 appears to have been present in South Asia long before the Indo-European expansions and may represent a lineage associated with the Indus Valley Civilisation or its predecessors. R2 is found at 5–15% frequency across South Asia, with peaks among some Dravidian and upper-caste populations. It is also found at low frequencies in Iran, Afghanistan, and isolated Central Asian populations.",
+  interestingFact:
+    "Haplogroup R2 has been proposed as a possible genetic signature of the Indus Valley Civilisation — the Bronze Age urban culture of the northwestern Indian subcontinent — because it predates the R1a-heavy Indo-Aryan steppe migration and is found at elevated frequencies in regions that were the heartland of Harappan culture.",
+  distribution: [
+    { ethnicity: "South Indians (average)", region: "South Asia", percentage: 10, sampleSize: 800 },
+    { ethnicity: "Pakistanis (average)", region: "South Asia", percentage: 8, sampleSize: 600 },
+    { ethnicity: "Pashtuns", region: "South Asia / Central Asia", percentage: 15, sampleSize: 200 },
+    { ethnicity: "Iranians", region: "Near East", percentage: 3, sampleSize: 500 },
+    { ethnicity: "Sri Lankans", region: "South Asia", percentage: 6, sampleSize: 200 },
+    { ethnicity: "North Indians (Brahmin)", region: "South Asia", percentage: 12, sampleSize: 400 },
+  ],
+  statistics: {
+    modernFrequency: "~2% of global male population",
+    peakRegion: "South Asia",
+    estimatedCarriers: 75_000_000,
+  },
+  tags: ["South Asia", "India", "Pakistan", "Indus Valley", "Dravidian", "Central Asia", "Paleolithic"],
+  references: [
+    "Sengupta et al. (2006) — Polarity and temporality of high-resolution Y-chromosome distributions in India identify both indigenous and exogenous expansions and reveal minor genetic influence of Central Asian pastoralists. American Journal of Human Genetics 78(2), 202–221.",
+    "Underhill et al. (2010) — Separating the post-Glacial coancestry of European and Asian Y chromosomes within haplogroup R1a. European Journal of Human Genetics 18, 479–484.",
+    "Chiaroni et al. (2009) — Y chromosome diversity, human expansion, drift, and cultural evolution. PNAS 106(48), 20174–20179.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default R2;
