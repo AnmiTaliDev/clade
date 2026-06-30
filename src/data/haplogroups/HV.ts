@@ -5,7 +5,7 @@ const HV: Haplogroup = {
   name: "HV (mtDNA)",
   type: "mtDNA",
   parent: "R_mt",
-  children: ["H_mt", "V"],
+  children: ["H_mt", "V_mt"],
   formed: "~30,000 BCE",
   mrca: "~25,000 BCE",
   origin: {
