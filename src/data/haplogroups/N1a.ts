@@ -1,0 +1,40 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const N1a: Haplogroup = {
+  id: "N1a",
+  name: "N1a (M128)",
+  type: "Y-DNA",
+  parent: "N1",
+  children: ["N1a1", "N1a2b"],
+  formed: "~18,000 BCE",
+  mrca: "~12,000 BCE",
+  origin: {
+    region: "Central / Northern Asia",
+    period: "Mesolithic",
+    coordinates: [95, 52],
+  },
+  description:
+    "Haplogroup N1a (M128) is a major subclade of N1 found across Siberia, Central Asia, and East Asia. It split into N1a1 (the large Uralic and Siberian branch) and other subclades. N1a represents the post-glacial northward expansion of haplogroup N into the Siberian taiga and tundra, where its descendants became the founding paternal lineages of Uralic, Yeniseian, and several Siberian ethnic groups.",
+  interestingFact:
+    "N1a (M128) is the ancestor of most modern N-lineage men in northern Eurasia — its descendants include the Finns, Estonians, Yakuts, and many Siberian indigenous peoples, making M128 one of the most geographically impactful Y-chromosome markers in the post-glacial Northern Hemisphere.",
+  distribution: [
+    { ethnicity: "Finns", region: "Northern Europe", percentage: 58, sampleSize: 700 },
+    { ethnicity: "Yakuts", region: "Siberia", percentage: 88, sampleSize: 300 },
+    { ethnicity: "Khanty", region: "West Siberia", percentage: 73, sampleSize: 120 },
+    { ethnicity: "Selkups", region: "West Siberia", percentage: 65, sampleSize: 80 },
+  ],
+  statistics: {
+    modernFrequency: "~2.5% of global male population",
+    peakRegion: "Siberia / Northern Europe",
+    estimatedCarriers: 95_000_000,
+  },
+  tags: ["Uralic", "Siberia", "Finland", "Mesolithic", "Northern Europe"],
+  references: [
+    "Rootsi et al. (2007) — A counter-clockwise northern route of the Y-chromosome haplogroup N from Southeast Asia towards Europe. European Journal of Human Genetics 15, 204–211.",
+    "Ilumäe et al. (2016) — Human Y Chromosome Haplogroup N: A Non-trivial Time-Resolved Phylogeography that Cuts across Language Families. AJHG 99(1), 163–173.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default N1a;
