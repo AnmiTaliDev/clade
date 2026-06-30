@@ -1,0 +1,27 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const T1: Haplogroup = {
+  id: "T1",
+  name: "T1 (L206)",
+  type: "Y-DNA",
+  parent: "T",
+  children: ["T1a"],
+  formed: "~25,000 BCE",
+  mrca: "~12,000 BCE",
+  origin: { region: "Near East / Fertile Crescent", period: "Upper Paleolithic", coordinates: [42, 32] },
+  description: "Haplogroup T1 (L206) is the primary subclade of Y-DNA haplogroup T and the source of virtually all modern T lineages. T1 is found across a broad geographic range including the Near East, East Africa, South Asia, and Mediterranean Europe, with its highest frequencies in the Arabian Peninsula, Horn of Africa, and southern India. T1 appears to have originated in the Near East or East Africa during the Upper Paleolithic and subsequently spread into multiple regions. Ancient DNA has recovered T1 from Neolithic Anatolian farmers and from Bronze Age Eastern Mediterranean populations, suggesting it was part of early Neolithic expansions from the Near East.",
+  interestingFact: "T1 was found in Ötzi the Iceman's maternal relatives' community — while Ötzi himself belonged to K (via haplogroup G2a on the paternal side), T lineages have been recovered from ancient Neolithic European contexts including Linearbandkeramik (LBK) farmers, showing T1 was part of the original Neolithic farming expansion from Anatolia into Europe.",
+  distribution: [
+    { ethnicity: "Omanis", region: "Arabian Peninsula", percentage: 12, sampleSize: 300 },
+    { ethnicity: "Ethiopians", region: "East Africa", percentage: 8, sampleSize: 400 },
+    { ethnicity: "South Indians (Tamil/Telugu)", region: "South Asia", percentage: 7, sampleSize: 600 },
+    { ethnicity: "Egyptians", region: "North Africa", percentage: 6, sampleSize: 500 },
+    { ethnicity: "Somalis", region: "Horn of Africa", percentage: 5, sampleSize: 300 },
+  ],
+  statistics: { modernFrequency: "~1% of global male population", peakRegion: "Near East / Horn of Africa", estimatedCarriers: 40_000_000 },
+  tags: ["Near East", "East Africa", "South Asia", "Arabia", "Neolithic", "Ethiopia", "Oman"],
+  references: ["Cruciani et al. (2002) — A back migration from Asia to sub-Saharan Africa is supported by high-resolution analysis of human Y-chromosome haplotypes. American Journal of Human Genetics 70(5), 1197–1214."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default T1;
