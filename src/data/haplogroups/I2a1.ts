@@ -1,0 +1,26 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const I2a1: Haplogroup = {
+  id: "I2a1",
+  name: "I2a1 (M26)",
+  type: "Y-DNA",
+  parent: "I2a",
+  children: [],
+  formed: "~8,000 BCE",
+  mrca: "~5,000 BCE",
+  origin: { region: "Western Mediterranean / Iberia", period: "Mesolithic", coordinates: [5, 40] },
+  description: "Haplogroup I2a1 (M26) is the defining Y-DNA lineage of Sardinia, where it reaches frequencies of 35–42% — the highest in the world. Outside Sardinia, it is found at low levels in the rest of the Mediterranean and Western Europe. I2a1 is considered a relic of the ancient pre-Neolithic hunter-gatherer populations of the Western Mediterranean, preserved at high frequency on the island of Sardinia due to its relative geographic isolation. The Sardinians, together with Basques, are often cited as the European population that best preserves Neolithic and even pre-Neolithic genetic ancestry.",
+  interestingFact: "Sardinia's exceptional genetic distinctiveness — including very high I2a1 frequency — has made Sardinians one of the most studied populations in human genetics. Genome-wide studies consistently show that Sardinians are genetic outliers in Europe, preserving ancient ancestral components that were diluted elsewhere by Bronze Age steppe migrations, making them invaluable 'proxies' for ancient European Neolithic ancestry.",
+  distribution: [
+    { ethnicity: "Sardinians", region: "Southern Europe (Sardinia)", percentage: 40, sampleSize: 400 },
+    { ethnicity: "Italians (general)", region: "Southern Europe", percentage: 3, sampleSize: 800 },
+    { ethnicity: "Iberians (Spanish)", region: "Southern Europe", percentage: 2, sampleSize: 700 },
+    { ethnicity: "Corsicans", region: "Southern Europe", percentage: 5, sampleSize: 200 },
+  ],
+  statistics: { modernFrequency: "~0.3% of global male population", peakRegion: "Sardinia", estimatedCarriers: 12_000_000 },
+  tags: ["Sardinia", "Mediterranean", "Italy", "Paleolithic", "Isolate", "Neolithic", "Western Europe"],
+  references: ["Francalacci et al. (2013) — Low-pass DNA sequencing of 1200 Sardinians reconstructs European Y-chromosome phylogeny. Science 341(6145), 565–569."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default I2a1;
