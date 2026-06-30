@@ -72,7 +72,6 @@ import C1b2b1 from "./C1b2b1";
 import C2b1a2a from "./C2b1a2a";
 import C2b1a2a1 from "./C2b1a2a1";
 import C2b1a2a1b from "./C2b1a2a1b";
-import C3 from "./C3";
 import N1a from "./N1a";
 import N1a1 from "./N1a1";
 import N1a1a from "./N1a1a";
@@ -189,7 +188,6 @@ export const haplogroups: Haplogroup[] = [
   C2b1a2a,
   C2b1a2a1,
   C2b1a2a1b,
-  C3,
   F,
   G,
   G1,
