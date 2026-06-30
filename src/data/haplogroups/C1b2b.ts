@@ -11,7 +11,7 @@ const C1b2b: Haplogroup = {
   name: "C1b2b (M347)",
   type: "Y-DNA",
   parent: "C1b2",
-  children: [],
+  children: ["C1b2b1"],
   formed: "~44,000 BCE",
   mrca: "~40,000 BCE",
   origin: {
