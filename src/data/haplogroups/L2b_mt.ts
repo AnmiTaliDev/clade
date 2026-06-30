@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup L2b.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const L2b_mt: Haplogroup = {
+  id: "L2b_mt",
+  name: "L2b",
+  type: "mtDNA",
+  parent: "L2",
+  children: [],
+  formed: "~60,000 BCE",
+  mrca: "~40,000 BCE",
+  origin: {
+    region: "West / Central Africa",
+    period: "Middle Stone Age",
+    coordinates: [15, 5],
+  },
+  description:
+    "Haplogroup L2b is a subclade of L2, primarily found in West and Central Africa. It is part of the broad L2 clade that represents the most common branch of the African macrohaplogroup L. L2b, along with L2c and L2d, forms the sister clade to L2a — the most widespread and common L2 subclade. L2b is found in various West African populations and, as a result of the trans-Atlantic slave trade, has been detected in African-American and Afro-Caribbean populations at significant frequencies.",
+  interestingFact:
+    "L2b, like other L2 subclades, was carried across the Atlantic as part of the African diaspora during the trans-Atlantic slave trade (c. 1500–1900 CE). Genetic genealogy studies of African-American populations have used L2 subclades to identify ancestral African regions, providing important connections between diaspora communities and their geographic origins in West and Central Africa.",
+  distribution: [
+    { ethnicity: "Yoruba (Nigeria)", region: "West Africa", percentage: 5, sampleSize: 200 },
+    { ethnicity: "Ghanaians", region: "West Africa", percentage: 4, sampleSize: 180 },
+    { ethnicity: "Cameroonians", region: "Central Africa", percentage: 5, sampleSize: 150 },
+    { ethnicity: "African Americans", region: "North America", percentage: 3, sampleSize: 300 },
+    { ethnicity: "Afro-Caribbeans", region: "Caribbean", percentage: 4, sampleSize: 200 },
+  ],
+  statistics: {
+    modernFrequency: "~1% globally; ~5% in West Africa",
+    peakRegion: "West and Central Africa",
+    estimatedCarriers: 10_000_000,
+  },
+  tags: ["West Africa", "Central Africa", "African diaspora", "Slave trade", "Sub-Saharan", "mtDNA"],
+  references: [
+    "Salas et al. (2002) — The making of the African mtDNA landscape. American Journal of Human Genetics 71(5), 1082–1111.",
+    "Bandelt et al. (2001) — Phylogeography of the human mitochondrial haplogroup L3e: a snapshot of African prehistory and Atlantic slave trade. Annals of Human Genetics 65(6), 549–563.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default L2b_mt;
