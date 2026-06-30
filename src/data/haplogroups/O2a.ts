@@ -1,0 +1,41 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const O2a: Haplogroup = {
+  id: "O2a",
+  name: "O2a (M95)",
+  type: "Y-DNA",
+  parent: "O2",
+  children: ["O2a2"],
+  formed: "~25,000 BCE",
+  mrca: "~10,000 BCE",
+  origin: {
+    region: "Southeast Asia / South China",
+    period: "Upper Paleolithic / Neolithic",
+    coordinates: [108, 20],
+  },
+  description:
+    "Haplogroup O2a (M95) is the primary subclade of O2 associated with Austroasiatic-speaking populations of Southeast Asia and South Asia. It is found at high frequencies among Mon-Khmer, Munda, and other Austroasiatic groups. O2a carriers participated in the ancient agricultural expansion of mainland Southeast Asia and the spread of Austroasiatic languages from a homeland in South China or mainland Southeast Asia into the Indian subcontinent. It also forms a significant component of the paternal gene pool in parts of South China, Vietnam, and the eastern Indian subcontinent.",
+  interestingFact:
+    "The distribution of O2a (M95) closely tracks the geographic extent of Austroasiatic language families — from the Munda tribes of central India to the Khmer of Cambodia and the Mon of Myanmar — providing one of the strongest known genetic correlates for a language family expansion in Asia.",
+  distribution: [
+    { ethnicity: "Khmer (Cambodian)", region: "Southeast Asia", percentage: 45, sampleSize: 300 },
+    { ethnicity: "Mon-Khmer groups", region: "Southeast Asia", percentage: 40, sampleSize: 400 },
+    { ethnicity: "Munda (India)", region: "South Asia", percentage: 60, sampleSize: 200 },
+    { ethnicity: "Vietnamese", region: "Southeast Asia", percentage: 20, sampleSize: 500 },
+    { ethnicity: "Malays", region: "Southeast Asia", percentage: 10, sampleSize: 400 },
+  ],
+  statistics: {
+    modernFrequency: "~3% of global male population",
+    peakRegion: "Southeast Asia (Mainland)",
+    estimatedCarriers: 110_000_000,
+  },
+  tags: ["Southeast Asia", "Austroasiatic", "Khmer", "Munda", "Neolithic", "South Asia"],
+  references: [
+    "Shi et al. (2005) — Y-chromosome evidence of earliest modern human settlement in East Asia. BMC Biology 3, 5.",
+    "Kumar et al. (2007) — Y-chromosome evidence suggests a common paternal heritage of Austro-Asiatic populations. BMC Evolutionary Biology 7, 47.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default O2a;
