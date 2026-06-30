@@ -5,7 +5,7 @@ const C: Haplogroup = {
   name: "C",
   type: "Y-DNA",
   parent: "CF",
-  children: ["C1", "C2"],
+  children: ["C1", "C2", "C3"],
   formed: "~65,000 BCE",
   mrca: "~53,000 BCE",
   origin: {
