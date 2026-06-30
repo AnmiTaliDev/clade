@@ -8,7 +8,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const R1b_U152: Haplogroup = {
   id: "R1b-U152",
-  name: "R1b-U152",
+  name: "R1b1a1b1a2b (U152)",
   type: "Y-DNA",
   parent: "R1b-P312",
   children: [],
