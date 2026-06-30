@@ -1,0 +1,43 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const V_mt: Haplogroup = {
+  id: "V_mt",
+  name: "V (mtDNA)",
+  type: "mtDNA",
+  parent: "HV",
+  children: [],
+  formed: "~16,000 BCE",
+  mrca: "~12,000 BCE",
+  origin: {
+    region: "Iberian Peninsula",
+    period: "Upper Paleolithic / Late Glacial",
+    coordinates: [-4, 41],
+  },
+  description:
+    "Mitochondrial haplogroup V is a sister clade of H under HV, likely originating in the Iberian Peninsula during or shortly after the Last Glacial Maximum (~18,000 BCE). It expanded northward with post-glacial repopulation of Europe and today reaches its highest frequencies among the Saami of Scandinavia (~40%) and the Basques of northern Spain (~10%). V's distribution — concentrated at the geographic peripheries of Europe — reflects the post-glacial re-expansion from the Iberian refugium and the subsequent isolation of populations at the northern and western margins of the continent. V is rare outside of Europe.",
+  interestingFact:
+    "The Saami of northern Scandinavia carry haplogroup V at frequencies around 40% — the highest of any population on Earth. This almost certainly reflects a severe founder effect when a small group of V-carrying post-glacial migrants expanded into the empty landscapes of northern Fennoscandia following the retreat of the ice sheets approximately 11,000 years ago.",
+  distribution: [
+    { ethnicity: "Saami", region: "Northern Europe", percentage: 40, sampleSize: 200 },
+    { ethnicity: "Basques", region: "Western Europe", percentage: 10, sampleSize: 200 },
+    { ethnicity: "Cantabrians", region: "Western Europe", percentage: 8, sampleSize: 150 },
+    { ethnicity: "Swedes", region: "Northern Europe", percentage: 5, sampleSize: 400 },
+    { ethnicity: "Finns", region: "Northern Europe", percentage: 3, sampleSize: 400 },
+    { ethnicity: "Europeans (average)", region: "Europe", percentage: 4, sampleSize: 5000 },
+  ],
+  statistics: {
+    modernFrequency: "~4% of global female population",
+    peakRegion: "Northern Europe / Saami",
+    estimatedCarriers: 110_000_000,
+  },
+  tags: ["mtDNA", "Europe", "Saami", "Basques", "Last Glacial Maximum", "Post-glacial", "Iberian refugium", "Maternal lineage"],
+  references: [
+    "Torroni et al. (2001) — A signal, from human mtDNA, of postglacial recolonization in Europe. American Journal of Human Genetics 69(4), 844–852.",
+    "Achilli et al. (2004) — The molecular dissection of mtDNA haplogroup H confirms that the Franco-Cantabrian glacial refuge was a major source for the European gene pool. American Journal of Human Genetics 75(5), 910–918.",
+    "Soares et al. (2010) — The archaeogenetics of Europe. Current Biology 20(4), R174–R183.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default V_mt;
