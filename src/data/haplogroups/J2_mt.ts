@@ -5,7 +5,7 @@ const J2_mt: Haplogroup = {
   name: "J2 (mtDNA)",
   type: "mtDNA",
   parent: "J_mt",
-  children: [],
+  children: ["J2a_mt", "J2b_mt"],
   formed: "~25,000 BCE",
   mrca: "~8,000 BCE",
   origin: { region: "Near East / Arabian Peninsula", period: "Epipaleolithic", coordinates: [42, 28] },
