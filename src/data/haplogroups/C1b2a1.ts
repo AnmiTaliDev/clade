@@ -1,0 +1,41 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const C1b2a1: Haplogroup = {
+  id: "C1b2a1",
+  name: "C1b2a1 (M208)",
+  type: "Y-DNA",
+  parent: "C1b2a",
+  children: [],
+  formed: "~35,000 BCE",
+  mrca: "~5,000 BCE",
+  origin: {
+    region: "Near Oceania (New Guinea / Bismarck Archipelago)",
+    period: "Mesolithic / Neolithic",
+    coordinates: [147, -6],
+  },
+  description:
+    "C1b2a1 (M208) is the Polynesian and Micronesian branch of C1b2a, defined by the M208 marker. It reached its highest frequencies through the Austronesian expansion across the Pacific, being carried by seafaring populations who settled Polynesia and Micronesia over the last 3,000 years. Despite its ancient origin, the very recent MRCA (~5,000 BCE) reflects a founder effect associated with the proto-Polynesian population that departed from Near Oceania and rapidly colonized the vast Pacific. C1b2a1 is today one of the defining paternal lineages of Polynesian and Micronesian peoples.",
+  interestingFact:
+    "C1b2a1 (M208) was carried by the Lapita cultural complex — the ancestral Austronesian/Oceanian seafarers who between 1500–1000 BCE made some of the longest open-ocean voyages in human prehistory, eventually settling islands from Samoa to Hawaii to Easter Island.",
+  distribution: [
+    { ethnicity: "Polynesians (Samoa / Tonga)", region: "Oceania", percentage: 65, sampleSize: 300 },
+    { ethnicity: "Micronesians", region: "Oceania", percentage: 35, sampleSize: 200 },
+    { ethnicity: "Maori", region: "Oceania (New Zealand)", percentage: 40, sampleSize: 150 },
+    { ethnicity: "Fijians", region: "Oceania", percentage: 20, sampleSize: 200 },
+    { ethnicity: "Hawaiians", region: "Oceania", percentage: 30, sampleSize: 100 },
+  ],
+  statistics: {
+    modernFrequency: "~0.05% of global male population",
+    peakRegion: "Polynesia (Samoa / Tonga / New Zealand)",
+    estimatedCarriers: 2_000_000,
+  },
+  tags: ["Polynesia", "Micronesia", "Pacific", "Lapita", "Austronesian", "Maritime"],
+  references: [
+    "Kayser et al. (2006) — Melanesian and Asian origins of Polynesians: mtDNA and Y chromosome evidence. American Journal of Human Genetics 79(1), 64–76.",
+    "Karafet et al. (2010) — Major east-west division underlies Y chromosome stratification across Indonesia. Molecular Biology and Evolution 27(8), 1833–1844.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default C1b2a1;
