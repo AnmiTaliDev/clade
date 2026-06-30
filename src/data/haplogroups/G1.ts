@@ -2,7 +2,7 @@ import type { Haplogroup } from "@/types/haplogroup";
 
 const G1: Haplogroup = {
   id: "G1",
-  name: "G1",
+  name: "G1 (M285)",
   type: "Y-DNA",
   parent: "G",
   children: [],
