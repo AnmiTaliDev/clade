@@ -1,0 +1,26 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const D1a: Haplogroup = {
+  id: "D1a",
+  name: "D1a (Z27276)",
+  type: "Y-DNA",
+  parent: "D1",
+  children: [],
+  formed: "~45,000 BCE",
+  mrca: "~30,000 BCE",
+  origin: { region: "Tibetan Plateau / Himalaya", period: "Upper Paleolithic", coordinates: [90, 32] },
+  description: "Haplogroup D1a (Z27276) is the dominant Y-DNA lineage of the Tibetan Plateau and surrounding Himalayan regions, found at very high frequencies among Tibetans, Bhutanese, Sherpa, and related Himalayan peoples. It is a defining genetic marker of the ancient populations that colonized and adapted to the high-altitude Tibetan Plateau — one of the most extreme environments ever inhabited by modern humans. D1a is essentially absent outside the Himalayan/Central Asian region, reflecting the remarkable genetic isolation of high-altitude Tibetan communities over tens of thousands of years.",
+  interestingFact: "Tibetans carrying D1a (and other Tibetan-specific lineages) show strong genetic signals of natural selection at the EPAS1 gene — the so-called 'superhero gene' — which allows them to thrive at altitudes above 4,000 meters by regulating hemoglobin production. This adaptation appears to have been acquired partly through ancient admixture with Denisovans, a distinct archaic human population.",
+  distribution: [
+    { ethnicity: "Tibetans", region: "Tibet / High Asia", percentage: 50, sampleSize: 400 },
+    { ethnicity: "Bhutanese", region: "Himalaya", percentage: 45, sampleSize: 200 },
+    { ethnicity: "Sherpa (Nepal)", region: "Himalaya", percentage: 48, sampleSize: 150 },
+    { ethnicity: "Ladakhi", region: "India (Ladakh)", percentage: 30, sampleSize: 100 },
+  ],
+  statistics: { modernFrequency: "~0.4% of global male population", peakRegion: "Tibetan Plateau", estimatedCarriers: 15_000_000 },
+  tags: ["Tibet", "Himalaya", "Bhutan", "Sherpa", "High altitude", "Paleolithic", "Denisovan"],
+  references: ["Gayden et al. (2007) — The Himalayas as a directional barrier to gene flow. American Journal of Human Genetics 80(5), 884–894."],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+export default D1a;
