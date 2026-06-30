@@ -1,0 +1,43 @@
+import type { Haplogroup } from "@/types/haplogroup";
+
+const R1b_M73: Haplogroup = {
+  id: "R1b-M73",
+  name: "R1b-M73",
+  type: "Y-DNA",
+  parent: "R1b",
+  children: [],
+  formed: "~13,000 BCE",
+  mrca: "~8,000 BCE",
+  origin: {
+    region: "Central Asia / Southern Siberia",
+    period: "Mesolithic",
+    coordinates: [65, 50],
+  },
+  description:
+    "R1b-M73 is an ancient Central Asian branch of R1b that diverged long before the Yamnaya-associated M269 expansion. It is found at elevated frequencies among the Bashkirs of the southern Urals (~20–25%), as well as among Kazakhs, Uzbeks, Hazara, and Uyghurs at lower levels. M73's distribution marks a distinct pre-Bronze Age Central Asian presence of R1b that is entirely separate from the steppe pastoralist expansion that shaped Western European genetics. Some ancient DNA studies have identified M73-like lineages in Bronze Age Central Asian sites, suggesting it was a resident Central Asian lineage predating the major steppe migrations.",
+  interestingFact:
+    "The Bashkirs of the southern Urals carry R1b-M73 at ~20–25% alongside equally high proportions of R1a, making them one of the few modern populations where both R1a and R1b are present at high and roughly equal frequencies — a unique genetic signature reflecting the southern Urals as a meeting point of eastern and western Eurasian lineages.",
+  distribution: [
+    { ethnicity: "Bashkirs", region: "Urals", percentage: 22, sampleSize: 250 },
+    { ethnicity: "Kazakhs", region: "Central Asia", percentage: 5, sampleSize: 500 },
+    { ethnicity: "Uzbeks", region: "Central Asia", percentage: 4, sampleSize: 300 },
+    { ethnicity: "Hazara", region: "Central Asia (Afghanistan)", percentage: 6, sampleSize: 150 },
+    { ethnicity: "Uyghurs", region: "Central Asia (Xinjiang)", percentage: 4, sampleSize: 200 },
+    { ethnicity: "Kyrgyz", region: "Central Asia", percentage: 3, sampleSize: 200 },
+  ],
+  statistics: {
+    modernFrequency: "~0.2% of global male population",
+    peakRegion: "Urals / Central Asia",
+    estimatedCarriers: 8_000_000,
+  },
+  tags: ["Central Asia", "Bashkirs", "Urals", "Mesolithic", "Kazakhstan", "Steppe"],
+  references: [
+    "Underhill et al. (2010) — Separating the post-Glacial coancestry of European and Asian Y chromosomes within haplogroup R1a. European Journal of Human Genetics 18, 479–484.",
+    "Tambets et al. (2018) — Genes reveal traces of common recent demographic history for most of the Uralic-speaking populations. Genome Biology 19, 139.",
+    "Mathieson et al. (2015) — Genome-wide patterns of selection in 230 ancient Eurasians. Nature 528, 499–503.",
+  ],
+  featured: false,
+  addedAt: "2026-06-30",
+};
+
+export default R1b_M73;
