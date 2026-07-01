@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup V1.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const V1_mt: Haplogroup = {
+  id: "V1_mt",
+  name: "V1",
+  type: "mtDNA",
+  parent: "V_mt",
+  children: [],
+  formed: "~12,000 BCE",
+  mrca: "~8,000 BCE",
+  origin: {
+    region: "Iberian Peninsula / Northwestern Europe",
+    period: "Mesolithic",
+    coordinates: [-4, 42],
+  },
+  description:
+    "Haplogroup V1 is a subclade of V, itself one of the most characteristic Western European Paleolithic maternal lineages. V1 has a distribution similar to its parent V, found primarily in the Iberian Peninsula, France, and the British Isles, with some presence in Scandinavia. It represents one of the sub-branches of V that diversified after the post-glacial re-expansion from the Franco-Cantabrian refugium. V1 is rare overall but found at slightly elevated frequencies in the same Atlantic-facing populations where V is concentrated.",
+  interestingFact:
+    "V and its subclades including V1 have a complementary distribution with H in Europe — both are descended from HV, but H expanded strongly northward and eastward while V remained concentrated in the western periphery (Iberia, Basque Country, Sardinia) and leapt to Scandinavia where it reached extremely high frequencies in the Saami. This complementary distribution reflects the complex post-glacial recolonization of Europe from multiple refugia.",
+  distribution: [
+    { ethnicity: "Basques", region: "Southwestern Europe", percentage: 5, sampleSize: 200 },
+    { ethnicity: "Iberian (Spanish/Portuguese)", region: "Southwestern Europe", percentage: 3, sampleSize: 500 },
+    { ethnicity: "British / Irish", region: "Northwestern Europe", percentage: 2, sampleSize: 600 },
+    { ethnicity: "French", region: "Western Europe", percentage: 2, sampleSize: 400 },
+    { ethnicity: "Sardinians", region: "Southern Europe", percentage: 2.5, sampleSize: 200 },
+  ],
+  statistics: {
+    modernFrequency: "~1% in Europe",
+    peakRegion: "Iberian Peninsula / Western Europe",
+    estimatedCarriers: 6_000_000,
+  },
+  tags: ["Western Europe", "Iberian", "Basque", "Paleolithic", "Post-glacial", "Refugium", "mtDNA"],
+  references: [
+    "Torroni et al. (2001) — A signal, from human mtDNA, of postglacial recolonization in Europe. American Journal of Human Genetics 69(4), 844–852.",
+    "Achilli et al. (2004) — The molecular dissection of mtDNA haplogroup H. American Journal of Human Genetics 75(5), 910–918.",
+  ],
+  featured: false,
+  addedAt: "2026-07-01",
+};
+
+export default V1_mt;
