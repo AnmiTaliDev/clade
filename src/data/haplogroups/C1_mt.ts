@@ -5,7 +5,7 @@ const C1_mt: Haplogroup = {
   name: "C1 (mtDNA)",
   type: "mtDNA",
   parent: "C_mt",
-  children: [],
+  children: ["C1b_mt", "C1c_mt", "C1d_mt"],
   formed: "~30,000 BCE",
   mrca: "~18,000 BCE",
   origin: { region: "Northeast Asia / Beringia", period: "Upper Paleolithic", coordinates: [160, 60] },
