@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup K1a4.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const K1a4_mt: Haplogroup = {
+  id: "K1a4_mt",
+  name: "K1a4",
+  type: "mtDNA",
+  parent: "K1a_mt",
+  children: [],
+  formed: "~10,000 BCE",
+  mrca: "~6,000 BCE",
+  origin: {
+    region: "Near East / Levant",
+    period: "Pre-Pottery Neolithic",
+    coordinates: [35, 32],
+  },
+  description:
+    "Haplogroup K1a4 is one of the major subclades of K1a, itself the most common K subclade. K1a4 includes K1a4a1, which is one of the four major founding mtDNA haplogroups of the Ashkenazi Jewish population. K1a4a1 is carried by approximately 10–12% of Ashkenazi Jewish women and represents one of the most dramatic genetic founder effects ever documented in a modern human population. K1a4 is found broadly in the Near East and at lower frequencies across Europe.",
+  interestingFact:
+    "K1a4a1, the most notable K1a4 subclade, shows a remarkable star-shaped phylogeny consistent with rapid exponential population growth from a very small founding group — estimated at fewer than 10 women — who lived approximately 1,000–2,000 years ago in the Near East before the Ashkenazi communities were established in medieval Europe. Together with K1a1b1a and K1a9, these K lineages account for nearly 30% of all Ashkenazi maternal DNA.",
+  distribution: [
+    { ethnicity: "Ashkenazi Jews", region: "Europe / Near East", percentage: 12, sampleSize: 500 },
+    { ethnicity: "Sephardic Jews", region: "Near East / Mediterranean", percentage: 6, sampleSize: 300 },
+    { ethnicity: "Levantine Arabs", region: "Near East", percentage: 4, sampleSize: 200 },
+    { ethnicity: "Turks", region: "Anatolia", percentage: 3, sampleSize: 250 },
+    { ethnicity: "Europeans (average)", region: "Europe", percentage: 1.5, sampleSize: 1000 },
+  ],
+  statistics: {
+    modernFrequency: "~1% globally; ~10-12% in Ashkenazi Jews",
+    peakRegion: "Ashkenazi Jewish diaspora / Near East",
+    estimatedCarriers: 10_000_000,
+  },
+  tags: ["Ashkenazi", "Jewish", "Near East", "Founder effect", "Levant", "Neolithic", "mtDNA"],
+  references: [
+    "Behar et al. (2006) — The matrilineal ancestry of Ashkenazi Jewry: portrait of a recent founder event. American Journal of Human Genetics 78(3), 487–497.",
+    "Costa et al. (2013) — A substantial prehistoric European ancestry amongst Ashkenazi maternal lineages. Nature Communications 4, 2543.",
+  ],
+  featured: false,
+  addedAt: "2026-07-01",
+};
+
+export default K1a4_mt;
