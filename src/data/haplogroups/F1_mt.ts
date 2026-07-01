@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup F1.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const F1_mt: Haplogroup = {
+  id: "F1_mt",
+  name: "F1",
+  type: "mtDNA",
+  parent: "F_mt",
+  children: [],
+  formed: "~35,000 BCE",
+  mrca: "~25,000 BCE",
+  origin: {
+    region: "Southeast Asia / South China",
+    period: "Upper Paleolithic",
+    coordinates: [108, 22],
+  },
+  description:
+    "Haplogroup F1 is the most common subclade of F, broadly distributed across Southeast Asia, southern China, and Taiwan. F1 contains several sub-branches adapted to different Southeast Asian environments, with F1a being particularly common in Austronesian-speaking populations and F1b in continental Southeast Asian groups. F1 is carried by significant proportions of Thai, Vietnamese, Filipino, and Han Chinese populations, and represents one of the major maternal lineages of the ancient Southeast Asian population that predated the spread of Neolithic rice agriculture.",
+  interestingFact:
+    "F1a, a major sub-branch of F1, is found at elevated frequencies in Austronesian-speaking populations across Southeast Asia and the Pacific. Its distribution partly parallels that of B4a (the Polynesian motif lineage), suggesting that multiple F and B haplogroups were carried by the same Austronesian-speaking seafarers who colonized Island Southeast Asia and the Pacific beginning ~3,500 years ago.",
+  distribution: [
+    { ethnicity: "Thai", region: "Southeast Asia", percentage: 10, sampleSize: 300 },
+    { ethnicity: "Vietnamese", region: "Southeast Asia", percentage: 9, sampleSize: 300 },
+    { ethnicity: "Filipinos", region: "Southeast Asia", percentage: 8, sampleSize: 400 },
+    { ethnicity: "Han Chinese (South)", region: "East/Southeast Asia", percentage: 7, sampleSize: 1000 },
+    { ethnicity: "Taiwanese aboriginals", region: "East Asia", percentage: 12, sampleSize: 250 },
+  ],
+  statistics: {
+    modernFrequency: "~2% globally; ~8-12% in Southeast Asia",
+    peakRegion: "Southeast Asia / South China",
+    estimatedCarriers: 20_000_000,
+  },
+  tags: ["Southeast Asia", "China", "Taiwan", "Austronesian", "Paleolithic", "mtDNA"],
+  references: [
+    "Kong et al. (2011) — Complete mitochondrial genome sequences of the Han Chinese with distinct dialect backgrounds and phylogenetic analysis. Journal of Human Genetics 56(5), 386–394.",
+    "Trejaut et al. (2005) — Traces of archaic mitochondrial lineages persist in Austronesian-speaking Formosan populations. PLOS Biology 3(8), e247.",
+  ],
+  featured: false,
+  addedAt: "2026-07-01",
+};
+
+export default F1_mt;
