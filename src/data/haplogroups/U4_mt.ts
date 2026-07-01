@@ -5,7 +5,7 @@ const U4_mt: Haplogroup = {
   name: "U4 (mtDNA)",
   type: "mtDNA",
   parent: "U_mt",
-  children: [],
+  children: ["U4a_mt"],
   formed: "~30,000 BCE",
   mrca: "~20,000 BCE",
   origin: { region: "Eastern Europe / Siberia", period: "Upper Paleolithic", coordinates: [55, 58] },
