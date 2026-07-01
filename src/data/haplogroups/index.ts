@@ -116,23 +116,35 @@ import L1 from "./L1";
 import L2 from "./L2";
 import L3 from "./L3";
 import M_mt from "./M_mt";
+import M1_mt from "./M1_mt";
+import M2_mt from "./M2_mt";
 import C_mt from "./C_mt";
 import Z_mt from "./Z_mt";
+import Z1_mt from "./Z1_mt";
 import D_mt from "./D_mt";
 import G_mt from "./G_mt";
+import G2_mt from "./G2_mt";
 import N_mt from "./N_mt";
+import N1_mt from "./N1_mt";
+import N9_mt from "./N9_mt";
 import A_mt from "./A_mt";
 import A2_mt from "./A2_mt";
 import X_mt from "./X_mt";
 import X2_mt from "./X2_mt";
 import W_mt from "./W_mt";
+import W1_mt from "./W1_mt";
 import I_mt from "./I_mt";
+import I1_mt from "./I1_mt";
+import I2_mt from "./I2_mt";
 import R_mt from "./R_mt";
+import R0_mt from "./R0_mt";
 import B_mt from "./B_mt";
 import F_mt from "./F_mt";
+import F1_mt from "./F1_mt";
 import HV from "./HV";
 import H_mt from "./H_mt";
 import V_mt from "./V_mt";
+import V1_mt from "./V1_mt";
 import JT_mt from "./JT_mt";
 import J_mt from "./J_mt";
 import T_mt from "./T_mt";
@@ -144,6 +156,7 @@ import U5b_mt from "./U5b_mt";
 import K_mt from "./K_mt";
 import K1_mt from "./K1_mt";
 import K1a_mt from "./K1a_mt";
+import K1a4_mt from "./K1a4_mt";
 import H1_mt from "./H1_mt";
 import H2_mt from "./H2_mt";
 import H3_mt from "./H3_mt";
@@ -161,6 +174,7 @@ import H3a_mt from "./H3a_mt";
 import J1_mt from "./J1_mt";
 import J1b_mt from "./J1b_mt";
 import J1c_mt from "./J1c_mt";
+import J1c2_mt from "./J1c2_mt";
 import J2_mt from "./J2_mt";
 import J2a_mt from "./J2a_mt";
 import J2b_mt from "./J2b_mt";
@@ -171,9 +185,13 @@ import T2b_mt from "./T2b_mt";
 import T2c_mt from "./T2c_mt";
 import T2e_mt from "./T2e_mt";
 import D4_mt from "./D4_mt";
+import D4h_mt from "./D4h_mt";
 import D1_mt from "./D1_mt";
 import D5_mt from "./D5_mt";
 import C1_mt from "./C1_mt";
+import C1b_mt from "./C1b_mt";
+import C1c_mt from "./C1c_mt";
+import C1d_mt from "./C1d_mt";
 import C4_mt from "./C4_mt";
 import C5_mt from "./C5_mt";
 import B4_mt from "./B4_mt";
@@ -185,22 +203,28 @@ import E_mt from "./E_mt";
 import U2_mt from "./U2_mt";
 import U3_mt from "./U3_mt";
 import U4_mt from "./U4_mt";
+import U4a_mt from "./U4a_mt";
 import U6_mt from "./U6_mt";
+import U6a_mt from "./U6a_mt";
 import U8_mt from "./U8_mt";
 import Y_mt from "./Y_mt";
 import S_mt from "./S_mt";
 import P_mt from "./P_mt";
 import L0a_mt from "./L0a_mt";
 import L0d_mt from "./L0d_mt";
+import L0f_mt from "./L0f_mt";
+import L1a_mt from "./L1a_mt";
 import L1b_mt from "./L1b_mt";
 import L1c_mt from "./L1c_mt";
 import L2a_mt from "./L2a_mt";
 import L2a1_mt from "./L2a1_mt";
 import L2b_mt from "./L2b_mt";
 import L2c_mt from "./L2c_mt";
+import L3a_mt from "./L3a_mt";
 import L3b_mt from "./L3b_mt";
 import L3d_mt from "./L3d_mt";
 import L3e_mt from "./L3e_mt";
+import L3f_mt from "./L3f_mt";
 import D1 from "./D1";
 import D1a from "./D1a";
 import D1b from "./D1b";
@@ -346,23 +370,35 @@ export const haplogroups: Haplogroup[] = [
   L2,
   L3,
   M_mt,
+  M1_mt,
+  M2_mt,
   C_mt,
   Z_mt,
+  Z1_mt,
   D_mt,
   G_mt,
+  G2_mt,
   N_mt,
+  N1_mt,
+  N9_mt,
   A_mt,
   A2_mt,
   X_mt,
   X2_mt,
   W_mt,
+  W1_mt,
   I_mt,
+  I1_mt,
+  I2_mt,
   R_mt,
+  R0_mt,
   B_mt,
   F_mt,
+  F1_mt,
   HV,
   H_mt,
   V_mt,
+  V1_mt,
   JT_mt,
   J_mt,
   T_mt,
@@ -374,6 +410,7 @@ export const haplogroups: Haplogroup[] = [
   K_mt,
   K1_mt,
   K1a_mt,
+  K1a4_mt,
   H1_mt,
   H1a_mt,
   H1b_mt,
@@ -391,6 +428,7 @@ export const haplogroups: Haplogroup[] = [
   J1_mt,
   J1b_mt,
   J1c_mt,
+  J1c2_mt,
   J2_mt,
   J2a_mt,
   J2b_mt,
@@ -401,9 +439,13 @@ export const haplogroups: Haplogroup[] = [
   T2c_mt,
   T2e_mt,
   D4_mt,
+  D4h_mt,
   D5_mt,
   D1_mt,
   C1_mt,
+  C1b_mt,
+  C1c_mt,
+  C1d_mt,
   C4_mt,
   C5_mt,
   B4_mt,
@@ -415,22 +457,28 @@ export const haplogroups: Haplogroup[] = [
   U2_mt,
   U3_mt,
   U4_mt,
+  U4a_mt,
   U6_mt,
+  U6a_mt,
   U8_mt,
   Y_mt,
   S_mt,
   P_mt,
   L0a_mt,
   L0d_mt,
+  L0f_mt,
+  L1a_mt,
   L1b_mt,
   L1c_mt,
   L2a_mt,
   L2a1_mt,
   L2b_mt,
   L2c_mt,
+  L3a_mt,
   L3b_mt,
   L3d_mt,
   L3e_mt,
+  L3f_mt,
   D1,
   D1a,
   D1b,
