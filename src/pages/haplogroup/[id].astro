@@ -139,33 +139,35 @@ const clanTypeLabel = (type: string) => {
 
         <section class="content-section">
           <h2 class="section-title">{t("haplogroup.distribution")}</h2>
-          <table class="dist-table">
-            <thead>
-              <tr>
-                <th>{t("compare.column_ethnicity")}</th>
-                <th>Region</th>
-                <th>Frequency</th>
-                <th>Sample</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sortedDist.map((d) => (
+          <div class="dist-table-wrap">
+            <table class="dist-table">
+              <thead>
                 <tr>
-                  <td>{d.ethnicity}</td>
-                  <td class="text-muted">{d.region}</td>
-                  <td>
-                    <div class="percentage-bar">
-                      <div class="percentage-bar__track">
-                        <div class="percentage-bar__fill" style={`width:${d.percentage}%`}></div>
-                      </div>
-                      <span class="percentage-bar__value">{d.percentage}%</span>
-                    </div>
-                  </td>
-                  <td class="text-muted">{d.sampleSize ? `n=${d.sampleSize}` : "—"}</td>
+                  <th>{t("compare.column_ethnicity")}</th>
+                  <th>Region</th>
+                  <th>Frequency</th>
+                  <th>Sample</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {sortedDist.map((d) => (
+                  <tr>
+                    <td>{d.ethnicity}</td>
+                    <td class="text-muted">{d.region}</td>
+                    <td>
+                      <div class="percentage-bar">
+                        <div class="percentage-bar__track">
+                          <div class="percentage-bar__fill" style={`width:${d.percentage}%`}></div>
+                        </div>
+                        <span class="percentage-bar__value">{d.percentage}%</span>
+                      </div>
+                    </td>
+                    <td class="text-muted">{d.sampleSize ? `n=${d.sampleSize}` : "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         {h.clans && h.clans.length > 0 && (

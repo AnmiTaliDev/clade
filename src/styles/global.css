@@ -316,6 +316,60 @@ input, select, textarea {
   margin-top: 0.2rem;
 }
 
+.dist-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dist-table {
+  min-width: 480px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.dist-table th,
+.dist-table td {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.dist-table th {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dist-table td {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.dist-table td:first-child,
+.dist-table th:first-child {
+  white-space: normal;
+}
+
+.dist-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dist-table tbody tr:hover td {
+  background: var(--color-surface-hover, rgba(0, 0, 0, 0.03));
+}
+
+.dist-region-inline {
+  display: none;
+}
+
+.percentage-bar__track {
+  min-width: 60px;
+}
+
 .percentage-bar {
   display: flex;
   align-items: center;
