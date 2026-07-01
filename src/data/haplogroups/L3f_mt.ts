@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup L3f.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const L3f_mt: Haplogroup = {
+  id: "L3f_mt",
+  name: "L3f",
+  type: "mtDNA",
+  parent: "L3",
+  children: [],
+  formed: "~60,000 BCE",
+  mrca: "~40,000 BCE",
+  origin: {
+    region: "East / West Africa",
+    period: "Middle Stone Age",
+    coordinates: [25, 5],
+  },
+  description:
+    "Haplogroup L3f is a widely distributed subclade of L3 found across sub-Saharan Africa, from East Africa through Central Africa to West Africa. Unlike L3b and L3d which are more West-Central African, L3f has a more pan-African distribution reflecting its ancient origins within the L3 diversification that preceded the Out-of-Africa migration. L3f has been found in ancient DNA from Iron Age sub-Saharan African sites and is also present in the African diaspora, particularly in African-American and Afro-Caribbean populations.",
+  interestingFact:
+    "L3f lineages have been found in ancient DNA from Holocene hunter-gatherer skeletons in sub-Saharan Africa, including remains from Malawi and Tanzania. These ancient samples reveal that L3f was present across the African continent for tens of thousands of years before the Bantu expansion reshaped sub-Saharan African genetic diversity — providing a direct maternal connection to Africa's pre-agricultural past.",
+  distribution: [
+    { ethnicity: "Ethiopians", region: "East Africa", percentage: 8, sampleSize: 250 },
+    { ethnicity: "Kenyans", region: "East Africa", percentage: 6, sampleSize: 200 },
+    { ethnicity: "Nigerians", region: "West Africa", percentage: 5, sampleSize: 300 },
+    { ethnicity: "Tanzanians", region: "East Africa", percentage: 7, sampleSize: 180 },
+    { ethnicity: "African Americans", region: "North America", percentage: 3, sampleSize: 500 },
+  ],
+  statistics: {
+    modernFrequency: "~1% globally; ~5-8% in East Africa",
+    peakRegion: "East Africa",
+    estimatedCarriers: 10_000_000,
+  },
+  tags: ["East Africa", "West Africa", "Sub-Saharan", "African diaspora", "Ancient", "L3", "mtDNA"],
+  references: [
+    "Skoglund et al. (2017) — Reconstructing prehistoric African population structure. Cell 171(1), 59–71.",
+    "Salas et al. (2002) — The making of the African mtDNA landscape. American Journal of Human Genetics 71(5), 1082–1111.",
+  ],
+  featured: false,
+  addedAt: "2026-07-01",
+};
+
+export default L3f_mt;
