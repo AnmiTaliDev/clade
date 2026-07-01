@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup G2.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const G2_mt: Haplogroup = {
+  id: "G2_mt",
+  name: "G2",
+  type: "mtDNA",
+  parent: "G_mt",
+  children: [],
+  formed: "~25,000 BCE",
+  mrca: "~18,000 BCE",
+  origin: {
+    region: "Northeast Asia / Japan",
+    period: "Upper Paleolithic",
+    coordinates: [135, 38],
+  },
+  description:
+    "Haplogroup G2 is the more common of the two main G subclades, found prominently in Japan, Korea, China, and Tibetan populations. G2a is particularly associated with Japan, where it is found at frequencies of ~5–8% and has been linked to the ancient Jomon population — the pre-agricultural indigenous inhabitants of the Japanese archipelago. G2 subclades are also found at elevated frequencies in Tibetan highlanders, suggesting possible ancient adaptations to high-altitude environments. In Korea and China, G2 is present at moderate frequencies of 3–5%.",
+  interestingFact:
+    "G2 (specifically G2a) has been detected in ancient Jomon skeletal remains from Japan dating back more than 10,000 years, confirming that this haplogroup was present in the archipelago before the Yayoi migrants arrived from mainland Asia approximately 3,000 years ago. Modern Japanese populations show a mixture of G2 (Jomon-associated) and D4 (Yayoi-associated) lineages, allowing researchers to estimate the relative contributions of each ancestral population to modern Japanese maternal heritage.",
+  distribution: [
+    { ethnicity: "Japanese", region: "East Asia", percentage: 7, sampleSize: 1000 },
+    { ethnicity: "Koreans", region: "East Asia", percentage: 4, sampleSize: 600 },
+    { ethnicity: "Han Chinese (Northeast)", region: "East Asia", percentage: 3, sampleSize: 800 },
+    { ethnicity: "Tibetans", region: "Central Asia / East Asia", percentage: 8, sampleSize: 200 },
+    { ethnicity: "Mongolians", region: "Central Asia", percentage: 5, sampleSize: 300 },
+  ],
+  statistics: {
+    modernFrequency: "~1-2% globally; ~5-8% in Northeast Asia",
+    peakRegion: "Japan / Tibet",
+    estimatedCarriers: 15_000_000,
+  },
+  tags: ["East Asia", "Japan", "Jomon", "Tibet", "Korea", "Paleolithic", "mtDNA"],
+  references: [
+    "Tanaka et al. (2004) — Mitochondrial genome variation in eastern Asia and the peopling of Japan. Genome Research 14(10a), 1832–1850.",
+    "Adachi et al. (2011) — Mitochondrial DNA analysis of Jomon skeletal remains from the Funadomari site, Hokkaido, and its implication for the origins of Native American haplogroup X. American Journal of Physical Anthropology 146(2), 346–360.",
+  ],
+  featured: false,
+  addedAt: "2026-07-01",
+};
+
+export default G2_mt;
