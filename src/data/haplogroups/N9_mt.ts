@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup N9.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const N9_mt: Haplogroup = {
+  id: "N9_mt",
+  name: "N9",
+  type: "mtDNA",
+  parent: "N_mt",
+  children: [],
+  formed: "~45,000 BCE",
+  mrca: "~30,000 BCE",
+  origin: {
+    region: "East Asia / Southeast Asia",
+    period: "Upper Paleolithic",
+    coordinates: [110, 30],
+  },
+  description:
+    "Haplogroup N9 is a subclade of N found predominantly in East Asia and Southeast Asia, particularly in Japan, Korea, and China. N9 contains N9a, which is found in significant proportions among Taiwanese aboriginals and at moderate frequencies in Chinese, Japanese, and Korean populations. N9 also contains the Ami subclade Y_mt, the defining haplogroup of the Ami people of Taiwan. The presence of N9 lineages in Taiwan and surrounding regions supports the Out-of-Taiwan model for the Austronesian expansion, though N9 is more broadly distributed than the specifically Austronesian B4a lineages.",
+  interestingFact:
+    "N9a, a major N9 subclade, has been found in ancient DNA from the earliest Neolithic sites in northeastern China (Hongshan culture, ~5000 BCE), confirming that N9 lineages were present in East Asia well before the Bronze Age population movements. N9 is also notable for providing the ancient maternal background against which later Yayoi and other agricultural expansions in Japan can be identified.",
+  distribution: [
+    { ethnicity: "Taiwanese aboriginals", region: "East Asia", percentage: 25, sampleSize: 300 },
+    { ethnicity: "Han Chinese (North)", region: "East Asia", percentage: 8, sampleSize: 800 },
+    { ethnicity: "Japanese", region: "East Asia", percentage: 6, sampleSize: 1000 },
+    { ethnicity: "Koreans", region: "East Asia", percentage: 5, sampleSize: 600 },
+    { ethnicity: "Vietnamese", region: "Southeast Asia", percentage: 6, sampleSize: 300 },
+  ],
+  statistics: {
+    modernFrequency: "~2% globally; ~5-8% in East Asia",
+    peakRegion: "East Asia / Taiwan",
+    estimatedCarriers: 18_000_000,
+  },
+  tags: ["East Asia", "Japan", "Korea", "China", "Taiwan", "Austronesian", "mtDNA"],
+  references: [
+    "Kong et al. (2003) — Mitochondrial DNA sequence polymorphisms of five ethnic populations from northern China. Human Genetics 113(5), 391–405.",
+    "Trejaut et al. (2005) — Traces of archaic mitochondrial lineages persist in Austronesian-speaking Formosan populations. PLOS Biology 3(8), e247.",
+  ],
+  featured: false,
+  addedAt: "2026-07-01",
+};
+
+export default N9_mt;
