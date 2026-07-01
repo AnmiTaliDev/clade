@@ -1,0 +1,46 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup D4h.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const D4h_mt: Haplogroup = {
+  id: "D4h_mt",
+  name: "D4h",
+  type: "mtDNA",
+  parent: "D4_mt",
+  children: [],
+  formed: "~15,000 BCE",
+  mrca: "~14,000 BCE",
+  origin: {
+    region: "Beringia / Pacific Coast of Americas",
+    period: "Late Upper Paleolithic",
+    coordinates: [-130, 55],
+  },
+  description:
+    "Haplogroup D4h is a rare but scientifically critical subclade of D4. While D4 is mainly an East Asian haplogroup, D4h3a is found exclusively in Native American populations along the Pacific Coast of North and South America — from Alaska to Tierra del Fuego. D4h3a is considered strong evidence for the 'coastal migration route' hypothesis for the peopling of the Americas, which proposes that some founding populations migrated southward along the Pacific Coast by boat rather than exclusively through the interior ice-free corridor.",
+  interestingFact:
+    "D4h3a (the main American subclade of D4h) has a strikingly coastal distribution — it is found in Native American populations along the Pacific Coast from southern Alaska to the Fuegians of Patagonia, but is essentially absent from interior North American populations. This unusual distribution is cited as one of the strongest genetic arguments for a 'kelp highway' coastal migration route as the primary pathway for the initial peopling of the Americas approximately 15,000–16,000 years ago.",
+  distribution: [
+    { ethnicity: "Fuegians (Kawésqar/Yamana)", region: "South America (Patagonia)", percentage: 20, sampleSize: 80 },
+    { ethnicity: "Chilean coastal Amerindians", region: "South America", percentage: 8, sampleSize: 100 },
+    { ethnicity: "Pacific Northwest peoples", region: "North America", percentage: 3, sampleSize: 120 },
+    { ethnicity: "Native Americans (coastal, average)", region: "Pacific Coast Americas", percentage: 5, sampleSize: 300 },
+  ],
+  statistics: {
+    modernFrequency: "~0.3% in Native American populations; rare globally",
+    peakRegion: "Pacific Coast of Americas",
+    estimatedCarriers: 500_000,
+  },
+  tags: ["Americas", "Native Americans", "Pacific Coast", "Coastal migration", "Patagonia", "Kelp highway", "Beringia", "mtDNA"],
+  references: [
+    "Perego et al. (2009) — Distinctive Paleo-Indian migration routes from Beringia marked by two rare mtDNA haplogroups. Current Biology 19(1), 1–8.",
+    "Achilli et al. (2008) — The phylogeny of the four pan-American MtDNA haplogroups. PLOS ONE 3(3), e1764.",
+  ],
+  featured: false,
+  addedAt: "2026-07-01",
+};
+
+export default D4h_mt;
