@@ -1,0 +1,47 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup C1c.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const C1c_mt: Haplogroup = {
+  id: "C1c_mt",
+  name: "C1c",
+  type: "mtDNA",
+  parent: "C1_mt",
+  children: [],
+  formed: "~15,000 BCE",
+  mrca: "~12,000 BCE",
+  origin: {
+    region: "South America",
+    period: "Late Upper Paleolithic",
+    coordinates: [-65, -15],
+  },
+  description:
+    "Haplogroup C1c is one of the exclusive Native American subclades of C1, found predominantly in South America. Unlike C1b which has a broad North-South American distribution, C1c appears more concentrated in South America, particularly in Andean and Amazonian populations. C1c is found at measurable frequencies in populations from Brazil, Peru, Colombia, and Bolivia, suggesting it diversified primarily during or after the rapid southward expansion of founding populations into South America. Like all C1 subclades, C1c is absent from Asian populations.",
+  interestingFact:
+    "The geographic distribution of C1c — concentrated in South America with relatively low frequencies in North America — mirrors the pattern seen with certain other founding lineages that may have diversified during the rapid southward migration from the Beringian entry point to Tierra del Fuego, which genetic and archaeological evidence suggests occurred in as little as 1,000–2,000 years after the initial entry into the Americas.",
+  distribution: [
+    { ethnicity: "Brazilians (Amerindian)", region: "South America", percentage: 12, sampleSize: 200 },
+    { ethnicity: "Peruvians (indigenous)", region: "South America", percentage: 10, sampleSize: 180 },
+    { ethnicity: "Colombians (Amerindian)", region: "South America", percentage: 8, sampleSize: 150 },
+    { ethnicity: "Bolivians (indigenous)", region: "South America", percentage: 9, sampleSize: 160 },
+    { ethnicity: "Native Americans (average)", region: "Americas", percentage: 4, sampleSize: 800 },
+  ],
+  statistics: {
+    modernFrequency: "~5-12% in South American indigenous populations",
+    peakRegion: "South America (Andes / Amazon)",
+    estimatedCarriers: 5_000_000,
+  },
+  tags: ["South America", "Americas", "Native Americans", "Andes", "Amazon", "Founding lineage", "mtDNA"],
+  references: [
+    "Achilli et al. (2008) — The phylogeny of the four pan-American MtDNA haplogroups. PLOS ONE 3(3), e1764.",
+    "Tamm et al. (2007) — Beringian standstill and spread of Native American founders. PLOS ONE 2(9), e829.",
+  ],
+  featured: false,
+  addedAt: "2026-07-01",
+};
+
+export default C1c_mt;
