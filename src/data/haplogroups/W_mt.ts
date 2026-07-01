@@ -5,7 +5,7 @@ const W_mt: Haplogroup = {
   name: "W (mtDNA)",
   type: "mtDNA",
   parent: "N_mt",
-  children: [],
+  children: ["W1_mt"],
   formed: "~25,000 BCE",
   mrca: "~20,000 BCE",
   origin: {
