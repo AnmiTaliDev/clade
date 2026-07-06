@@ -5,7 +5,7 @@ const U_mt: Haplogroup = {
   name: "U (mtDNA)",
   type: "mtDNA",
   parent: "R_mt",
-  children: ["K_mt", "U1_mt", "U2_mt", "U3_mt", "U4_mt", "U5_mt", "U6_mt", "U8_mt"],
+  children: ["K_mt", "U1_mt", "U2_mt", "U3_mt", "U4_mt", "U5_mt", "U6_mt", "U7_mt", "U8_mt"],
   formed: "~55,000 BCE",
   mrca: "~50,000 BCE",
   origin: {
