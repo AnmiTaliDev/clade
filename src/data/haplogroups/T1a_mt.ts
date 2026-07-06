@@ -11,7 +11,7 @@ const T1a_mt: Haplogroup = {
   name: "T1a",
   type: "mtDNA",
   parent: "T1_mt",
-  children: [],
+  children: ["T1a1_mt"],
   formed: "~11,000 BCE",
   mrca: "~7,000 BCE",
   origin: {
