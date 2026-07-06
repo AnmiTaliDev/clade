@@ -5,7 +5,7 @@ const K_mt: Haplogroup = {
   name: "K (mtDNA)",
   type: "mtDNA",
   parent: "U_mt",
-  children: ["K1_mt"],
+  children: ["K1_mt", "K2_mt"],
   formed: "~30,000 BCE",
   mrca: "~25,000 BCE",
   origin: {
