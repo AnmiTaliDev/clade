@@ -1,0 +1,49 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup C2.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const C2_mt: Haplogroup = {
+  id: "C2_mt",
+  name: "C2 (mtDNA)",
+  type: "mtDNA",
+  parent: "C_mt",
+  children: [],
+  formed: "~25,000 BCE",
+  mrca: "~18,000 BCE",
+  origin: {
+    region: "Northeast Asia / Siberia",
+    period: "Upper Paleolithic",
+    coordinates: [110, 55],
+  },
+  description:
+    "Mitochondrial haplogroup C2 is a Siberian and Northeast Asian subclade of haplogroup C, with a distribution spanning Siberia, northern Central Asia, and the Arctic. C2 is found at 5–15% frequencies among various Siberian peoples including the Evenks, Yakuts, Buryats, and other Tungusic and Turkic-speaking populations. Unlike C1 which is primarily a founding Native American haplogroup, C2 represents the Northeast Asian remnant of the C lineage that did not cross into the Americas or that expanded more recently in Siberia. C2 is particularly associated with the Siberian populations that were ancestral to or connected with the expansion of reindeer herding and Arctic adaptations.",
+  interestingFact:
+    "Haplogroup C2 shows a fascinating distribution that mirrors the spread of reindeer pastoralism across Siberia — it is found at elevated frequencies among the Evenks, Yakuts, and other Siberian reindeer-herding peoples, suggesting that C2-carrying maternal lineages played a significant role in the peopling and cultural development of the Siberian north.",
+  distribution: [
+    { ethnicity: "Evenks", region: "Siberia", percentage: 15, sampleSize: 150 },
+    { ethnicity: "Yakuts", region: "Siberia", percentage: 12, sampleSize: 200 },
+    { ethnicity: "Buryats", region: "Siberia", percentage: 8, sampleSize: 250 },
+    { ethnicity: "Mongolians", region: "Central Asia", percentage: 6, sampleSize: 400 },
+    { ethnicity: "Koreans", region: "East Asia", percentage: 2, sampleSize: 600 },
+    { ethnicity: "Chinese (northern)", region: "East Asia", percentage: 1.5, sampleSize: 700 },
+  ],
+  statistics: {
+    modernFrequency: "~5–15% in Siberia; 1–6% in Northeast Asia",
+    peakRegion: "Siberia (Evenks, Yakuts)",
+    estimatedCarriers: 6_000_000,
+  },
+  tags: ["mtDNA", "Siberia", "Northeast Asia", "Arctic", "Tungusic", "Yakuts", "C-branch"],
+  references: [
+    "Derenko et al. (2010) — Complete mitochondrial DNA analysis of eastern Eurasian haplogroups rarely found in populations of northern Asia and eastern Europe. PLOS ONE 5(12), e14105.",
+    "Pimenoff et al. (2008) — Northwest Siberian Khanty and Mansi in the junction of West and East Eurasian gene pools as revealed by uniparental markers. European Journal of Human Genetics 16(10), 1254–1264.",
+    "Starikovskaya et al. (2005) — Mitochondrial DNA diversity in indigenous populations of the southern extent of Siberia, and the origins of Native American haplogroups. Annals of Human Genetics 69(1), 67–89.",
+  ],
+  featured: false,
+  addedAt: "2026-07-06",
+};
+
+export default C2_mt;
