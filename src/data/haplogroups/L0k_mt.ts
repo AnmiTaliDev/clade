@@ -1,0 +1,48 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup L0k.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const L0k_mt: Haplogroup = {
+  id: "L0k_mt",
+  name: "L0k (mtDNA)",
+  type: "mtDNA",
+  parent: "L0",
+  children: [],
+  formed: "~90,000 BCE",
+  mrca: "~70,000 BCE",
+  origin: {
+    region: "Southern Africa",
+    period: "Middle Stone Age",
+    coordinates: [25, -25],
+  },
+  description:
+    "Mitochondrial haplogroup L0k is one of the deepest branching lineages within L0, the oldest known human mtDNA haplogroup. L0k is found almost exclusively among the Khoisan (San and Khoikhoi) people of southern Africa — the hunter-gatherers of the Kalahari region — at frequencies of 5–15%. The deep age of L0k (estimated at ~90,000 years) places it among the most ancient human maternal lineages, predating the major expansion of modern humans out of Africa. L0k carriers represent some of the most genetically distinct human populations on Earth, having maintained their ancestral genetic characteristics through millennia of relative isolation in southern Africa.",
+  interestingFact:
+    "Haplogroup L0k is so ancient that it sits near the very root of the human mitochondrial tree, predating even the split between most other African populations. The San people who carry L0k are not only the holders of Earth's oldest continuous cultural traditions but also some of the most genetically ancient humans alive — their maternal lineages trace back over 90,000 years without major population replacement.",
+  distribution: [
+    { ethnicity: "San (!Kung)", region: "Southern Africa", percentage: 12, sampleSize: 150 },
+    { ethnicity: "San (ǀGwi)", region: "Southern Africa", percentage: 8, sampleSize: 100 },
+    { ethnicity: "Khoikhoi", region: "Southern Africa", percentage: 6, sampleSize: 120 },
+    { ethnicity: "ǂKhomani San", region: "Southern Africa", percentage: 15, sampleSize: 80 },
+    { ethnicity: "South Africans (admixed)", region: "Southern Africa", percentage: 0.5, sampleSize: 400 },
+  ],
+  statistics: {
+    modernFrequency: "~5–15% among Khoisan; rare elsewhere",
+    peakRegion: "Kalahari region (San peoples)",
+    estimatedCarriers: 150_000,
+  },
+  tags: ["mtDNA", "Khoisan", "San", "Southern Africa", "Middle Stone Age", "Ancient lineage", "L0-branch"],
+  references: [
+    "Behar et al. (2008) — The dawn of human matrilineal diversity. American Journal of Human Genetics 82(5), 1130–1140.",
+    "Soares et al. (2012) — The expansion of mtDNA haplogroup L3 within and out of Africa. Molecular Biology and Evolution 29(3), 915–927.",
+    "Pickrell et al. (2012) — The genetic prehistory of southern Africa. Nature Communications 3:1143.",
+  ],
+  featured: false,
+  addedAt: "2026-07-06",
+};
+
+export default L0k_mt;
