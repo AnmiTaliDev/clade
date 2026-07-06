@@ -1,0 +1,48 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup D2.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const D2_mt: Haplogroup = {
+  id: "D2_mt",
+  name: "D2 (mtDNA)",
+  type: "mtDNA",
+  parent: "D_mt",
+  children: [],
+  formed: "~15,000 BCE",
+  mrca: "~10,000 BCE",
+  origin: {
+    region: "Beringia / Arctic Alaska",
+    period: "Late Paleolithic",
+    coordinates: [-155, 64],
+  },
+  description:
+    "Mitochondrial haplogroup D2 is primarily associated with Aleut and Pacific Yupik populations of the Arctic, representing a founding maternal lineage of the Eskimo-Aleut language family. D2 is found at high frequencies (30–70%) among Aleut populations of the Aleutian Islands and some Pacific Yupik groups of the Alaska Peninsula. Unlike the founding Native American haplogroups (A2, B2, C1, D1, X2a), D2 is associated with the later Eskimo-Aleut migration from northeastern Asia — a second major wave of Arctic migration that brought distinct linguistic and cultural traditions to the Arctic regions of North America.",
+  interestingFact:
+    "Haplogroup D2 is one of the clearest genetic markers distinguishing Aleut populations from other Native American groups. The Aleuts, who have inhabited the Aleutian Islands for at least 8,000 years, carry D2 at some of the highest frequencies observed for any single mtDNA haplogroup in any population — a testament to the founder effect and the isolation of island-dwelling communities.",
+  distribution: [
+    { ethnicity: "Aleuts", region: "Arctic North America", percentage: 55, sampleSize: 150 },
+    { ethnicity: "Pacific Yupik", region: "Arctic North America", percentage: 30, sampleSize: 100 },
+    { ethnicity: "Siberian Yupik", region: "Arctic", percentage: 20, sampleSize: 80 },
+    { ethnicity: "Alaskan Athabaskan", region: "North America", percentage: 5, sampleSize: 120 },
+    { ethnicity: "Chukchi", region: "Siberia", percentage: 8, sampleSize: 90 },
+  ],
+  statistics: {
+    modernFrequency: "~30–70% among Aleuts; rare in other populations",
+    peakRegion: "Aleutian Islands",
+    estimatedCarriers: 300_000,
+  },
+  tags: ["mtDNA", "Aleut", "Arctic", "Alaska", "Eskimo-Aleut", "Pacific Yupik", "D-branch"],
+  references: [
+    "Rubicz et al. (2003) — Mitochondrial DNA variation and the origins of the Aleuts. Human Biology 75(6), 809–835.",
+    "Zlojutro et al. (2006) — Mitochondrial DNA diversity of the Aleuts of the Pribilof Islands: a synthesis of prehistoric and historic settlement. Annals of Human Genetics 70(3), 273–285.",
+    "Tamm et al. (2007) — Beringian standstill and spread of Native American founders. PLOS ONE 2(9), e829.",
+  ],
+  featured: false,
+  addedAt: "2026-07-06",
+};
+
+export default D2_mt;
