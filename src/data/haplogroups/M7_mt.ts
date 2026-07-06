@@ -5,7 +5,7 @@ const M7_mt: Haplogroup = {
   name: "M7 (mtDNA)",
   type: "mtDNA",
   parent: "M_mt",
-  children: [],
+  children: ["M7a_mt", "M7b_mt"],
   formed: "~60,000 BCE",
   mrca: "~35,000 BCE",
   origin: { region: "Southeast Asia / South China", period: "Upper Paleolithic", coordinates: [108, 22] },
