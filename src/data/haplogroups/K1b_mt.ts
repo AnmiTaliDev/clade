@@ -1,0 +1,49 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup K1b.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const K1b_mt: Haplogroup = {
+  id: "K1b_mt",
+  name: "K1b (mtDNA)",
+  type: "mtDNA",
+  parent: "K1_mt",
+  children: [],
+  formed: "~15,000 BCE",
+  mrca: "~10,000 BCE",
+  origin: {
+    region: "Near East / Caucasus",
+    period: "Epipaleolithic",
+    coordinates: [40, 38],
+  },
+  description:
+    "Mitochondrial haplogroup K1b is a Near Eastern and European subclade of K1, found at low to moderate frequencies across the Near East, Caucasus, and Europe. K1b likely originated in the Near East or Caucasus region during the late Paleolithic or early Neolithic and spread into Europe along with other Neolithic farmer haplogroups. It is found at frequencies of 1–4% across Europe and the Near East, with somewhat higher representation in southeastern Europe and the Caucasus. K1b is one of three major subclades of K1 (alongside K1a and K1c), and its European presence reflects Neolithic agricultural expansion from Anatolia.",
+  interestingFact:
+    "Like its sister clade K1a, haplogroup K1b was carried into Europe by early Neolithic farmers from Anatolia. However, K1b remained less common than K1a in modern European populations, possibly because it was less prevalent among the particular populations that drove the Linearbandkeramik (LBK) expansion into Central and Western Europe.",
+  distribution: [
+    { ethnicity: "Armenians", region: "Caucasus", percentage: 4, sampleSize: 250 },
+    { ethnicity: "Iranians", region: "Near East", percentage: 3, sampleSize: 350 },
+    { ethnicity: "Turks", region: "Near East", percentage: 2.5, sampleSize: 400 },
+    { ethnicity: "Greeks", region: "Southern Europe", percentage: 2, sampleSize: 300 },
+    { ethnicity: "Italians", region: "Southern Europe", percentage: 1.5, sampleSize: 400 },
+    { ethnicity: "Jews (Ashkenazi)", region: "Europe / Near East", percentage: 3, sampleSize: 500 },
+  ],
+  statistics: {
+    modernFrequency: "~1–4% in Near East and Europe",
+    peakRegion: "Caucasus / Near East",
+    estimatedCarriers: 10_000_000,
+  },
+  tags: ["mtDNA", "Near East", "Caucasus", "Europe", "Neolithic", "K-branch", "Farmer"],
+  references: [
+    "Behar et al. (2004) — Counting the founders: the matrilineal genetic ancestry of the Jewish Diaspora. PLOS Genetics 1(6), e32.",
+    "Metspalu et al. (2004) — Most of the extant mtDNA boundaries in south and southwest Asia were likely shaped during the initial settlement of Eurasia. BMC Genetics 5:26.",
+    "Haak et al. (2015) — Massive migration from the steppe was a source for Indo-European languages in Europe. Nature 522(7555), 207–211.",
+  ],
+  featured: false,
+  addedAt: "2026-07-06",
+};
+
+export default K1b_mt;
