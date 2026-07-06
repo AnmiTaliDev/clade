@@ -1,0 +1,49 @@
+/**
+ * SPDX-FileCopyrightText: 2026 AnmiTaliDev <anmitalidev@nuros.org>
+ *
+ * This file describes the mtDNA haplogroup M7b.
+ */
+
+import type { Haplogroup } from "@/types/haplogroup";
+
+const M7b_mt: Haplogroup = {
+  id: "M7b_mt",
+  name: "M7b (mtDNA)",
+  type: "mtDNA",
+  parent: "M7_mt",
+  children: [],
+  formed: "~35,000 BCE",
+  mrca: "~22,000 BCE",
+  origin: {
+    region: "Southeast Asia / Southern China",
+    period: "Upper Paleolithic",
+    coordinates: [110, 25],
+  },
+  description:
+    "Mitochondrial haplogroup M7b is a widespread East and Southeast Asian branch of M7, distributed across southern China, Southeast Asia, and the Pacific. Unlike the Japan-specific M7a, M7b has a broader geographic range and is found at 2–8% frequencies across Han Chinese populations of southern China, Vietnamese, Thai, and other Southeast Asian groups. M7b reflects an ancient southward expansion of populations along the East Asian coast and into Southeast Asia during the late Paleolithic and early Holocene. It is one of several M-derived haplogroups that testify to the deep roots of coastal Asian populations.",
+  interestingFact:
+    "While M7a remained largely confined to the Japanese archipelago, M7b spread widely across the East and Southeast Asian coastlines, carried by the same ancestral coastal migration that ultimately contributed maternal lineages to populations as far afield as Taiwan, the Philippines, and mainland Southeast Asia.",
+  distribution: [
+    { ethnicity: "Southern Chinese Han", region: "East Asia", percentage: 5, sampleSize: 700 },
+    { ethnicity: "Vietnamese", region: "Southeast Asia", percentage: 6, sampleSize: 400 },
+    { ethnicity: "Thai", region: "Southeast Asia", percentage: 4, sampleSize: 350 },
+    { ethnicity: "Taiwanese indigenous", region: "East Asia", percentage: 3, sampleSize: 200 },
+    { ethnicity: "Japanese", region: "East Asia", percentage: 2, sampleSize: 1000 },
+    { ethnicity: "Indonesians", region: "Southeast Asia", percentage: 2, sampleSize: 300 },
+  ],
+  statistics: {
+    modernFrequency: "~2–6% in East/Southeast Asia",
+    peakRegion: "Southern China / Vietnam",
+    estimatedCarriers: 20_000_000,
+  },
+  tags: ["mtDNA", "East Asia", "Southeast Asia", "China", "Vietnam", "Coastal migration", "M-branch"],
+  references: [
+    "Kivisild et al. (2002) — The emerging limbs and twigs of the East Asian mtDNA tree. Molecular Biology and Evolution 19(10), 1737–1751.",
+    "Kong et al. (2003) — Phylogeny of east Asian mitochondrial DNA lineages inferred from complete sequences. American Journal of Human Genetics 73(3), 671–676.",
+    "Macaulay et al. (2005) — Single, rapid coastal settlement of Asia revealed by analysis of complete mitochondrial genomes. Science 308(5724), 1034–1036.",
+  ],
+  featured: false,
+  addedAt: "2026-07-06",
+};
+
+export default M7b_mt;
