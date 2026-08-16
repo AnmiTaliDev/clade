@@ -1,0 +1,77 @@
+{
+  "id": "HV1_mt",
+  "name": "HV1 (mtDNA)",
+  "type": "mtDNA",
+  "parent": "HV",
+  "children": [],
+  "formed": "~25,000 BCE",
+  "mrca": "~15,000 BCE",
+  "origin": {
+    "region": "Near East / Arabian Peninsula",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      43,
+      28
+    ]
+  },
+  "description": "Mitochondrial haplogroup HV1 is a Near Eastern and Mediterranean branch of the HV clade, found at notable frequencies in the Arabian Peninsula, the Levant, and the Mediterranean basin. HV1 is particularly prevalent among Arab populations of the Arabian Peninsula (5–12%) and reaches moderate frequencies in North Africa, the Levant, and Turkey. It appears to be one of the pre-Neolithic maternal lineages of the Near East that expanded in the region before and during the Holocene. HV1's distribution across the Mediterranean and Arabian Peninsula reflects both ancient Near Eastern populations and subsequent expansions along historic trade and migration routes.",
+  "interestingFact": "Haplogroup HV1 is found at particularly high frequencies among Bedouin Arab populations of the Arabian Peninsula, suggesting it may have been a defining lineage of early Arabian pastoralist communities that expanded across the region as populations adapted to arid environments during the Holocene.",
+  "distribution": [
+    {
+      "ethnicity": "Saudis",
+      "region": "Near East",
+      "percentage": 8,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Yemenis",
+      "region": "Near East",
+      "percentage": 10,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Bedouin",
+      "region": "Near East",
+      "percentage": 12,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Lebanese",
+      "region": "Near East",
+      "percentage": 5,
+      "sampleSize": 250
+    },
+    {
+      "ethnicity": "North Africans",
+      "region": "North Africa",
+      "percentage": 4,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Turks",
+      "region": "Near East",
+      "percentage": 3,
+      "sampleSize": 400
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~5–12% in Arabian Peninsula; 1–5% in Mediterranean",
+    "peakRegion": "Arabian Peninsula",
+    "estimatedCarriers": 15000000
+  },
+  "tags": [
+    "mtDNA",
+    "Near East",
+    "Arabia",
+    "Mediterranean",
+    "Paleolithic",
+    "HV-branch"
+  ],
+  "references": [
+    "Abu-Amero et al. (2008) — Mitochondrial DNA structure in the Arabian Peninsula. BMC Evolutionary Biology 8:45.",
+    "Olivieri et al. (2006) — The mtDNA legacy of the Levantine early Upper Palaeolithic in Africa. Science 314(5806), 1767–1770.",
+    "Behar et al. (2008) — The dawn of human matrilineal diversity. American Journal of Human Genetics 82(5), 1130–1140."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-06"
+}

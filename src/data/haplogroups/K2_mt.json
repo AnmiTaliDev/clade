@@ -1,0 +1,77 @@
+{
+  "id": "K2_mt",
+  "name": "K2 (mtDNA)",
+  "type": "mtDNA",
+  "parent": "K_mt",
+  "children": [],
+  "formed": "~20,000 BCE",
+  "mrca": "~12,000 BCE",
+  "origin": {
+    "region": "Near East",
+    "period": "Epipaleolithic",
+    "coordinates": [
+      37,
+      33
+    ]
+  },
+  "description": "Mitochondrial haplogroup K2 is the second major subclade of K, alongside K1. While K1 dominates the European representation of haplogroup K, K2 has a more limited distribution focused on the Near East, Caucasus, and parts of Europe. K2 is found at frequencies of 1–5% in the Near East and Caucasus, and at lower frequencies in Europe. Like K1, K2 traces back to the broader HV lineage and ultimately to the Eurasia-founding female populations of the late Paleolithic. K2's more eastern distribution compared to K1 may reflect differences in the migration routes and source populations that contributed to the Neolithic expansion into Europe.",
+  "interestingFact": "Although K2 is less famous than K1 (which includes the celebrity haplogroup K1a with its link to Ötzi the Iceman and Ashkenazi Jewish founders), K2 preserves an equally ancient Near Eastern ancestry and may contain genetic traces of populations that did not participate as heavily in the major westward Neolithic migrations.",
+  "distribution": [
+    {
+      "ethnicity": "Iranians",
+      "region": "Near East",
+      "percentage": 3.5,
+      "sampleSize": 350
+    },
+    {
+      "ethnicity": "Armenians",
+      "region": "Caucasus",
+      "percentage": 3,
+      "sampleSize": 250
+    },
+    {
+      "ethnicity": "Kurds",
+      "region": "Near East",
+      "percentage": 4,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Turks",
+      "region": "Near East",
+      "percentage": 2,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Europeans",
+      "region": "Europe",
+      "percentage": 0.5,
+      "sampleSize": 1000
+    },
+    {
+      "ethnicity": "Jews (Mizrahi)",
+      "region": "Near East",
+      "percentage": 2.5,
+      "sampleSize": 300
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1–5% in Near East; ~0.5% in Europe",
+    "peakRegion": "Near East / Caucasus",
+    "estimatedCarriers": 6000000
+  },
+  "tags": [
+    "mtDNA",
+    "Near East",
+    "Caucasus",
+    "Europe",
+    "K-branch",
+    "Neolithic"
+  ],
+  "references": [
+    "Metspalu et al. (2004) — Most of the extant mtDNA boundaries in south and southwest Asia were likely shaped during the initial settlement of Eurasia. BMC Genetics 5:26.",
+    "Behar et al. (2008) — The dawn of human matrilineal diversity. American Journal of Human Genetics 82(5), 1130–1140.",
+    "Richards et al. (2000) — Tracing European founder lineages in the Near Eastern mtDNA pool. American Journal of Human Genetics 67(5), 1251–1276."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-06"
+}

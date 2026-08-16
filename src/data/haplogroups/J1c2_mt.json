@@ -1,0 +1,77 @@
+{
+  "id": "J1c2_mt",
+  "name": "J1c2",
+  "type": "mtDNA",
+  "parent": "J1c_mt",
+  "children": [],
+  "formed": "~9,000 BCE",
+  "mrca": "~6,000 BCE",
+  "origin": {
+    "region": "Near East / Anatolia",
+    "period": "Pre-Pottery Neolithic B",
+    "coordinates": [
+      36,
+      37
+    ]
+  },
+  "description": "Haplogroup J1c2 is one of the most common sub-branches of J1c, itself the most common J subclade in Europe. J1c2 is found across Europe, the Near East, and North Africa, with higher frequencies in Central and Northern Europe. J1c2 and J1c3 together account for the majority of J1c diversity in modern European populations. Like its parent J1c, J1c2 was introduced into Europe by Neolithic farmers from the Near East approximately 8,000–9,000 years ago and has been detected in ancient DNA from Neolithic sites across Europe.",
+  "interestingFact": "J1c2 has been found in the famous Ötzi the Iceman's contemporaries — specifically, skeletal remains from Alpine Neolithic communities (~3300–5500 BCE) that share Ötzi's period. While Ötzi himself was K1 mtDNA, his female community members included J1c carriers, suggesting that J1c2 and related lineages were co-present with K in the Chalcolithic Alpine farming communities that Ötzi belonged to.",
+  "distribution": [
+    {
+      "ethnicity": "Germans",
+      "region": "Central Europe",
+      "percentage": 2.5,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "British",
+      "region": "Northwestern Europe",
+      "percentage": 2.5,
+      "sampleSize": 600
+    },
+    {
+      "ethnicity": "Scandinavians",
+      "region": "Northern Europe",
+      "percentage": 2,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "French",
+      "region": "Western Europe",
+      "percentage": 2,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Italians",
+      "region": "Southern Europe",
+      "percentage": 1.8,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Levantine Arabs",
+      "region": "Near East",
+      "percentage": 2,
+      "sampleSize": 250
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1.5-2% in Europe; higher in Near East",
+    "peakRegion": "Central and Northern Europe",
+    "estimatedCarriers": 15000000
+  },
+  "tags": [
+    "Europe",
+    "Near East",
+    "Neolithic",
+    "LBK",
+    "Central Europe",
+    "Anatolian farmers",
+    "mtDNA"
+  ],
+  "references": [
+    "Haak et al. (2010) — Ancient DNA from European early Neolithic farmers reveals their Near Eastern affinities. PLOS Biology 8(11), e1000536.",
+    "Brandt et al. (2013) — Ancient DNA reveals key stages in the formation of central European mitochondrial genetic diversity. Science 342(6155), 257–261."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-01"
+}

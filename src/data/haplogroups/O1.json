@@ -1,0 +1,86 @@
+{
+  "id": "O1",
+  "name": "O1",
+  "type": "Y-DNA",
+  "parent": "O",
+  "children": [],
+  "formed": "~30,000 BCE",
+  "mrca": "~20,000 BCE",
+  "origin": {
+    "region": "Southeast Asia / Taiwan",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      120,
+      20
+    ]
+  },
+  "description": "Haplogroup O1 is the defining paternal lineage of the Austronesian expansion, one of the most geographically sweeping demographic events in human prehistory. O1 — specifically its subclade O1a — originated among the proto-Austronesian populations of Taiwan and the southern Chinese coast and spread across Southeast Asia, Maritime Southeast Asia, Madagascar, and the Pacific Islands as Austronesian seafarers colonised the ocean over the past 5,000 years. O1b is concentrated in mainland Southeast Asian populations including the Vietnamese, Thai, and Mon-Khmer peoples. Together, O1 lineages are found at high frequencies among Taiwanese Aborigines (up to 90%), Polynesians (~70%), and various Southeast Asian groups.",
+  "interestingFact": "Haplogroup O1a is carried by the vast majority of Polynesian men, tracing every male lineage in populations from Hawaii to New Zealand to Easter Island back to the Austronesian seafarers who launched from Taiwan approximately 5,000 years ago — one of the most extraordinary colonisation events in human history.",
+  "distribution": [
+    {
+      "ethnicity": "Taiwanese Aborigines",
+      "region": "East Asia",
+      "percentage": 85,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Polynesians (average)",
+      "region": "Pacific Islands",
+      "percentage": 72,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Vietnamese",
+      "region": "Southeast Asia",
+      "percentage": 30,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Filipinos",
+      "region": "Southeast Asia",
+      "percentage": 38,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Malays",
+      "region": "Southeast Asia",
+      "percentage": 30,
+      "sampleSize": 350
+    },
+    {
+      "ethnicity": "Thai",
+      "region": "Southeast Asia",
+      "percentage": 20,
+      "sampleSize": 400
+    }
+  ],
+  "clans": [
+    {
+      "type": "tribe",
+      "name": "Austronesian peoples",
+      "region": "Southeast Asia / Pacific",
+      "note": "O1a is the defining lineage of the Austronesian expansion from Taiwan into the Pacific over the past 5,000 years"
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~7% of global male population",
+    "peakRegion": "Southeast Asia / Pacific Islands",
+    "estimatedCarriers": 260000000
+  },
+  "tags": [
+    "East Asia",
+    "Southeast Asia",
+    "Austronesian",
+    "Polynesia",
+    "Taiwan",
+    "Neolithic",
+    "Pacific"
+  ],
+  "references": [
+    "Kayser et al. (2008) — Melanesian and Asian origins of Polynesians: mtDNA and Y chromosome gradients across the Pacific. Molecular Biology and Evolution 23(11), 2234–2244.",
+    "Ko et al. (2014) — Peopling of Taiwan, and cycling refinement of human mtDNA in East Asia. PLOS ONE 9(6), e99493.",
+    "Zhong et al. (2011) — Extended Y chromosome investigation suggests postglacial migrations of modern humans into East Asia via the northern route. Molecular Biology and Evolution 28(1), 717–727."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

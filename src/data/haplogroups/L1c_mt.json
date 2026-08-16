@@ -1,0 +1,64 @@
+{
+  "id": "L1c_mt",
+  "name": "L1c (mtDNA)",
+  "type": "mtDNA",
+  "parent": "L1",
+  "children": [],
+  "formed": "~80,000 BCE",
+  "mrca": "~40,000 BCE",
+  "origin": {
+    "region": "Central Africa",
+    "period": "Middle / Late Stone Age",
+    "coordinates": [
+      18,
+      2
+    ]
+  },
+  "description": "Haplogroup L1c is a subclade of L1 characteristic of Central African populations, particularly associated with Bantu and pre-Bantu Central African peoples of the Congo Basin and surrounding region. It is notably common among Baka Pygmies of Cameroon and Congo, Aka Pygmies of the Central African Republic, and various Bantu-speaking populations of Central Africa. L1c represents an ancient Central African maternal lineage that predates the Bantu expansion and has been maintained in forest-dwelling hunter-gatherer populations for tens of thousands of years.",
+  "interestingFact": "L1c is among the most common mtDNA lineages in Central African Pygmy populations — these forest hunter-gatherers, including the Baka and Aka, are among the earliest-diverging populations in Africa, and their high frequency of L1c reflects the extreme antiquity and genetic continuity of human populations in the Central African rainforest.",
+  "distribution": [
+    {
+      "ethnicity": "Baka Pygmies",
+      "region": "Central Africa",
+      "percentage": 35,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Aka Pygmies",
+      "region": "Central Africa",
+      "percentage": 30,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Bantu (Congo)",
+      "region": "Central Africa",
+      "percentage": 12,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Cameroonians",
+      "region": "Central/West Africa",
+      "percentage": 8,
+      "sampleSize": 300
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.5% of global female population",
+    "peakRegion": "Central Africa (Pygmy groups)",
+    "estimatedCarriers": 10000000
+  },
+  "tags": [
+    "Central Africa",
+    "Pygmy",
+    "Baka",
+    "Congo",
+    "Cameroon",
+    "Hunter-gatherer",
+    "Ancient"
+  ],
+  "references": [
+    "Batini et al. (2011) — Insights into the demographic history of African Pygmies from complete mitochondrial genomes. Molecular Biology and Evolution 28(2), 1099–1110."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

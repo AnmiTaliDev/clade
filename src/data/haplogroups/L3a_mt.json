@@ -1,0 +1,66 @@
+{
+  "id": "L3a_mt",
+  "name": "L3a",
+  "type": "mtDNA",
+  "parent": "L3",
+  "children": [],
+  "formed": "~65,000 BCE",
+  "mrca": "~45,000 BCE",
+  "origin": {
+    "region": "East Africa (Ethiopia / Horn)",
+    "period": "Middle Stone Age",
+    "coordinates": [
+      37,
+      8
+    ]
+  },
+  "description": "Haplogroup L3a is a subclade of L3 that remained in Africa while the better-known L3-derived lineages (M and N) expanded out of Africa. L3a is found predominantly in East Africa, particularly among Ethiopian and Somali populations, where it reaches frequencies of ~10–15%. L3a is concentrated in the Horn of Africa region, consistent with its likely origin near the East African crossroads where the Out-of-Africa migration originated approximately 65,000–70,000 years ago. L3a represents the African side of the L3 diversification event that produced the most consequential branch point in the entire human mtDNA tree.",
+  "interestingFact": "L3a's presence in Ethiopia alongside L3's descendants M and N in the same geographic region — the Horn of Africa — is consistent with L3 diversifying in East Africa before the Out-of-Africa migration took its M and N descendant lineages worldwide. Ethiopia has the highest diversity of L3 sub-branches of any country in the world, supporting the view that this region was the staging ground for one of humanity's most consequential migrations.",
+  "distribution": [
+    {
+      "ethnicity": "Ethiopians (Amhara/Oromo)",
+      "region": "East Africa",
+      "percentage": 12,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Somalis",
+      "region": "East Africa",
+      "percentage": 8,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Sudanese",
+      "region": "Northeast Africa",
+      "percentage": 5,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Djiboutians",
+      "region": "East Africa",
+      "percentage": 7,
+      "sampleSize": 100
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.5% globally; ~8-12% in East Africa",
+    "peakRegion": "Horn of Africa (Ethiopia / Somalia)",
+    "estimatedCarriers": 5000000
+  },
+  "tags": [
+    "East Africa",
+    "Ethiopia",
+    "Somalia",
+    "Horn of Africa",
+    "L3",
+    "Ancient",
+    "Out of Africa",
+    "mtDNA"
+  ],
+  "references": [
+    "Kivisild et al. (2004) — Ethiopian mitochondrial DNA heritage: tracking gene flow across and around the gate of tears. American Journal of Human Genetics 75(5), 752–770.",
+    "Soares et al. (2012) — The expansion of mtDNA haplogroup L3 within and out of Africa. Molecular Biology and Evolution 29(3), 915–927."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-01"
+}

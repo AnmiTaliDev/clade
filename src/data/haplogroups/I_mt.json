@@ -1,0 +1,80 @@
+{
+  "id": "I_mt",
+  "name": "I (mtDNA)",
+  "type": "mtDNA",
+  "parent": "N_mt",
+  "children": [
+    "I1_mt",
+    "I2_mt"
+  ],
+  "formed": "~30,000 BCE",
+  "mrca": "~25,000 BCE",
+  "origin": {
+    "region": "Near East / Caucasus",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      44,
+      34
+    ]
+  },
+  "description": "Mitochondrial haplogroup I is a minor N-derived lineage found at low frequency throughout Europe, the Caucasus, and the Near East. In Europe, I typically comprises 1–3% of maternal lineages and shows somewhat higher frequencies in central and northeastern Europe. I is found at moderate levels in some Caucasian populations and among Druze and Iranians. Ancient DNA studies have detected I in Bronze Age and Neolithic samples, suggesting a modest but persistent presence since the early peopling of the Near East and Europe. I is not associated with any single major migration event but reflects the deep background diversity of West Eurasian maternal lineages.",
+  "interestingFact": "Haplogroup I is one of the rarer mtDNA lineages in modern Europe, yet it has been found in ancient DNA from Bronze Age Pontic steppe populations, indicating that it participated in the steppe migrations that reshaped European genetics during the third millennium BCE.",
+  "distribution": [
+    {
+      "ethnicity": "Druze",
+      "region": "Near East",
+      "percentage": 4,
+      "sampleSize": 120
+    },
+    {
+      "ethnicity": "Iranians",
+      "region": "Near East",
+      "percentage": 3,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Georgians",
+      "region": "Caucasus",
+      "percentage": 4,
+      "sampleSize": 250
+    },
+    {
+      "ethnicity": "Poles",
+      "region": "Eastern Europe",
+      "percentage": 3,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Germans",
+      "region": "Central Europe",
+      "percentage": 2,
+      "sampleSize": 800
+    },
+    {
+      "ethnicity": "Europeans (average)",
+      "region": "Europe",
+      "percentage": 2,
+      "sampleSize": 5000
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1% of global female population",
+    "peakRegion": "Near East / Caucasus",
+    "estimatedCarriers": 35000000
+  },
+  "tags": [
+    "mtDNA",
+    "Europe",
+    "Caucasus",
+    "Near East",
+    "Paleolithic",
+    "Maternal lineage"
+  ],
+  "references": [
+    "Torroni et al. (2006) — Harvesting the fruit of the human mtDNA tree. Trends in Genetics 22(6), 339–345.",
+    "Soares et al. (2010) — The archaeogenetics of Europe. Current Biology 20(4), R174–R183.",
+    "Haak et al. (2015) — Massive migration from the steppe was a source for Indo-European languages in Europe. Nature 522, 207–211."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

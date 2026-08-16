@@ -1,0 +1,66 @@
+{
+  "id": "O2a2b",
+  "name": "O2a2b (M88)",
+  "type": "Y-DNA",
+  "parent": "O2a2",
+  "children": [
+    "O2a2b1"
+  ],
+  "formed": "~15,000 BCE",
+  "mrca": "~6,000 BCE",
+  "origin": {
+    "region": "South China / Yangtze River valley",
+    "period": "Neolithic",
+    "coordinates": [
+      114,
+      26
+    ]
+  },
+  "description": "Haplogroup O2a2b (M88) is a subclade of O2a2 concentrated in southern and central China and mainland Southeast Asia. It is one of the branches of O2a that expanded with early agricultural societies in the Yangtze River basin and adjacent regions. O2a2b is found among Han Chinese, especially in central and southern China, as well as among several ethnic minority groups of southwestern China and northern Indochina. Its distribution reflects the complex agricultural and demographic history of pre-Qin China and the ancient migrations into Southeast Asia.",
+  "interestingFact": "O2a2b (M88) represents the genetic legacy of the diverse pre-Han populations of the Yangtze River valley — groups who cultivated rice, built stilt-house settlements, and eventually contributed substantially to the ancestry of modern Han Chinese through the process of Sinicization over several millennia.",
+  "distribution": [
+    {
+      "ethnicity": "Han Chinese (South / Central)",
+      "region": "East Asia",
+      "percentage": 8,
+      "sampleSize": 1000
+    },
+    {
+      "ethnicity": "Zhuang",
+      "region": "South China",
+      "percentage": 15,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Vietnamese",
+      "region": "Southeast Asia",
+      "percentage": 10,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Thai",
+      "region": "Southeast Asia",
+      "percentage": 6,
+      "sampleSize": 400
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.8% of global male population",
+    "peakRegion": "Central / South China",
+    "estimatedCarriers": 30000000
+  },
+  "tags": [
+    "China",
+    "Yangtze",
+    "Neolithic",
+    "Rice farming",
+    "Southeast Asia",
+    "Han"
+  ],
+  "references": [
+    "Shi et al. (2005) — Y-chromosome evidence of earliest modern human settlement in East Asia. BMC Biology 3, 5.",
+    "Zhong et al. (2011) — Extended Y chromosome investigation suggests postglacial migrations of modern humans into East Asia. Molecular Biology and Evolution 28(1), 717–727."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "G2b",
+  "name": "G2b (M377)",
+  "type": "Y-DNA",
+  "parent": "G2",
+  "children": [],
+  "formed": "~20,000 BCE",
+  "mrca": "~10,000 BCE",
+  "origin": {
+    "region": "Near East / Levant",
+    "period": "Epipaleolithic",
+    "coordinates": [
+      36,
+      32
+    ]
+  },
+  "description": "Haplogroup G2b (M377) is a rare subclade of G2 found primarily in the Near East, Jewish populations, and parts of Central and South Asia. It is considerably less common than G2a and did not participate in the Neolithic farming expansion into Europe in the way that G2a did. G2b reaches its highest known frequencies among certain Jewish communities (particularly Ashkenazi and Sephardic Jews) and among some Afghan and Pakistani populations, suggesting a Near Eastern origin with subsequent dispersal along trade routes and through diaspora communities.",
+  "interestingFact": "G2b is one of the Y-DNA haplogroups with notably elevated frequency among Jewish populations compared to neighboring non-Jewish groups — its presence in Ashkenazi, Sephardic, and Mizrahi communities at consistent frequencies across geography suggests it was part of the ancient Israelite/Levantine gene pool before the Jewish diaspora.",
+  "distribution": [
+    {
+      "ethnicity": "Ashkenazi Jews",
+      "region": "Europe / Israel",
+      "percentage": 5,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Sephardic Jews",
+      "region": "Mediterranean / Middle East",
+      "percentage": 4,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Levantine Arabs",
+      "region": "Near East",
+      "percentage": 2,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Afghans / Pakistanis",
+      "region": "South / Central Asia",
+      "percentage": 2,
+      "sampleSize": 400
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.2% of global male population",
+    "peakRegion": "Near East / Jewish diaspora",
+    "estimatedCarriers": 8000000
+  },
+  "tags": [
+    "Near East",
+    "Jewish",
+    "Levant",
+    "Afghanistan",
+    "Pakistan",
+    "Diaspora"
+  ],
+  "references": [
+    "Behar et al. (2004) — Multiple origins of Ashkenazi Levites: Y chromosome evidence for both Near Eastern and European ancestries. American Journal of Human Genetics 73(4), 768–779."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

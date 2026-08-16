@@ -1,0 +1,72 @@
+{
+  "id": "M7a_mt",
+  "name": "M7a (mtDNA)",
+  "type": "mtDNA",
+  "parent": "M7_mt",
+  "children": [],
+  "formed": "~35,000 BCE",
+  "mrca": "~25,000 BCE",
+  "origin": {
+    "region": "Japan",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      137,
+      36
+    ]
+  },
+  "description": "Mitochondrial haplogroup M7a is a Japan-specific subclade of M7 that represents one of the primary Jōmon-derived maternal lineages in modern Japanese people. Found at frequencies of 8–15% in the Japanese population, M7a is substantially more common in the Japanese than in other East Asian populations, reflecting its origins among the ancient Jōmon hunter-gatherers who inhabited the Japanese archipelago for tens of thousands of years before the Yayoi agricultural expansion from the Korean peninsula approximately 3,000 years ago. M7a's distinctly Japanese distribution pattern is a key marker of Jōmon genetic heritage in the modern Japanese population.",
+  "interestingFact": "Haplogroup M7a is so strongly associated with Jōmon ancestry that geneticists use it as one of the primary markers to estimate the Jōmon versus Yayoi genetic contributions in modern Japanese people. Ancient DNA from Jōmon burial sites has confirmed the presence of M7a thousands of years before agriculture arrived in Japan.",
+  "distribution": [
+    {
+      "ethnicity": "Japanese",
+      "region": "East Asia",
+      "percentage": 10,
+      "sampleSize": 1000
+    },
+    {
+      "ethnicity": "Ainu",
+      "region": "East Asia",
+      "percentage": 25,
+      "sampleSize": 120
+    },
+    {
+      "ethnicity": "Ryukyuan",
+      "region": "East Asia",
+      "percentage": 18,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Koreans",
+      "region": "East Asia",
+      "percentage": 2,
+      "sampleSize": 600
+    },
+    {
+      "ethnicity": "Chinese Han",
+      "region": "East Asia",
+      "percentage": 1,
+      "sampleSize": 800
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~8–15% in Japan; rare elsewhere",
+    "peakRegion": "Japan / Ainu and Ryukyuan populations",
+    "estimatedCarriers": 10000000
+  },
+  "tags": [
+    "mtDNA",
+    "Japan",
+    "Jōmon",
+    "East Asia",
+    "Ainu",
+    "Ryukyu",
+    "M-branch"
+  ],
+  "references": [
+    "Tanaka et al. (2004) — Mitochondrial genome variation in eastern Asia and the peopling of Japan. Genome Research 14(10A), 1832–1850.",
+    "Adachi et al. (2011) — Mitochondrial DNA analysis of Jōmon skeletons from the Funadomari site. American Journal of Physical Anthropology 146(3), 346–360.",
+    "Kanzawa-Kiriyama et al. (2017) — A partial nuclear genome of the Jomons who lived 3000 years ago in Fukushima, Japan. Journal of Human Genetics 62(2), 213–221."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-06"
+}

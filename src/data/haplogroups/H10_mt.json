@@ -1,0 +1,63 @@
+{
+  "id": "H10_mt",
+  "name": "H10",
+  "type": "mtDNA",
+  "parent": "H_mt",
+  "children": [],
+  "formed": "~12,000 BCE",
+  "mrca": "~8,000 BCE",
+  "origin": {
+    "region": "Near East / Anatolia",
+    "period": "Epipaleolithic",
+    "coordinates": [
+      36,
+      38
+    ]
+  },
+  "description": "Haplogroup H10 is a rare subclade of H found predominantly in Anatolia, the Caucasus, and parts of the Middle East. It has also been detected at low frequencies in Southern Europe, likely carried there by Neolithic farmers expanding from Anatolia. H10 is an ancient lineage that branched off early within haplogroup H, and its distribution in the Near East suggests a refugium origin during or shortly after the Last Glacial Maximum.",
+  "interestingFact": "H10 has been found in ancient samples from the Neolithic site of Boncuklu Höyük in Anatolia (~8500 BCE), one of the earliest known settled communities in the region, suggesting it was among the founding lineages of the Neolithic revolution.",
+  "distribution": [
+    {
+      "ethnicity": "Turks",
+      "region": "Anatolia",
+      "percentage": 1.5,
+      "sampleSize": 250
+    },
+    {
+      "ethnicity": "Armenians",
+      "region": "Caucasus",
+      "percentage": 1.2,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Iranians",
+      "region": "Middle East",
+      "percentage": 1,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Greeks",
+      "region": "Southern Europe",
+      "percentage": 0.8,
+      "sampleSize": 200
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.4% in Near East / Southern Europe",
+    "peakRegion": "Anatolia / Caucasus",
+    "estimatedCarriers": 4000000
+  },
+  "tags": [
+    "Anatolia",
+    "Near East",
+    "Caucasus",
+    "Neolithic",
+    "mtDNA"
+  ],
+  "references": [
+    "Kivisild et al. (2003) — The genetic heritage of the earliest settlers persists both in Indian tribal and caste populations. American Journal of Human Genetics 72(2), 313–332.",
+    "Mathieson et al. (2015) — Genome-wide patterns of selection in 230 ancient Eurasians. Nature 528, 499–503."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

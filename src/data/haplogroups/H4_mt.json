@@ -1,0 +1,63 @@
+{
+  "id": "H4_mt",
+  "name": "H4",
+  "type": "mtDNA",
+  "parent": "H_mt",
+  "children": [],
+  "formed": "~14,000 BCE",
+  "mrca": "~10,000 BCE",
+  "origin": {
+    "region": "Near East / Caucasus",
+    "period": "Late Upper Paleolithic",
+    "coordinates": [
+      40,
+      40
+    ]
+  },
+  "description": "Haplogroup H4 is a minor subclade of H found at low frequencies across Europe and the Near East. It is most notable for its presence in the Basque Country and among populations of the Caucasus, suggesting it may represent an ancient pre-Neolithic lineage. H4 is rare but widely distributed, and its deep divergence from other H subclades hints at a Glacial Refugium origin, possibly in the Caucasus or Anatolia during the Last Glacial Maximum.",
+  "interestingFact": "H4 has been detected in ancient DNA samples from Neolithic and Chalcolithic sites in Europe, including the Iberian Peninsula, suggesting it was part of the founding maternal lineages of early European farmers.",
+  "distribution": [
+    {
+      "ethnicity": "Basques",
+      "region": "Southwestern Europe",
+      "percentage": 3,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Georgians",
+      "region": "Caucasus",
+      "percentage": 2,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Sardinians",
+      "region": "Southern Europe",
+      "percentage": 2,
+      "sampleSize": 180
+    },
+    {
+      "ethnicity": "Northern Europeans (average)",
+      "region": "Northern Europe",
+      "percentage": 1,
+      "sampleSize": 500
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.5% of European females",
+    "peakRegion": "Western Europe / Caucasus",
+    "estimatedCarriers": 5000000
+  },
+  "tags": [
+    "Europe",
+    "Caucasus",
+    "Paleolithic",
+    "mtDNA",
+    "H subgroup"
+  ],
+  "references": [
+    "Roostalu et al. (2007) — Origin and expansion of haplogroup H, the dominant human mitochondrial DNA lineage in West Eurasia. Molecular Biology and Evolution 24(11), 2669–2680.",
+    "Pereira et al. (2005) — High-resolution mtDNA evidence for the late-glacial resettlement of Europe from an Iberian refugium. Genome Research 15(1), 19–24."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

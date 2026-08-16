@@ -1,0 +1,70 @@
+{
+  "id": "N1_mt",
+  "name": "N1",
+  "type": "mtDNA",
+  "parent": "N_mt",
+  "children": [],
+  "formed": "~50,000 BCE",
+  "mrca": "~35,000 BCE",
+  "origin": {
+    "region": "Near East / South Asia",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      50,
+      28
+    ]
+  },
+  "description": "Haplogroup N1 (mtDNA) is a subclade of N that includes some important Near Eastern and European lineages. N1 contains N1b, which is one of the four founding Ashkenazi Jewish mtDNA haplogroups, alongside K1a1b1a, K1a9, and T1a1. N1 is distributed across the Near East, Caucasus, and South Asia, and at lower frequencies in Europe. N1a, found at low frequencies in early Neolithic samples from Europe, has been proposed as a marker of the earliest Neolithic farmers who brought agriculture from the Near East into Europe.",
+  "interestingFact": "N1b is one of the four major founding maternal haplogroups of Ashkenazi Jews — carried by approximately 5–8% of Ashkenazi women. Genetic analyses suggest all four founding Ashkenazi lineages (N1b, K1a1b1a, K1a9, T1a1) trace to Middle Eastern women who lived in the Near East within the last 2,000 years, consistent with a Near Eastern origin for Ashkenazi Jewish maternal lineages before the communities were established in medieval Europe.",
+  "distribution": [
+    {
+      "ethnicity": "Ashkenazi Jews",
+      "region": "Europe / Near East",
+      "percentage": 7,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Druze",
+      "region": "Near East",
+      "percentage": 5,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Iranians",
+      "region": "Middle East",
+      "percentage": 3,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Pakistanis",
+      "region": "South Asia",
+      "percentage": 3,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Europeans (average)",
+      "region": "Europe",
+      "percentage": 0.5,
+      "sampleSize": 2000
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.5% globally; higher in Near East",
+    "peakRegion": "Near East / Ashkenazi Jewish diaspora",
+    "estimatedCarriers": 5000000
+  },
+  "tags": [
+    "Near East",
+    "Ashkenazi",
+    "Jewish",
+    "South Asia",
+    "Neolithic",
+    "mtDNA"
+  ],
+  "references": [
+    "Behar et al. (2008) — The matrilineal ancestry of Ashkenazi Jewry: portrait of a recent founder event. American Journal of Human Genetics 78(3), 487–497.",
+    "Haak et al. (2010) — Ancient DNA from European early Neolithic farmers reveals their Near Eastern affinities. PLOS Biology 8(11), e1000536."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-01"
+}

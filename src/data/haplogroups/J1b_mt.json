@@ -1,0 +1,70 @@
+{
+  "id": "J1b_mt",
+  "name": "J1b",
+  "type": "mtDNA",
+  "parent": "J1_mt",
+  "children": [],
+  "formed": "~12,000 BCE",
+  "mrca": "~8,000 BCE",
+  "origin": {
+    "region": "Near East / Levant",
+    "period": "Epipaleolithic",
+    "coordinates": [
+      35,
+      33
+    ]
+  },
+  "description": "Haplogroup J1b is a subclade of J1 found primarily in the Near East and at significant frequencies in the Arabian Peninsula, the Levant, and East Africa. It is part of the broader J1 lineage that is associated with the spread of Neolithic farming and herding cultures from the Fertile Crescent. J1b has been found in ancient DNA from the Early Neolithic of the Near East, confirming its presence among the founding farmers of the Neolithic revolution.",
+  "interestingFact": "J1b, along with J1c, is among the mtDNA lineages introduced into Europe by Neolithic farmers migrating from the Near East around 9,000–7,000 BCE. Ancient DNA from early Neolithic sites across Europe consistently reveals elevated frequencies of J haplogroups relative to modern European populations.",
+  "distribution": [
+    {
+      "ethnicity": "Saudis",
+      "region": "Arabian Peninsula",
+      "percentage": 3,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Yemenis",
+      "region": "Arabian Peninsula",
+      "percentage": 4,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Levantine Arabs",
+      "region": "Near East",
+      "percentage": 2.5,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Ethiopians",
+      "region": "East Africa",
+      "percentage": 2,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Europeans (average)",
+      "region": "Europe",
+      "percentage": 0.8,
+      "sampleSize": 1000
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1% globally; higher in Near East",
+    "peakRegion": "Near East / Arabian Peninsula",
+    "estimatedCarriers": 10000000
+  },
+  "tags": [
+    "Near East",
+    "Levant",
+    "Neolithic",
+    "Arabian Peninsula",
+    "East Africa",
+    "mtDNA"
+  ],
+  "references": [
+    "Haak et al. (2010) — Ancient DNA from European early Neolithic farmers reveals their Near Eastern affinities. PLOS Biology 8(11), e1000536.",
+    "Richards et al. (2000) — Tracing European founder lineages in the Near Eastern mtDNA pool. American Journal of Human Genetics 67(5), 1251–1276."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}
