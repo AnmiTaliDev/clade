@@ -1,0 +1,79 @@
+{
+  "id": "T1a_mt",
+  "name": "T1a",
+  "type": "mtDNA",
+  "parent": "T1_mt",
+  "children": [
+    "T1a1_mt"
+  ],
+  "formed": "~11,000 BCE",
+  "mrca": "~7,000 BCE",
+  "origin": {
+    "region": "Near East / Arabian Peninsula",
+    "period": "Epipaleolithic / Neolithic",
+    "coordinates": [
+      40,
+      25
+    ]
+  },
+  "description": "Haplogroup T1a is a subclade of T1, one of the two main branches of mtDNA haplogroup T. T1a is found throughout the Near East, East Africa, and at lower frequencies across Europe. It is particularly common in populations of the Arabian Peninsula, the Horn of Africa, and among Ashkenazi Jews. T1a appears to have experienced significant demographic expansion in the Near East during the Neolithic and subsequently spread through the movements of Semitic-speaking peoples and later with the Arab expansion of the Islamic period.",
+  "interestingFact": "T1a is one of the four major mtDNA haplogroups (along with K1a1b1a, N1b, and X2e) that together account for the majority of Ashkenazi Jewish maternal lineages, pointing to a common female ancestral pool of Near Eastern origin for this population.",
+  "distribution": [
+    {
+      "ethnicity": "Saudis",
+      "region": "Arabian Peninsula",
+      "percentage": 6,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Yemenis",
+      "region": "Arabian Peninsula",
+      "percentage": 8,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Somalis",
+      "region": "East Africa",
+      "percentage": 5,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Ethiopians",
+      "region": "East Africa",
+      "percentage": 4,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Ashkenazi Jews",
+      "region": "Europe / Near East",
+      "percentage": 4,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Levantine Arabs",
+      "region": "Near East",
+      "percentage": 5,
+      "sampleSize": 200
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1-2% globally; higher in Near East and East Africa",
+    "peakRegion": "Arabian Peninsula / Horn of Africa",
+    "estimatedCarriers": 20000000
+  },
+  "tags": [
+    "Near East",
+    "Arabian Peninsula",
+    "East Africa",
+    "Ashkenazi",
+    "Semitic",
+    "Neolithic",
+    "mtDNA"
+  ],
+  "references": [
+    "Behar et al. (2008) — The matrilineal ancestry of Ashkenazi Jewry: portrait of a recent founder event. American Journal of Human Genetics 78(3), 487–497.",
+    "Richards et al. (2003) — Extensive female-mediated gene flow from sub-Saharan Africa into Near Eastern Arab populations. American Journal of Human Genetics 72(4), 1058–1064."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

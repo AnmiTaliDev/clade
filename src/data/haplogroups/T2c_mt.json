@@ -1,0 +1,70 @@
+{
+  "id": "T2c_mt",
+  "name": "T2c",
+  "type": "mtDNA",
+  "parent": "T2_mt",
+  "children": [],
+  "formed": "~10,000 BCE",
+  "mrca": "~6,000 BCE",
+  "origin": {
+    "region": "Near East / Anatolia",
+    "period": "Pre-Pottery Neolithic",
+    "coordinates": [
+      36,
+      38
+    ]
+  },
+  "description": "Haplogroup T2c is a subclade of T2 distributed across Europe and the Near East. Like other T2 subclades, it was part of the Neolithic package carried by Anatolian farmers expanding into Europe. T2c is found at moderate frequencies in Southern and Western Europe, the Caucasus, and the Near East. It is less common than T2b and appears to have had a more restricted dispersal pattern following the initial Neolithic expansion.",
+  "interestingFact": "T2c and related T2 subclades have been identified in ancient remains from the Cardial Ware culture (~5500–4500 BCE), the first farming culture of the Western Mediterranean coast, suggesting that these lineages reached the Atlantic and Mediterranean facades of Europe via a coastal migration route from Anatolia and the Aegean.",
+  "distribution": [
+    {
+      "ethnicity": "Spaniards",
+      "region": "Southwestern Europe",
+      "percentage": 2,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Italians",
+      "region": "Southern Europe",
+      "percentage": 1.5,
+      "sampleSize": 350
+    },
+    {
+      "ethnicity": "Turks",
+      "region": "Anatolia",
+      "percentage": 1.5,
+      "sampleSize": 250
+    },
+    {
+      "ethnicity": "Greeks",
+      "region": "Southern Europe",
+      "percentage": 1.5,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "French",
+      "region": "Western Europe",
+      "percentage": 1.2,
+      "sampleSize": 350
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1% in Europe and Near East",
+    "peakRegion": "Southern Europe / Anatolia",
+    "estimatedCarriers": 10000000
+  },
+  "tags": [
+    "Southern Europe",
+    "Near East",
+    "Neolithic",
+    "Cardial Ware",
+    "Mediterranean",
+    "mtDNA"
+  ],
+  "references": [
+    "Gamba et al. (2012) — Ancient DNA from an Early Neolithic Iberian population supports a pioneer colonization by first European farmers. Molecular Ecology 21(1), 45–56.",
+    "Lazaridis et al. (2016) — Genomic insights into the origin of farming in the ancient Near East. Nature 536, 419–424."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

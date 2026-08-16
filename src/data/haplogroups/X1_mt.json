@@ -1,0 +1,77 @@
+{
+  "id": "X1_mt",
+  "name": "X1 (mtDNA)",
+  "type": "mtDNA",
+  "parent": "X_mt",
+  "children": [],
+  "formed": "~20,000 BCE",
+  "mrca": "~12,000 BCE",
+  "origin": {
+    "region": "Near East / North Africa",
+    "period": "Epipaleolithic",
+    "coordinates": [
+      30,
+      28
+    ]
+  },
+  "description": "Mitochondrial haplogroup X1 is the Near Eastern and North African subclade of haplogroup X, contrasting with the more famous X2 which has a trans-continental distribution. X1 is found at 3–8% frequencies in North Africa (particularly among Berber populations), the Levant, and the Arabian Peninsula. X1's distribution in North Africa and the Near East suggests it may represent an ancient backflow from the Near East into North Africa, or possibly an in situ diversification in North Africa. X1 is considerably more common than X2 in the Maghreb, making it a significant marker of North African and Near Eastern maternal heritage.",
+  "interestingFact": "While X2 grabbed scientific headlines for its mysterious presence among Native Americans (seemingly connecting them to European or Near Eastern populations), the less publicized X1 has its own fascinating story as a marker of North African and Near Eastern populations — particularly the Berbers of the Maghreb, who carry X1 at rates 10 times higher than most European populations.",
+  "distribution": [
+    {
+      "ethnicity": "Berbers (Morocco)",
+      "region": "North Africa",
+      "percentage": 7,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Berbers (Algeria)",
+      "region": "North Africa",
+      "percentage": 6,
+      "sampleSize": 250
+    },
+    {
+      "ethnicity": "Egyptians",
+      "region": "North Africa",
+      "percentage": 4,
+      "sampleSize": 350
+    },
+    {
+      "ethnicity": "Algerians (Arab)",
+      "region": "North Africa",
+      "percentage": 3,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Lebanese",
+      "region": "Near East",
+      "percentage": 3,
+      "sampleSize": 250
+    },
+    {
+      "ethnicity": "Yemenis",
+      "region": "Near East",
+      "percentage": 2.5,
+      "sampleSize": 200
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~3–8% in North Africa and Near East",
+    "peakRegion": "Berber populations of North Africa",
+    "estimatedCarriers": 8000000
+  },
+  "tags": [
+    "mtDNA",
+    "North Africa",
+    "Berber",
+    "Near East",
+    "Maghreb",
+    "X-branch"
+  ],
+  "references": [
+    "Rando et al. (1998) — Mitochondrial DNA analysis of Northwest African populations reveals genetic exchanges with European, Near-Eastern and sub-Saharan populations. Annals of Human Genetics 62(6), 531–550.",
+    "Behar et al. (2008) — The dawn of human matrilineal diversity. American Journal of Human Genetics 82(5), 1130–1140.",
+    "Fadhlaoui-Zid et al. (2011) — Mitochondrial DNA heterogeneity in Tunisian Berbers. PLOS ONE 6(7), e22339."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-06"
+}

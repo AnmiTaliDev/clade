@@ -1,0 +1,75 @@
+{
+  "id": "W_mt",
+  "name": "W (mtDNA)",
+  "type": "mtDNA",
+  "parent": "N_mt",
+  "children": [
+    "W1_mt",
+    "W3_mt"
+  ],
+  "formed": "~25,000 BCE",
+  "mrca": "~20,000 BCE",
+  "origin": {
+    "region": "Near East / Northwestern South Asia",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      58,
+      30
+    ]
+  },
+  "description": "Mitochondrial haplogroup W is a relatively rare N-derived lineage found at low frequencies across West Eurasia, with a notable concentration in South Asia and Finland. W is thought to have originated in the Near East or northwestern South Asia and spread westward into Europe, where it persists at low levels (~1–2%) with a higher presence in Finland (~8%). In South Asia, W is found at 5–9% among some populations and is considered one of the West Eurasian-related lineages that entered the subcontinent. W's limited geographic reach and low frequency reflect either a relatively late origin or a history of genetic drift in small founding populations.",
+  "interestingFact": "The comparatively high frequency of W in Finland (~8%) compared to most of Europe (~1–2%) is thought to reflect a founder effect during the Neolithic settlement of the Baltic region, where a small group of W-carrying ancestors left a disproportionately large maternal legacy in the Finnish population.",
+  "distribution": [
+    {
+      "ethnicity": "Finns",
+      "region": "Northern Europe",
+      "percentage": 8,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "South Asians (Northwest)",
+      "region": "South Asia",
+      "percentage": 7,
+      "sampleSize": 600
+    },
+    {
+      "ethnicity": "Iranians",
+      "region": "Near East",
+      "percentage": 5,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Europeans (average)",
+      "region": "Europe",
+      "percentage": 2,
+      "sampleSize": 5000
+    },
+    {
+      "ethnicity": "Georgians",
+      "region": "Caucasus",
+      "percentage": 3,
+      "sampleSize": 250
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1% of global female population",
+    "peakRegion": "Northern Europe / South Asia",
+    "estimatedCarriers": 40000000
+  },
+  "tags": [
+    "mtDNA",
+    "West Eurasia",
+    "Finland",
+    "South Asia",
+    "Near East",
+    "Maternal lineage",
+    "Paleolithic"
+  ],
+  "references": [
+    "Torroni et al. (2006) — Harvesting the fruit of the human mtDNA tree. Trends in Genetics 22(6), 339–345.",
+    "Palanichamy et al. (2004) — Phylogeny of mitochondrial DNA macrohaplogroup N in India, based on complete sequencing. American Journal of Human Genetics 75(6), 966–978.",
+    "Soares et al. (2010) — The archaeogenetics of Europe. Current Biology 20(4), R174–R183."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

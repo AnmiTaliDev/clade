@@ -1,0 +1,63 @@
+{
+  "id": "Y_mt",
+  "name": "Y (mtDNA)",
+  "type": "mtDNA",
+  "parent": "N_mt",
+  "children": [],
+  "formed": "~40,000 BCE",
+  "mrca": "~15,000 BCE",
+  "origin": {
+    "region": "East Asia / Southeast Asia",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      118,
+      28
+    ]
+  },
+  "description": "Haplogroup Y (mtDNA) is a rare subclade of macro-haplogroup N found primarily in Southeast Asia, South China, and among some Siberian indigenous peoples. It is notably common in populations of Southeast Asian origin and some Pacific island groups. Y appears to represent a very ancient lineage that has persisted in small, often isolated populations. It reaches its highest known frequencies among the Orang Asli (indigenous peoples) of the Malay Peninsula and some groups in Indonesia, reflecting deep-time population continuity in Island and Peninsular Southeast Asia.",
+  "interestingFact": "Haplogroup Y is one of the rarest macro-haplogroup N lineages in the world and is primarily found in Southeast Asian Negrito and Orang Asli populations — ancient hunter-gatherer groups whose ancestors were among the first modern humans to colonize Southeast Asia during the initial 'Out of Africa' dispersal.",
+  "distribution": [
+    {
+      "ethnicity": "Orang Asli (Malaysia)",
+      "region": "Southeast Asia",
+      "percentage": 15,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Negritos (Philippines)",
+      "region": "Southeast Asia",
+      "percentage": 8,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Indonesian island peoples",
+      "region": "Southeast Asia",
+      "percentage": 4,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Southern Chinese",
+      "region": "East Asia",
+      "percentage": 1,
+      "sampleSize": 1000
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.1% of global female population",
+    "peakRegion": "Southeast Asia (Orang Asli)",
+    "estimatedCarriers": 2000000
+  },
+  "tags": [
+    "Southeast Asia",
+    "Orang Asli",
+    "Negrito",
+    "Malaysia",
+    "Philippines",
+    "Hunter-gatherer"
+  ],
+  "references": [
+    "Schurr & Sherry (2004) — Mitochondrial DNA and Y chromosome diversity and the peopling of the Americas: evolutionary and demographic evidence. American Journal of Human Biology 16(4), 420–439."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

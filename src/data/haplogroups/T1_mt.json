@@ -1,0 +1,65 @@
+{
+  "id": "T1_mt",
+  "name": "T1 (mtDNA)",
+  "type": "mtDNA",
+  "parent": "T_mt",
+  "children": [
+    "T1a_mt"
+  ],
+  "formed": "~20,000 BCE",
+  "mrca": "~9,000 BCE",
+  "origin": {
+    "region": "Near East / Mesopotamia",
+    "period": "Epipaleolithic",
+    "coordinates": [
+      44,
+      34
+    ]
+  },
+  "description": "Haplogroup T1 is one of the two primary subclades of mtDNA haplogroup T, concentrated in the Near East, East Africa, and parts of Europe. It is particularly common in the Levant, Arabian Peninsula, and among East African populations including Ethiopians and Somalis, where it reaches some of its highest worldwide frequencies. T1 appears to have spread from the Near East into both Europe (via Neolithic farming expansions) and Africa (via coastal and Red Sea routes), and is often considered a marker of ancient Near Eastern ancestry.",
+  "interestingFact": "T1 has been found in ancient Neolithic individuals from the Near East and has been proposed as a matrilineal marker associated with early pastoralist and farming populations who spread into East Africa and Europe from a Near Eastern homeland.",
+  "distribution": [
+    {
+      "ethnicity": "Ethiopians",
+      "region": "East Africa",
+      "percentage": 10,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Levantine Arabs",
+      "region": "Near East",
+      "percentage": 8,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Arabians",
+      "region": "Arabian Peninsula",
+      "percentage": 7,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Europeans (general)",
+      "region": "Europe",
+      "percentage": 2,
+      "sampleSize": 2000
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1% of global female population",
+    "peakRegion": "Near East / East Africa",
+    "estimatedCarriers": 20000000
+  },
+  "tags": [
+    "Near East",
+    "East Africa",
+    "Arabia",
+    "Neolithic",
+    "Levant",
+    "Ethiopia"
+  ],
+  "references": [
+    "González et al. (2007) — Mitochondrial lineage M1 traces an early human backflow to Africa. BMC Genomics 8, 223."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

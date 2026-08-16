@@ -1,0 +1,72 @@
+{
+  "id": "T1a1_mt",
+  "name": "T1a1 (mtDNA)",
+  "type": "mtDNA",
+  "parent": "T1a_mt",
+  "children": [],
+  "formed": "~8,000 BCE",
+  "mrca": "~3,500 BCE",
+  "origin": {
+    "region": "Near East / Levant",
+    "period": "Pre-Pottery Neolithic",
+    "coordinates": [
+      35,
+      32
+    ]
+  },
+  "description": "Mitochondrial haplogroup T1a1 is a subclade of T1a that includes one of the four Ashkenazi Jewish founding maternal lineages — making it one of the most studied haplogroups in the context of Jewish population genetics. T1a1 is found at 3–7% among Ashkenazi Jews, where it represents a lineage that traces back to a small founding population of Jewish women in the Near East approximately 2,000–3,000 years ago. Outside of Jewish communities, T1a1 is found at low frequencies across the Near East and Europe. The Ashkenazi T1a1 cluster shares a common ancestor who lived approximately 2,000–3,500 years ago in the Levant.",
+  "interestingFact": "T1a1 is one of the 'four founding mothers' of the Ashkenazi Jewish population identified by geneticists — a set of four mtDNA lineages (K1a1b1a, K1a9, K2a2a1, and T1a1) that, together, account for approximately 40% of all Ashkenazi maternal lineages. All four trace back to a small founding population in the Near East, reflecting the unique genetic history of the Jewish people.",
+  "distribution": [
+    {
+      "ethnicity": "Jews (Ashkenazi)",
+      "region": "Europe / Near East",
+      "percentage": 5,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Israelis (general)",
+      "region": "Near East",
+      "percentage": 3,
+      "sampleSize": 350
+    },
+    {
+      "ethnicity": "Turks",
+      "region": "Near East",
+      "percentage": 2,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Levantine Arabs",
+      "region": "Near East",
+      "percentage": 1.5,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Europeans",
+      "region": "Europe",
+      "percentage": 0.5,
+      "sampleSize": 1000
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~3–7% among Ashkenazi Jews; ~0.5–2% in Near East",
+    "peakRegion": "Ashkenazi Jewish diaspora",
+    "estimatedCarriers": 3000000
+  },
+  "tags": [
+    "mtDNA",
+    "Ashkenazi",
+    "Jewish",
+    "Near East",
+    "Founding lineage",
+    "T-branch",
+    "Levant"
+  ],
+  "references": [
+    "Behar et al. (2006) — The matrilineal ancestry of Ashkenazi Jewry: portrait of a recent founder event. American Journal of Human Genetics 78(3), 487–497.",
+    "Costa et al. (2013) — A substantial prehistoric European ancestry amongst Ashkenazi maternal lineages. Nature Communications 4:2543.",
+    "Behar et al. (2008) — The dawn of human matrilineal diversity. American Journal of Human Genetics 82(5), 1130–1140."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-06"
+}

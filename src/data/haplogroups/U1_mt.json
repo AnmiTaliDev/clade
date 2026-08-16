@@ -1,0 +1,70 @@
+{
+  "id": "U1_mt",
+  "name": "U1",
+  "type": "mtDNA",
+  "parent": "U_mt",
+  "children": [],
+  "formed": "~28,000 BCE",
+  "mrca": "~18,000 BCE",
+  "origin": {
+    "region": "Near East / South Asia",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      55,
+      25
+    ]
+  },
+  "description": "Haplogroup U1 is a subclade of U found primarily in South Asia, the Near East, and parts of East Africa. It is relatively rare in Europe. U1 is one of the oldest surviving lineages within the U clade, with an estimated origin in the Near East or South Asia during the Upper Paleolithic. Its distribution spans from the Indian subcontinent through Iran to East Africa, suggesting ancient population connections across this vast region that predate historical records.",
+  "interestingFact": "U1 and its subclades have been found among Sri Lankan populations at elevated frequencies, and its presence in Ethiopia and Somalia at around 5% suggests ancient maternal connections between South Asia, the Near East, and the Horn of Africa that may reflect pre-Holocene population movements along the 'Southern Route' out of Africa.",
+  "distribution": [
+    {
+      "ethnicity": "Sri Lankans",
+      "region": "South Asia",
+      "percentage": 4,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Pakistanis",
+      "region": "South Asia",
+      "percentage": 3,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Iranians",
+      "region": "Middle East",
+      "percentage": 2.5,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Ethiopians",
+      "region": "East Africa",
+      "percentage": 5,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Somalis",
+      "region": "East Africa",
+      "percentage": 4,
+      "sampleSize": 150
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.5% globally; higher in South Asia and East Africa",
+    "peakRegion": "Horn of Africa / South Asia",
+    "estimatedCarriers": 6000000
+  },
+  "tags": [
+    "South Asia",
+    "Near East",
+    "East Africa",
+    "Horn of Africa",
+    "Paleolithic",
+    "mtDNA"
+  ],
+  "references": [
+    "Quintana-Murci et al. (2004) — Where West meets East: the complex mtDNA landscape of the Southwest and Central Asian corridor. American Journal of Human Genetics 74(5), 827–845.",
+    "Palanichamy et al. (2004) — Phylogeny of mitochondrial DNA macrohaplogroup N in India, based on complete sequencing. American Journal of Human Genetics 75(6), 966–978."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

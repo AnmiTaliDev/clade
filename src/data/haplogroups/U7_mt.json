@@ -1,0 +1,78 @@
+{
+  "id": "U7_mt",
+  "name": "U7 (mtDNA)",
+  "type": "mtDNA",
+  "parent": "U_mt",
+  "children": [],
+  "formed": "~30,000 BCE",
+  "mrca": "~18,000 BCE",
+  "origin": {
+    "region": "Near East / South Asia",
+    "period": "Upper Paleolithic",
+    "coordinates": [
+      60,
+      28
+    ]
+  },
+  "description": "Mitochondrial haplogroup U7 is a Near Eastern and South Asian branch of U found across a broad arc from the Arabian Peninsula through Iran and Pakistan to northern India. U7 is found at frequencies of 2–7% in Iran, Pakistan, and northwestern India, and at 1–4% in the Arabian Peninsula and parts of Central Asia. It is considered one of the ancient lineages connecting the Near East and South Asia, predating the Indo-European migrations. U7 appears to have been present in the region since the late Paleolithic and expanded during the Neolithic period along the southern Asian corridor.",
+  "interestingFact": "Haplogroup U7's distribution precisely traces the ancient cultural and genetic corridor linking the Near East, Iran, and South Asia — a region that saw the origin of some of the world's earliest urban civilizations (Mesopotamia, the Indus Valley). U7 may have been carried by populations ancestral to the Indus Valley Civilization.",
+  "distribution": [
+    {
+      "ethnicity": "Iranians",
+      "region": "Near East",
+      "percentage": 5,
+      "sampleSize": 350
+    },
+    {
+      "ethnicity": "Pakistanis",
+      "region": "South Asia",
+      "percentage": 4,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "North Indians",
+      "region": "South Asia",
+      "percentage": 3,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Afghans",
+      "region": "Central Asia",
+      "percentage": 3.5,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Saudis",
+      "region": "Near East",
+      "percentage": 2.5,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Uzbeks",
+      "region": "Central Asia",
+      "percentage": 2,
+      "sampleSize": 250
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~2–7% in Near East and South Asia",
+    "peakRegion": "Iran / Pakistan / Northwestern India",
+    "estimatedCarriers": 12000000
+  },
+  "tags": [
+    "mtDNA",
+    "Near East",
+    "South Asia",
+    "Iran",
+    "Pakistan",
+    "Paleolithic",
+    "U-branch"
+  ],
+  "references": [
+    "Quintana-Murci et al. (2004) — Where West Meets East: The Complex mtDNA Landscape of the Southwest and Central Asian Corridor. American Journal of Human Genetics 74(5), 827–845.",
+    "Metspalu et al. (2004) — Most of the extant mtDNA boundaries in south and southwest Asia were likely shaped during the initial settlement of Eurasia. BMC Genetics 5:26.",
+    "Behar et al. (2008) — The dawn of human matrilineal diversity. American Journal of Human Genetics 82(5), 1130–1140."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-06"
+}
