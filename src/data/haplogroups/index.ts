@@ -557,7 +557,8 @@ export const haplogroups: Haplogroup[] = [
   X1_mt,
   N2_mt,
   T1a1_mt,
-];
+] as unknown as Haplogroup[];
+
 
 export function getHaplogroup(id: string): Haplogroup | undefined {
   return haplogroups.find((h) => h.id === id);
