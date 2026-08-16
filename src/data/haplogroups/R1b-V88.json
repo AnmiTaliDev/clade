@@ -1,0 +1,78 @@
+{
+  "id": "R1b-V88",
+  "name": "R1b1c (V88)",
+  "type": "Y-DNA",
+  "parent": "R1b",
+  "children": [],
+  "formed": "~9,000 BCE",
+  "mrca": "~5,000 BCE",
+  "origin": {
+    "region": "North Africa / Sahara",
+    "period": "Neolithic (Green Sahara)",
+    "coordinates": [
+      18,
+      18
+    ]
+  },
+  "description": "R1b-V88 is the oldest and most diverged branch of R1b, representing a deep split from the European and Asian R1b lineages that took place during or before the Green Sahara period (~11,000–5,000 BCE). It is found at remarkably high frequencies in the Lake Chad basin, particularly among the Chadic-speaking peoples of northern Nigeria, Niger, Cameroon, and Chad — including the Hausa (~40%), Fulani, Kanuri, and related groups. V88 is rare in Europe and almost absent from the Near East and Central Asia, suggesting it represents an ancient migration of R1b-carrying populations into North Africa via the Nile corridor or across the Sahara when it was green and habitable.",
+  "interestingFact": "In the Lake Chad basin, R1b-V88 reaches frequencies of 60–95% among some Chadic-speaking groups — making it far more common in sub-Saharan Africa than anywhere in Europe, despite R1b being predominantly thought of as a European haplogroup. This remarkable distribution is a genetic signature of a migration across the once-green Sahara roughly 5,000–8,000 years ago.",
+  "distribution": [
+    {
+      "ethnicity": "Hausa",
+      "region": "West Africa (Nigeria/Niger)",
+      "percentage": 40,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Fulani (Nigeria)",
+      "region": "West Africa",
+      "percentage": 25,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Kanuri",
+      "region": "West Africa (Chad Basin)",
+      "percentage": 60,
+      "sampleSize": 100
+    },
+    {
+      "ethnicity": "Sara",
+      "region": "Central Africa (Chad)",
+      "percentage": 65,
+      "sampleSize": 80
+    },
+    {
+      "ethnicity": "Egyptians (Nile Valley)",
+      "region": "North Africa",
+      "percentage": 3,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Berbers",
+      "region": "North Africa",
+      "percentage": 2,
+      "sampleSize": 400
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.3% of global male population",
+    "peakRegion": "Lake Chad Basin / West Africa",
+    "estimatedCarriers": 10000000
+  },
+  "tags": [
+    "Africa",
+    "West Africa",
+    "Chad",
+    "Sahara",
+    "Neolithic",
+    "Green Sahara",
+    "Chadic",
+    "Hausa"
+  ],
+  "references": [
+    "Cruciani et al. (2010) — Human Y chromosome haplogroup R-V88: a paternal genetic record of early mid-Holocene trans-Saharan connections and the spread of Chadic languages. European Journal of Human Genetics 18(7), 800–807.",
+    "Underhill & Kivisild (2007) — Use of Y chromosome and mitochondrial DNA population structure in tracing human migrations. Annual Review of Genetics 41, 539–564."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}
