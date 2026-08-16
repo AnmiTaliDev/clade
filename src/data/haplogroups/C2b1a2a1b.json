@@ -1,0 +1,50 @@
+{
+  "id": "C2b1a2a1b",
+  "name": "C2b1a2a1b (F6379)",
+  "type": "Y-DNA",
+  "parent": "C2b1a2a1",
+  "children": [],
+  "formed": "~2,000 BCE",
+  "mrca": "~500 BCE",
+  "origin": {
+    "region": "Mongolia / Inner Mongolia",
+    "period": "Iron Age",
+    "coordinates": [
+      110,
+      44
+    ]
+  },
+  "description": "C2b1a2a1b (F6379) is a terminal subclade of C2b1a2a within the broader C2b1a2 (M48) Mongolic branch. Defined by the F6379 marker, this lineage represents a fine-scale Iron Age differentiation of the non-Star-Cluster Mongolic C2b diversity on the Mongolian Plateau. Its carriers today are found at low frequencies among Mongolian and Inner Mongolian populations.",
+  "interestingFact": "F6379 is one of many 'shadow lineages' on the Mongolian Plateau — branches that were demographically outcompeted by the explosive expansion of the Star Cluster during the Mongol Empire, surviving today only as rare but distinct patrilineal markers of Mongolia's pre-imperial genetic diversity.",
+  "distribution": [
+    {
+      "ethnicity": "Mongols",
+      "region": "East Asia / Central Asia",
+      "percentage": 1,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Inner Mongols",
+      "region": "East Asia (China)",
+      "percentage": 2,
+      "sampleSize": 200
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.02% of global male population",
+    "peakRegion": "Mongolia",
+    "estimatedCarriers": 700000
+  },
+  "tags": [
+    "Mongols",
+    "Iron Age",
+    "Mongolia",
+    "Steppe"
+  ],
+  "references": [
+    "Balaresque et al. (2015) — Y-chromosome descent clusters and male differential reproductive success. European Journal of Human Genetics 23, 1357–1362.",
+    "YFull YTree — Haplogroup C2b1a2a1 phylogeny."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

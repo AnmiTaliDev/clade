@@ -1,0 +1,63 @@
+{
+  "id": "E1b1b1b",
+  "name": "E1b1b1b (V243)",
+  "type": "Y-DNA",
+  "parent": "E1b1b1",
+  "children": [],
+  "formed": "~14,000 BCE",
+  "mrca": "~6,000 BCE",
+  "origin": {
+    "region": "East Africa / Arabian Peninsula",
+    "period": "Epipaleolithic / Neolithic",
+    "coordinates": [
+      42,
+      14
+    ]
+  },
+  "description": "Haplogroup E1b1b1b (V243) is a subclade of E1b1b1 found predominantly in the Arabian Peninsula, Yemen, and parts of East Africa. It represents a lineage that crossed the Red Sea or spread along the coastal route connecting the Horn of Africa with the Arabian Peninsula. E1b1b1b is found at notable frequencies among Yemenis, Omanis, and some Ethiopian populations, and is less common than its sibling branches M78 and M123. It reflects ancient population connections between East Africa and the southwestern Arabian Peninsula that predate the historical Arab expansion.",
+  "interestingFact": "E1b1b1b's distribution straddling the Red Sea is consistent with ancient maritime crossings or coastal movements between Africa and Arabia that archaeological evidence confirms occurred repeatedly during the Holocene, linking the populations of the Horn of Africa and southwestern Arabia through shared lineages, cultures, and — eventually — the Semitic languages.",
+  "distribution": [
+    {
+      "ethnicity": "Yemenis",
+      "region": "Arabian Peninsula",
+      "percentage": 10,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Omanis",
+      "region": "Arabian Peninsula",
+      "percentage": 8,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Ethiopians (Amhara)",
+      "region": "East Africa",
+      "percentage": 6,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Eritreans",
+      "region": "Horn of Africa",
+      "percentage": 8,
+      "sampleSize": 200
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.3% of global male population",
+    "peakRegion": "Yemen / Horn of Africa",
+    "estimatedCarriers": 12000000
+  },
+  "tags": [
+    "Yemen",
+    "Arabia",
+    "Horn of Africa",
+    "East Africa",
+    "Red Sea",
+    "Semitic"
+  ],
+  "references": [
+    "Chiaroni et al. (2009) — Y chromosome diversity, human expansion, drift, and cultural evolution. PNAS 106(48), 20174–20179."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

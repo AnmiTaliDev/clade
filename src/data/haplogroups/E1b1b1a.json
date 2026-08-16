@@ -1,0 +1,70 @@
+{
+  "id": "E1b1b1a",
+  "name": "E1b1b1a (M78)",
+  "type": "Y-DNA",
+  "parent": "E1b1b1",
+  "children": [],
+  "formed": "~14,000 BCE",
+  "mrca": "~8,000 BCE",
+  "origin": {
+    "region": "Northeast Africa (Egypt / Nile Valley)",
+    "period": "Epipaleolithic",
+    "coordinates": [
+      32,
+      22
+    ]
+  },
+  "description": "Haplogroup E1b1b1a (M78) is the most widespread subclade of E1b1b1, found at high frequencies across Northeast Africa, the Horn of Africa, and Mediterranean Europe. It reaches its highest frequencies among Ethiopians, Somalis, and some Egyptian groups, and was a key lineage in the movement of people from Northeast Africa into the Near East and Mediterranean during the Neolithic and later periods. E1b1b1a includes several sub-branches with distinct geographic distributions, including the 'Ethiopian' branch (V32) and the 'Mediterranean' branches that spread into Greece, Turkey, and the Balkans.",
+  "interestingFact": "E1b1b1a (M78) has been proposed as the Y-chromosome marker of ancient Cushitic-speaking populations in the Horn of Africa — its very high frequency among Somalis, Oromos, and other Cushitic groups, combined with the estimated age of its sub-branches, aligns with the proposed age and origin of the Afroasiatic language family.",
+  "distribution": [
+    {
+      "ethnicity": "Somalis",
+      "region": "Horn of Africa",
+      "percentage": 70,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Oromos (Ethiopia)",
+      "region": "East Africa",
+      "percentage": 55,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Egyptians",
+      "region": "North Africa",
+      "percentage": 25,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Greeks",
+      "region": "Southern Europe",
+      "percentage": 22,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Albanians",
+      "region": "Southeast Europe",
+      "percentage": 25,
+      "sampleSize": 300
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~3% of global male population",
+    "peakRegion": "Horn of Africa / North Africa",
+    "estimatedCarriers": 120000000
+  },
+  "tags": [
+    "Horn of Africa",
+    "Somalia",
+    "Ethiopia",
+    "Mediterranean",
+    "Egypt",
+    "Afroasiatic",
+    "Cushitic"
+  ],
+  "references": [
+    "Cruciani et al. (2007) — Tracing past human male movements in northern/eastern Africa and western Eurasia: new clues from Y-chromosomal haplogroups E-M78 and J-M12. Molecular Biology and Evolution 24(6), 1300–1311."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

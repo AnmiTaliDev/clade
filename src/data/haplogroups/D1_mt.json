@@ -1,0 +1,71 @@
+{
+  "id": "D1_mt",
+  "name": "D1",
+  "type": "mtDNA",
+  "parent": "D_mt",
+  "children": [],
+  "formed": "~15,000 BCE",
+  "mrca": "~13,000 BCE",
+  "origin": {
+    "region": "Beringia / Americas",
+    "period": "Late Upper Paleolithic",
+    "coordinates": [
+      -140,
+      65
+    ]
+  },
+  "description": "Haplogroup D1 (mtDNA) is one of the four founding Native American mitochondrial haplogroups (along with A2, B2, and C1), carried by the initial migration of people across the Bering land bridge into the Americas approximately 15,000–20,000 years ago. D1 is found throughout the Americas from North America to Patagonia, and its presence across the entire length of the continent reflects the rapid southward spread of the founding Beringian population. D1 is particularly common in Patagonian groups such as the Selknam and Kawésqar, suggesting deep ancestry in the southernmost tip of the Americas.",
+  "interestingFact": "D1 is one of the most geographically widespread mitochondrial haplogroups, found from Alaska to Tierra del Fuego. Its presence in both Andean highland groups like the Quechua and coastal Patagonian groups like the Kawésqar indicates that D1-carrying women were present in the founding population and their descendants spread and diversified across the entire Americas during the initial peopling event approximately 15,000 years ago.",
+  "distribution": [
+    {
+      "ethnicity": "Selknam (Chile/Argentina)",
+      "region": "South America (Patagonia)",
+      "percentage": 40,
+      "sampleSize": 80
+    },
+    {
+      "ethnicity": "Kawésqar",
+      "region": "South America (Patagonia)",
+      "percentage": 35,
+      "sampleSize": 60
+    },
+    {
+      "ethnicity": "Quechua",
+      "region": "South America (Andes)",
+      "percentage": 20,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Guaraní",
+      "region": "South America",
+      "percentage": 15,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Native Americans (average)",
+      "region": "Americas",
+      "percentage": 12,
+      "sampleSize": 800
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~10-15% in Native American populations",
+    "peakRegion": "Southern South America / Patagonia",
+    "estimatedCarriers": 10000000
+  },
+  "tags": [
+    "Americas",
+    "Native Americans",
+    "Beringia",
+    "Patagonia",
+    "Andes",
+    "Founding lineage",
+    "mtDNA"
+  ],
+  "references": [
+    "Perego et al. (2010) — The initial peopling of the Americas: a growing number of founding mitochondrial genomes from Beringia. Genome Research 20(9), 1174–1179.",
+    "Achilli et al. (2008) — The phylogeny of the four pan-American MtDNA haplogroups: implications for evolutionary and disease studies. PLOS ONE 3(3), e1764."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

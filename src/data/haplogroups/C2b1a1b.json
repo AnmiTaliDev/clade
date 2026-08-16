@@ -1,0 +1,93 @@
+{
+  "id": "C2b1a1b",
+  "name": "C2b1a1b (Plateau branch)",
+  "type": "Y-DNA",
+  "parent": "C2b1a1",
+  "children": [],
+  "formed": "~800 BCE",
+  "mrca": "~900 CE",
+  "origin": {
+    "region": "Mongolian Plateau",
+    "period": "Iron Age",
+    "coordinates": [
+      103,
+      47
+    ]
+  },
+  "description": "C2b1a1b is the broadest subclade of the Star Cluster by geographic spread, found throughout the Mongolian Plateau and surrounding steppe regions. It corresponds to the non-Borjigin Mongolic expansion of the Star Cluster — lineages that achieved high frequency not through the unique social dominance of the Chinggisid dynasty, but through the general demographic success of Mongolic-speaking societies on the plateau in the centuries before and after the Mongol Empire. C2b1a1b is found among Khalkha Mongols, Oirats, Buryats, and Inner Mongolian groups, and represents the broader 'common Mongolic' component of the Star Cluster. Its MRCA is slightly earlier than C2b1a1a, consistent with a founder predating the Borjigin clan himself.",
+  "interestingFact": "C2b1a1b demonstrates that the explosive success of the Star Cluster on the Mongolian Plateau was not solely a product of Genghis Khan's personal dynasty — the broader Mongolic populations already carried C2b1a1 at elevated frequencies before the Mongol Empire, and C2b1a1b represents the pre-imperial stratum of this success across the steppe.",
+  "distribution": [
+    {
+      "ethnicity": "Khalkha Mongols",
+      "region": "East Asia (Mongolia)",
+      "percentage": 20,
+      "sampleSize": 400
+    },
+    {
+      "ethnicity": "Oirats",
+      "region": "Central Asia / Xinjiang",
+      "percentage": 18,
+      "sampleSize": 120
+    },
+    {
+      "ethnicity": "Buryats",
+      "region": "Siberia",
+      "percentage": 15,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Inner Mongols",
+      "region": "East Asia (China)",
+      "percentage": 14,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Kalmyks",
+      "region": "Eastern Europe / Russia",
+      "percentage": 12,
+      "sampleSize": 100
+    },
+    {
+      "ethnicity": "Tuvans",
+      "region": "Siberia",
+      "percentage": 8,
+      "sampleSize": 100
+    }
+  ],
+  "clans": [
+    {
+      "type": "tribe",
+      "name": "Oirat confederation",
+      "region": "Western Mongolia / Xinjiang",
+      "note": "The Western Mongol peoples (Dzungar, Torghut, Dörbet) carry C2b1a1b at elevated frequency, reflecting their pre-imperial Mongolic ancestry"
+    },
+    {
+      "type": "tribe",
+      "name": "Kalmyks",
+      "region": "Lower Volga (Russia)",
+      "note": "Westernmost Mongolian group, descended from Oirat migrants of the 17th century; carry C2b1a1b as a marker of their steppe Mongolic heritage"
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.3% of global male population",
+    "peakRegion": "Mongolia / Buryatia",
+    "estimatedCarriers": 11000000
+  },
+  "tags": [
+    "Mongols",
+    "Steppe",
+    "Mongolia",
+    "Oirat",
+    "Buryats",
+    "Kalmyks",
+    "Medieval",
+    "Iron Age"
+  ],
+  "references": [
+    "Zerjal et al. (2003) — The Genetic Legacy of the Mongols. American Journal of Human Genetics 72(3), 717–721.",
+    "Balaresque et al. (2015) — Y-chromosome descent clusters and male differential reproductive success. European Journal of Human Genetics 23, 1357–1362.",
+    "Pakendorf et al. (2006) — Investigating the effects of prehistoric migrations in Siberia: genetic variation and the origins of Yakuts. Human Genetics 120(3), 334–353."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

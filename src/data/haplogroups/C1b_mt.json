@@ -1,0 +1,71 @@
+{
+  "id": "C1b_mt",
+  "name": "C1b",
+  "type": "mtDNA",
+  "parent": "C1_mt",
+  "children": [],
+  "formed": "~15,000 BCE",
+  "mrca": "~13,000 BCE",
+  "origin": {
+    "region": "Americas (North/Central)",
+    "period": "Late Upper Paleolithic",
+    "coordinates": [
+      -100,
+      45
+    ]
+  },
+  "description": "Haplogroup C1b is one of the three major Native American-specific subclades of C1 (alongside C1c and C1d), found exclusively in the Americas. C1b is widely distributed from North America to South America and is one of the five founding mitochondrial lineages of Indigenous Americans. It arose after the founding population crossed Beringia and is found across diverse Native American groups. C1b is absent from Asian populations, confirming it as an exclusively American lineage that diverged in situ after the peopling of the Americas.",
+  "interestingFact": "C1b, C1c, and C1d are used by geneticists as definitive markers of Native American maternal ancestry, because they are found nowhere outside the Americas. The presence of all three in a DNA sample is strong evidence of Indigenous American ancestry, and their detection in ancient DNA from diverse archaeological sites across the Americas has helped reconstruct the timing and routes of the initial peopling of the Western Hemisphere.",
+  "distribution": [
+    {
+      "ethnicity": "Maya (Guatemala/Mexico)",
+      "region": "Mesoamerica",
+      "percentage": 18,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Navajo",
+      "region": "North America",
+      "percentage": 12,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Algonquian peoples",
+      "region": "North America",
+      "percentage": 10,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Quechua",
+      "region": "South America (Andes)",
+      "percentage": 8,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Native Americans (average)",
+      "region": "Americas",
+      "percentage": 10,
+      "sampleSize": 800
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~8-12% in Native American populations",
+    "peakRegion": "Mesoamerica / North America",
+    "estimatedCarriers": 8000000
+  },
+  "tags": [
+    "Americas",
+    "Native Americans",
+    "Mesoamerica",
+    "North America",
+    "Beringia",
+    "Founding lineage",
+    "mtDNA"
+  ],
+  "references": [
+    "Achilli et al. (2008) — The phylogeny of the four pan-American MtDNA haplogroups. PLOS ONE 3(3), e1764.",
+    "Perego et al. (2010) — The initial peopling of the Americas: a growing number of founding mitochondrial genomes from Beringia. Genome Research 20(9), 1174–1179."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-01"
+}

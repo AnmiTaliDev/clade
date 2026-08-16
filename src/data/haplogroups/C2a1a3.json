@@ -1,0 +1,64 @@
+{
+  "id": "C2a1a3",
+  "name": "C2a1a3 (F1918)",
+  "type": "Y-DNA",
+  "parent": "C2a1a",
+  "children": [
+    "C2a1a3a"
+  ],
+  "formed": "~12,000 BCE",
+  "mrca": "~6,000 BCE",
+  "origin": {
+    "region": "East Asia (China)",
+    "period": "Mesolithic / Early Neolithic",
+    "coordinates": [
+      117,
+      32
+    ]
+  },
+  "description": "C2a1a3 (F1918) is a subclade of C2a1a distributed across East Asia, found in Chinese, Korean, and Southeast Asian populations. It is characterized by the F1918 SNP marker and represents a distinct lineage that diverged during the early Neolithic demographic expansion of East Asia. C2a1a3 has a somewhat broader geographic range than its sister clades, extending into parts of Southeast Asia through ancient population movements associated with the spread of rice agriculture.",
+  "interestingFact": "The F1918 marker defines a branch of haplogroup C that accompanied the early spread of East Asian agricultural populations southward into Southeast Asia, providing a genetic signal of ancient continental East Asian migration routes predating historical records.",
+  "distribution": [
+    {
+      "ethnicity": "Han Chinese",
+      "region": "East Asia",
+      "percentage": 2,
+      "sampleSize": 2000
+    },
+    {
+      "ethnicity": "Koreans",
+      "region": "East Asia",
+      "percentage": 1,
+      "sampleSize": 800
+    },
+    {
+      "ethnicity": "Vietnamese",
+      "region": "Southeast Asia",
+      "percentage": 2,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Zhuang",
+      "region": "South China",
+      "percentage": 3,
+      "sampleSize": 300
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~0.15% of global male population",
+    "peakRegion": "South / Central China",
+    "estimatedCarriers": 5000000
+  },
+  "tags": [
+    "East Asia",
+    "China",
+    "Neolithic",
+    "Agriculture",
+    "Southeast Asia"
+  ],
+  "references": [
+    "Wei et al. (2018) — Phylogenetic analysis of the Y-chromosome haplogroup C2b-F1067. PLOS ONE 13(5), e0197744."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

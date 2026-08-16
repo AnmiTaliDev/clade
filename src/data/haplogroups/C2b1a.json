@@ -1,0 +1,87 @@
+{
+  "id": "C2b1a",
+  "name": "C2b1a (M401)",
+  "type": "Y-DNA",
+  "parent": "C2b1",
+  "children": [
+    "C2b1a1",
+    "C2b1a2"
+  ],
+  "formed": "~10,000 BCE",
+  "mrca": "~4,000 BCE",
+  "origin": {
+    "region": "Mongolia / Baikal region",
+    "period": "Mesolithic / Neolithic",
+    "coordinates": [
+      108,
+      48
+    ]
+  },
+  "description": "Haplogroup C2b1a (C-M401) is the core Mongolic branch of C2b1 and the direct ancestor of the 'Star Cluster' (C2b1a1-F3918) associated with Genghis Khan and the Borjigin dynasty. C2b1a is strongly concentrated in Mongolia, among Buryats, and in the Mongolian-speaking populations of China (Inner Mongolia). It splits into two subclades: C2b1a1, the famous Star Cluster lineage that expanded explosively in the 13th century CE, and C2b1a2 (Z22424), a sister clade found among Mongolian populations that did not participate in the same founder effect. The MRCA of C2b1a lived approximately 4,000 BCE — several thousand years before Genghis Khan — indicating a deep prehistorical origin for Mongolic paternal lineages on the Mongolian plateau.",
+  "interestingFact": "The extraordinary diversity within C2b1a reveals that the Mongolian plateau was home to a significant C2b1a-carrying population for thousands of years before Genghis Khan — the 13th-century explosion of C2b1a1 (Star Cluster) was not the origin of Mongolic lineages, but the final and most extreme episode in a long history of C2b1a dominance on the steppe.",
+  "distribution": [
+    {
+      "ethnicity": "Mongols",
+      "region": "East Asia / Central Asia",
+      "percentage": 50,
+      "sampleSize": 500
+    },
+    {
+      "ethnicity": "Buryats",
+      "region": "Siberia",
+      "percentage": 60,
+      "sampleSize": 300
+    },
+    {
+      "ethnicity": "Inner Mongols",
+      "region": "East Asia (China)",
+      "percentage": 45,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Hazara",
+      "region": "Central Asia (Afghanistan)",
+      "percentage": 33,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Kazakhs (Mongolic clans)",
+      "region": "Central Asia",
+      "percentage": 20,
+      "sampleSize": 300
+    }
+  ],
+  "clans": [
+    {
+      "type": "dynasty",
+      "name": "House of Borjigin",
+      "region": "Mongolia",
+      "note": "Ruling clan of the Mongol Empire; C2b1a1 is proposed as their patrilineal marker"
+    },
+    {
+      "type": "tribe",
+      "name": "Khalka Mongols",
+      "region": "Mongolia",
+      "note": "Dominant ethnic group of Mongolia; high C2b1a frequency"
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~1.5% of global male population",
+    "peakRegion": "Mongolia / Buryatia",
+    "estimatedCarriers": 55000000
+  },
+  "tags": [
+    "Mongols",
+    "Central Asia",
+    "Mongolia",
+    "Steppe",
+    "Genghis Khan",
+    "Borjigin"
+  ],
+  "references": [
+    "Zerjal et al. (2003) — The Genetic Legacy of the Mongols. American Journal of Human Genetics 72(3), 717–721.",
+    "Balaresque et al. (2015) — Y-chromosome descent clusters and male differential reproductive success. European Journal of Human Genetics 23, 1357–1362."
+  ],
+  "featured": false,
+  "addedAt": "2026-06-30"
+}

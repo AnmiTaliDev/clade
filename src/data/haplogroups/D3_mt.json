@@ -1,0 +1,73 @@
+{
+  "id": "D3_mt",
+  "name": "D3 (mtDNA)",
+  "type": "mtDNA",
+  "parent": "D_mt",
+  "children": [],
+  "formed": "~15,000 BCE",
+  "mrca": "~10,000 BCE",
+  "origin": {
+    "region": "Arctic Siberia / Beringia",
+    "period": "Late Paleolithic",
+    "coordinates": [
+      -170,
+      65
+    ]
+  },
+  "description": "Mitochondrial haplogroup D3 is an Arctic haplogroup primarily found among Inuit (Eskimo) populations of the Canadian Arctic, Greenland, and Alaska. D3 is one of the founding maternal lineages of the Inuit, who represent the most recent major migration from Asia into the Americas — the Thule culture expansion approximately 1,000 years ago that spread from Alaska across Arctic Canada to Greenland, replacing the earlier Dorset culture inhabitants. D3 is found at frequencies of 15–40% among various Inuit groups and is extremely rare outside Arctic populations, making it an important genetic signature of Inuit identity and their distinct origin from other Native American peoples.",
+  "interestingFact": "Haplogroup D3's near-exclusive presence in Inuit populations makes it a powerful genetic marker for identifying Inuit ancestry. When ancient DNA researchers studied the skeletal remains of Dorset culture people (the culture displaced by the Inuit), they found no D3 — confirming that the Thule-Inuit ancestors were a genetically distinct population that arrived from Alaska and completely replaced the Dorset people.",
+  "distribution": [
+    {
+      "ethnicity": "Canadian Inuit",
+      "region": "Arctic North America",
+      "percentage": 35,
+      "sampleSize": 200
+    },
+    {
+      "ethnicity": "Greenlandic Inuit (Kalaallit)",
+      "region": "Arctic",
+      "percentage": 30,
+      "sampleSize": 150
+    },
+    {
+      "ethnicity": "Alaskan Inupiat",
+      "region": "Arctic North America",
+      "percentage": 25,
+      "sampleSize": 120
+    },
+    {
+      "ethnicity": "Siberian Yupik",
+      "region": "Arctic",
+      "percentage": 15,
+      "sampleSize": 80
+    },
+    {
+      "ethnicity": "Chukchi",
+      "region": "Siberia",
+      "percentage": 5,
+      "sampleSize": 90
+    }
+  ],
+  "statistics": {
+    "modernFrequency": "~15–40% among Inuit; rare elsewhere",
+    "peakRegion": "Canadian Arctic / Greenland",
+    "estimatedCarriers": 400000
+  },
+  "tags": [
+    "mtDNA",
+    "Inuit",
+    "Eskimo",
+    "Arctic",
+    "Greenland",
+    "Canada",
+    "Thule culture",
+    "D-branch"
+  ],
+  "references": [
+    "Helgason et al. (2006) — mtDNA variation in Inuit populations of Greenland and Canada: migration history and population structure. American Journal of Physical Anthropology 130(1), 123–134.",
+    "Raghavan et al. (2014) — The genetic prehistory of the New World Arctic. Science 345(6200), 1255832.",
+    "Friesen & Arnold (2008) — The timing of the Thule migration: new dates from the Western Canadian Arctic. Arctic Anthropology 45(1), 34–58."
+  ],
+  "featured": false,
+  "addedAt": "2026-07-06"
+}
